@@ -4426,15 +4426,15 @@
               "CooldownActive": false
             },
             {
+              "cellHeight": 10,
+              "cellWidth": 10,
+              "extraBorder": 0,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
-              "cellHeight": 20,
-              "cellWidth": 20,
-              "extraBorder": 0,
               "maxSpeed": 120,
               "rotateObject": false
             }
@@ -5750,7 +5750,7 @@
                 "ScytheWeapon",
                 "Cronus",
                 "Cronus.Width()",
-                "TimeFromStart() * 180"
+                "2 * TimeFromStart() * 180"
               ],
               "subInstructions": []
             },
@@ -6999,14 +6999,6 @@
                 "\"hurt\""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -7266,39 +7258,40 @@
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PathfindingBehavior::MaxSpeed"
+              },
+              "parameters": [
+                "Uranus",
+                "Pathfinding",
+                "=",
+                "90"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
-                    "value": "VarSceneTxt"
+                    "inverted": true,
+                    "value": "PathfindingBehavior::PathFound"
                   },
                   "parameters": [
-                    "DialogText",
-                    "=",
-                    "\"\""
+                    "Uranus",
+                    "Pathfinding"
                   ],
                   "subInstructions": []
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    "yes"
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
@@ -7308,11 +7301,19 @@
                     "Uranus",
                     "Pathfinding",
                     "",
-                    "Targets.X()",
-                    "Targets.Y() + Targets.Height()"
+                    "Gaia.X()",
+                    "Gaia.Y() + Gaia.Height()"
                   ],
                   "subInstructions": []
-                },
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "inverted": false,
@@ -7321,165 +7322,239 @@
                   "parameters": [
                     "Uranus",
                     "Pathfinding",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Uranus",
                     "=",
-                    "180"
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::Speed"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Pathfinding",
+                    "<",
+                    "0.01"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "<",
+                    "Gaia.X() - Gaia.Width()/2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    ">",
+                    "Gaia.X() + Gaia.Width()/2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Targets",
+                    "Uranus.Width() * 0.75",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "State",
+                    "=",
+                    "\"attack\""
                   ],
                   "subInstructions": []
                 },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PathfindingBehavior::Acceleration"
+                    "value": "ChangeAnimation"
                   },
                   "parameters": [
                     "Uranus",
-                    "Pathfinding",
                     "=",
-                    "1000"
+                    "2"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        ">",
-                        "Gaia.X() + Gaia.Width()/2"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "<",
-                        "Gaia.X() - Gaia.Width()/2"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "no"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PathfindingBehavior::Speed"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "Pathfinding",
-                        "<",
-                        "0.01"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeAnimation"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PathfindingBehavior::Speed"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "Pathfinding",
-                        ">",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeAnimation"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Attacking",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"attack\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "AnimationEnded"
+              },
+              "parameters": [
+                "Uranus"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"seek\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
@@ -7518,38 +7593,13 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PathfindingBehavior::Speed"
+                "value": "PathfindingBehavior::MaxSpeed"
               },
               "parameters": [
                 "Uranus",
                 "Pathfinding",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "PathfindingBehavior::Acceleration"
-              },
-              "parameters": [
-                "Uranus",
-                "Pathfinding",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "Uranus",
-                "Pathfinding",
-                "no"
               ],
               "subInstructions": []
             }
