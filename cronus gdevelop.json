@@ -1164,7 +1164,7 @@
       "title": "",
       "v": 87,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridB": 255,
         "gridG": 180,
         "gridHeight": 50,
@@ -1173,9 +1173,9 @@
         "gridR": 158,
         "gridType": "rectangular",
         "gridWidth": 50,
-        "snap": true,
+        "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.6154000000000004
+        "zoomFactor": 0.5896000000000003
       },
       "objectsGroups": [
         {
@@ -1340,8 +1340,8 @@
           "name": "Cronus",
           "persistentUuid": "7fcf99dd-8bed-45d8-b605-c019490b1e15",
           "width": 37,
-          "x": 181,
-          "y": 503,
+          "x": 200,
+          "y": 500,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -1402,138 +1402,10 @@
           "layer": "",
           "locked": false,
           "name": "StoneBlock",
-          "persistentUuid": "9d8cad49-352c-4f84-9ed5-4d5f7e1f9503",
-          "width": 0,
-          "x": 131,
-          "y": 77,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "173d9ea3-e00d-45eb-af55-4f27db3e5ad8",
-          "width": 0,
-          "x": 195.10256958007812,
-          "y": 247.94017028808594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7bcdd5d7-bc71-44c5-8863-3c42e3cf3d2f",
-          "width": 0,
-          "x": 22.0256404876709,
-          "y": 288.5384521484375,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "09e00df6-a641-474f-b5d1-a239059aed8e",
-          "width": 0,
-          "x": 582,
-          "y": 430,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "e0619590-c09d-4aef-933f-a2fce3083755",
-          "width": 0,
-          "x": 648,
-          "y": 75,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "48cb3461-e507-4041-b820-f88979945ace",
-          "width": 0,
-          "x": 328,
-          "y": 94,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
           "persistentUuid": "cf09262b-f468-442f-96f8-56331754a552",
           "width": 0,
-          "x": 52,
-          "y": 541,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "4e42b488-593d-4de1-a65c-433ad67ea484",
-          "width": 0,
-          "x": 222,
-          "y": 494,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "32f5712b-c8f5-4922-8cb1-c4a021b1f1ea",
-          "width": 0,
-          "x": 687,
-          "y": 496,
+          "x": 50,
+          "y": 550,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -1562,614 +1434,6 @@
           "layer": "",
           "locked": false,
           "name": "StoneBlock",
-          "persistentUuid": "79841852-1932-44bc-9be5-5e2f1173caac",
-          "width": 0,
-          "x": 903.2271728515625,
-          "y": 355.3714904785156,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7b3b311f-eb06-4178-bfe2-b9568f737067",
-          "width": 0,
-          "x": 1029.2271728515625,
-          "y": 531.3715209960938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "a0ae4a0b-d61b-4ee7-8a97-6fcd4a316743",
-          "width": 0,
-          "x": 1040.2271728515625,
-          "y": 407.3714904785156,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7ac0728f-8f5d-4b73-8db8-a7e00b4aa973",
-          "width": 0,
-          "x": 1134.2271728515625,
-          "y": 597.3715209960938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0300d3c3-bc90-4fb3-9781-e63ea57462e1",
-          "width": 0,
-          "x": 1163,
-          "y": -172,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "e0305172-9fba-4abc-8754-4ae3f9fcefd9",
-          "width": 0,
-          "x": 1289,
-          "y": 4,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "9eb96abc-8852-4951-be2d-3e98c686912a",
-          "width": 0,
-          "x": 1300,
-          "y": -120,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "242d23e4-a272-41f4-94ad-3357eb18545a",
-          "width": 0,
-          "x": 1394,
-          "y": 70,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "593d3245-174b-4ef0-aabe-d181259fd526",
-          "width": 0,
-          "x": 1019.8873291015625,
-          "y": -130.2587890625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "e177d57a-f920-495c-a317-fb1b31643c47",
-          "width": 0,
-          "x": 1145.8873291015625,
-          "y": 45.74120330810547,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "80618c78-f4ea-470a-a1a4-774e5e82181a",
-          "width": 0,
-          "x": 1156.8873291015625,
-          "y": -78.25879669189453,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "91d1ba78-585b-42fa-91e3-d3dada712761",
-          "width": 0,
-          "x": 1250.8873291015625,
-          "y": 111.74120330810547,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "85a5c355-4930-4eb3-8bf8-f9352b835ad7",
-          "width": 0,
-          "x": -223.404296875,
-          "y": -34.85032653808594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "ab5577ff-b3eb-437a-abbe-f2385bac13ef",
-          "width": 0,
-          "x": -97.404296875,
-          "y": 141.14967346191406,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "90cb3a3b-b88f-444f-8133-67180f1b5906",
-          "width": 0,
-          "x": -86.404296875,
-          "y": 17.14967155456543,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "177249e3-2b3f-4f97-ba58-d678435ce586",
-          "width": 0,
-          "x": 7.595706462860107,
-          "y": 207.14967346191406,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "6605404a-1c7d-4d55-9efa-941422c6453c",
-          "width": 0,
-          "x": -366.5169677734375,
-          "y": 6.890882968902588,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "6f0d03d3-5b1d-4233-86e5-57bac0ccd74d",
-          "width": 0,
-          "x": -240.5169677734375,
-          "y": 182.890869140625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0ba39dfe-1ca6-4ea4-905d-b043ffb1d43d",
-          "width": 0,
-          "x": -229.5169677734375,
-          "y": 58.89087677001953,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "10895dd8-67ee-40e3-ac38-8a3bf05f3a9f",
-          "width": 0,
-          "x": -135.5169677734375,
-          "y": 248.890869140625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "8a954660-0aa7-485f-8f92-9cc43fa6c509",
-          "width": 0,
-          "x": -306.8866882324219,
-          "y": 603.1937866210938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "89977e5a-70d1-4264-818a-bb556042275f",
-          "width": 0,
-          "x": -180.88670349121094,
-          "y": 779.1937866210938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "bab43603-82ac-4a35-948a-2c83b71bfda7",
-          "width": 0,
-          "x": -169.88670349121094,
-          "y": 655.1937866210938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "f170d79b-dcaf-4d3e-a246-d11e392a3e4a",
-          "width": 0,
-          "x": -75.88670349121094,
-          "y": 845.1937866210938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "c28a2a10-2e11-48b3-81c9-ae0dbe0ab525",
-          "width": 0,
-          "x": -323.9993591308594,
-          "y": 820.9349975585938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7da706fb-59ac-4686-a097-eec94c3496ff",
-          "width": 0,
-          "x": -312.9993591308594,
-          "y": 696.9349975585938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0683c344-0d13-4397-86ea-34945905b7c9",
-          "width": 0,
-          "x": -218.99937438964844,
-          "y": 886.9349975585938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "2a78afcf-27da-4d9e-80fc-fd5845160c1b",
-          "width": 0,
-          "x": 521.974365234375,
-          "y": 680.7131958007812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "c32496e4-c70b-4c9c-9997-b226e6d9ea46",
-          "width": 0,
-          "x": 647.974365234375,
-          "y": 856.7131958007812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "aff2e1a1-459d-46e7-8d0b-5b03bf642791",
-          "width": 0,
-          "x": 658.974365234375,
-          "y": 732.7131958007812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "8d1201e1-6885-4c3b-bcf0-bf18dce0ff47",
-          "width": 0,
-          "x": 752.974365234375,
-          "y": 922.7131958007812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "589489bd-d1c5-47cf-b1b7-6c559849bc7c",
-          "width": 0,
-          "x": 378.8616943359375,
-          "y": 722.4544067382812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "bb8f9ec6-b5f0-4c8b-ab0d-413b9ec531b1",
-          "width": 0,
-          "x": 504.8616943359375,
-          "y": 898.4544067382812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "59af8792-ecbe-4c02-9815-55042f7cc303",
-          "width": 0,
-          "x": 515.8616943359375,
-          "y": 774.4544067382812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "9d7ffeb8-b8cd-459a-96ae-da06c0c2ccf1",
-          "width": 0,
-          "x": 609.8616943359375,
-          "y": 964.4544067382812,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "65da415b-632d-4131-b3e4-c188164aa7fb",
-          "width": 0,
-          "x": 1255.427001953125,
-          "y": 659.8425903320312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "f7732925-c16d-4295-92f2-ed5a3d098802",
-          "width": 0,
-          "x": 1381.427001953125,
-          "y": 835.8425903320312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "92b94191-e39e-4975-996b-d115874d33f3",
-          "width": 0,
-          "x": 1392.427001953125,
-          "y": 711.8425903320312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
           "persistentUuid": "0b19ffe3-d3d9-4784-9618-749244227906",
           "width": 0,
           "x": 1486.427001953125,
@@ -2186,538 +1450,10 @@
           "layer": "",
           "locked": false,
           "name": "StoneBlock",
-          "persistentUuid": "0e41dc0b-0073-47b2-a7b3-e0272619bd8e",
-          "width": 0,
-          "x": 1112.3143310546875,
-          "y": 701.5838012695312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "ff1c0115-28ac-4b36-96c7-4b7b63210c79",
-          "width": 0,
-          "x": 1238.3143310546875,
-          "y": 877.5838012695312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "5e5e665c-915f-45fd-b0a3-063df8d1c411",
-          "width": 0,
-          "x": 1249.3143310546875,
-          "y": 753.5838012695312,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0febe00e-beb6-4d6c-b461-73ba1179af51",
-          "width": 0,
-          "x": 352.02801513671875,
-          "y": -303.1866455078125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "443f54f6-e4e2-42ac-8f22-edee32ebe920",
-          "width": 0,
-          "x": 478.02801513671875,
-          "y": -127.1866455078125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "934e87f0-8e4c-49d9-ae97-d5164a1be801",
-          "width": 0,
-          "x": 489.02801513671875,
-          "y": -251.1866455078125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7fe53fc5-f4eb-4809-bc7d-07262f34ae5c",
-          "width": 0,
-          "x": 583.0280151367188,
-          "y": -61.186641693115234,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0ddef234-2582-4e63-93ed-7c748efe6610",
-          "width": 0,
-          "x": 208.9153594970703,
-          "y": -261.4454345703125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "753a3528-c5bc-48ad-bf33-a1c73b32f2c1",
-          "width": 0,
-          "x": 334.91534423828125,
-          "y": -85.44544219970703,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "eb6d6a64-73e6-4dac-963e-f70272df3c8b",
-          "width": 0,
-          "x": 345.91534423828125,
-          "y": -209.4454345703125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "719f55a5-6894-4221-b6df-ae29409e2250",
-          "width": 0,
-          "x": 439.91534423828125,
-          "y": -19.4454402923584,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "d2c601a5-4c6e-46b5-9852-6f5621b83542",
-          "width": 0,
-          "x": -22.86642837524414,
-          "y": -177.8723907470703,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "d94520b4-e0d2-464c-a0b3-27cad1e90b17",
-          "width": 0,
-          "x": -11.86642837524414,
-          "y": -301.8724060058594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "24727425-895f-4f90-bb60-783ff86cd83b",
-          "width": 0,
-          "x": 82.13357543945312,
-          "y": -111.87239074707031,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "17fb0a39-c507-4487-a6a6-3a9c44196898",
-          "width": 0,
-          "x": -291.9790954589844,
-          "y": -312.1311950683594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "a31c2265-825a-4b3a-a8ba-723e846fa8aa",
-          "width": 0,
-          "x": -165.97909545898438,
-          "y": -136.13119506835938,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "06b61736-832b-4aaf-9a91-3aa71503f02a",
-          "width": 0,
-          "x": -154.97909545898438,
-          "y": -260.1311950683594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "30bacbce-2d3f-4089-aac3-5c2e27c6a204",
-          "width": 0,
-          "x": -60.97909927368164,
-          "y": -70.13118743896484,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "3ad001fc-a3ee-4149-9868-f69164a4904a",
-          "width": 0,
-          "x": 772.4215698242188,
-          "y": -148.14788818359375,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "092670fc-1144-49a1-a03e-f7bc7743017e",
-          "width": 0,
-          "x": 898.4215698242188,
-          "y": 27.85211753845215,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "54c36685-d2fe-443e-a009-783f7a54e9ab",
-          "width": 0,
-          "x": 909.4215698242188,
-          "y": -96.14788055419922,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "eb4a0f70-b0c2-4d99-96f1-49db0ff73546",
-          "width": 0,
-          "x": 1003.4215698242188,
-          "y": 93.85211944580078,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7726ce87-eaea-4799-a787-1df87bc28478",
-          "width": 0,
-          "x": 629.3088989257812,
-          "y": -106.40666961669922,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "b7e9d776-0fc1-499a-9c05-5bead55f87b4",
-          "width": 0,
-          "x": 755.3088989257812,
-          "y": 69.59332275390625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "537fea8e-d047-4960-afd9-d97d2f367e45",
-          "width": 0,
-          "x": 766.3088989257812,
-          "y": -54.406681060791016,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "f5d95205-bb2a-4ef0-9cff-5a14d3f3bf8f",
-          "width": 0,
-          "x": 860.3088989257812,
-          "y": 135.59332275390625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7b88160c-d4a1-4c8f-bf96-b0bc0d7a3e5c",
-          "width": 0,
-          "x": 1282.2606201171875,
-          "y": 242.43052673339844,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "fc4feb46-3dc4-4dcd-ae0c-7a62b264138d",
-          "width": 0,
-          "x": 1408.2606201171875,
-          "y": 418.4305419921875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "9b6361aa-e050-4f7e-9d28-6447451ca766",
-          "width": 0,
-          "x": 1419.2606201171875,
-          "y": 294.4305419921875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
           "persistentUuid": "4e62df84-5cc9-4aa3-bb8b-c01b05a3d01a",
           "width": 0,
           "x": 1513.2606201171875,
           "y": 484.4305419921875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "687a30cd-49f6-400f-a71b-fca79d7f1795",
-          "width": 0,
-          "x": 1139.14794921875,
-          "y": 284.1717529296875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "1023d3da-3b4e-4f22-8d3c-015f4e55c0d1",
-          "width": 0,
-          "x": 1265.14794921875,
-          "y": 460.1717224121094,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "1aa8245c-d8bb-4d14-87f3-ee2cb60c2cd2",
-          "width": 0,
-          "x": 1276.14794921875,
-          "y": 336.1717224121094,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "24e34a61-07f5-44b2-9f84-da0e09383661",
-          "width": 0,
-          "x": 1370.14794921875,
-          "y": 526.1717529296875,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -2778,250 +1514,10 @@
           "layer": "",
           "locked": false,
           "name": "StoneBlock",
-          "persistentUuid": "495a2dc7-8ec1-48be-8787-13b076c05049",
-          "width": 0,
-          "x": 398,
-          "y": 288,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "42dd03cd-89ee-41e7-8637-07ea48a16511",
-          "width": 0,
-          "x": 1003.0910034179688,
-          "y": 640.9041748046875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "1b08f31b-a4c7-4439-bf34-0d51443c477e",
-          "width": 0,
-          "x": 901.1492919921875,
-          "y": 747.7003173828125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "56f965d2-d270-47df-a928-f2a03b734ebb",
-          "width": 0,
-          "x": 1032.21728515625,
-          "y": 842.3604736328125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "42e29c07-0ec2-4022-861f-806252e7eaab",
-          "width": 0,
-          "x": 723.96484375,
-          "y": 592.3604736328125,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "b4147860-4748-48d3-82b6-1c50d1d115e9",
-          "width": 0,
-          "x": 461.8288879394531,
-          "y": 541.3896484375,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "4361e879-2102-4daa-b4b1-5952c00411cf",
-          "width": 0,
-          "x": 512.7997436523438,
-          "y": 468.5740966796875,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "f5629de2-a321-433d-b3ca-fd40c5ac622e",
-          "width": 0,
-          "x": 335.61529541015625,
-          "y": 606.923583984375,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "f084a923-575d-415b-95f8-ea9516d5f61d",
-          "width": 0,
-          "x": 180.27549743652344,
-          "y": 706.4381713867188,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "44b6ceb6-ab88-401e-bb9c-a28de252d3f6",
-          "width": 0,
-          "x": 357.4599609375,
-          "y": 820.515869140625,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0ca1d1a7-a1e7-4c02-9b79-91d1309ae6f5",
-          "width": 0,
-          "x": 64,
-          "y": 594,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "173fd326-e2a6-4be0-b395-8c43ec368f4b",
-          "width": 0,
-          "x": 52,
-          "y": 740,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "ebbd136c-4b64-4b87-ae66-13e9a1887b26",
-          "width": 0,
-          "x": 116,
-          "y": 595,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "7e298b33-2d12-4811-8e76-cf98295492c1",
-          "width": 0,
-          "x": 166,
-          "y": 547,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "284756f8-7313-4a68-a3f7-c8471960822f",
-          "width": 0,
-          "x": 162,
-          "y": 596,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
           "persistentUuid": "a98245ce-25f1-4d92-bd5a-bb5e733bbace",
           "width": 0,
-          "x": 222,
-          "y": 547,
+          "x": 150,
+          "y": 550,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -3039,6 +1535,86 @@
           "x": -1671,
           "y": -1229,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "StoneBlock",
+          "persistentUuid": "7a81446b-e982-444c-9fde-b3a3ec2b36d2",
+          "width": 0,
+          "x": 352.130126953125,
+          "y": 296.749755859375,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "StoneBlock",
+          "persistentUuid": "458a139e-0227-46ad-b523-07ebe3654fdb",
+          "width": 0,
+          "x": 101.8798828125,
+          "y": 146.59959411621094,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "StoneBlock",
+          "persistentUuid": "b789f340-09a8-4945-9738-e989a7d2a70c",
+          "width": 0,
+          "x": 600,
+          "y": 350,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "CronusHealth",
+          "persistentUuid": "8b601b87-f536-4a2e-b1c0-6da6386bb0a0",
+          "width": 0,
+          "x": 43,
+          "y": 18,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "UranusHealth",
+          "persistentUuid": "54eb38f0-c55d-448d-a162-b5baefebd4fb",
+          "width": 0,
+          "x": 621,
+          "y": 16,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3210,7 +1786,7 @@
               "name": "Health",
               "type": "Health::Health",
               "Health": 100,
-              "DamageCooldown": 0.25,
+              "DamageCooldown": 0.4,
               "MaxHealth": 100,
               "IsJustDamaged": false,
               "CooldownActive": false
@@ -3440,13 +2016,13 @@
             },
             {
               "name": "Moving",
-              "type": "string",
-              "value": "0"
+              "type": "number",
+              "value": 0
             },
             {
               "name": "Attacking",
-              "type": "string",
-              "value": "0"
+              "type": "number",
+              "value": 0
             }
           ],
           "behaviors": [
@@ -3463,7 +2039,7 @@
               "name": "Health",
               "type": "Health::Health",
               "Health": 100,
-              "DamageCooldown": 0.25,
+              "DamageCooldown": 0.4,
               "MaxHealth": 100,
               "IsJustDamaged": false,
               "CooldownActive": false
@@ -3493,7 +2069,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3510,7 +2105,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3527,7 +2141,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3544,7 +2177,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3573,7 +2225,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3590,7 +2261,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3607,7 +2297,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3624,7 +2333,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3641,7 +2369,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3658,7 +2405,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3687,7 +2453,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3704,7 +2489,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3721,94 +2525,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Falling Touch Ground",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.02500000037252903,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Mr. Man_Falling Touch Ground.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Falling",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.02500000037252903,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Mr. Man_Falling.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Flying Kick",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.02500000037252903,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Mr. Man_Flying Kick.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3837,7 +2573,170 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Falling Touch Ground",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Mr. Man_Falling Touch Ground.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Falling",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Mr. Man_Falling.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Flying Kick",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Mr. Man_Flying Kick.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3866,7 +2765,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -3895,7 +2813,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3912,7 +2849,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3929,7 +2885,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3946,7 +2921,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3963,7 +2957,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     },
                     {
                       "hasCustomCollisionMask": false,
@@ -3980,7 +2993,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -4009,7 +3041,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 0
+                          },
+                          {
+                            "x": 24,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 24
+                          },
+                          {
+                            "x": 0,
+                            "y": 0
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -4981,6 +4032,64 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "CronusHealth",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 0,
+              "leftEdgeAnchor": 1,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 0,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior"
+            }
+          ],
+          "string": "Cronus:",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "UranusHealth",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 0,
+              "leftEdgeAnchor": 0,
+              "name": "Anchor",
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 2,
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior"
+            }
+          ],
+          "string": "Uranus:",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -5066,6 +4175,19 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Name",
+                    "=",
+                    "\"Cronus\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "SetSceneVariableAsBoolean"
                   },
                   "parameters": [
@@ -5097,41 +4219,32 @@
           "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "name": "Collision",
+          "name": "AI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
-          "events": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "Uranus"
+            }
+          ],
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Uranus"
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjetTxt"
-              },
-              "parameters": [
-                "Uranus",
-                "State",
-                "=",
-                "\"attack\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
+          "name": "Dialog Show/Hide",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "disabled": false,
@@ -5141,359 +4254,24 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Cronus",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Health::Health::IsDead"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Health",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Health::Health::Hit"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Health",
-                    "20",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Flash::Flash::Flash"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Flash",
-                    "0.66",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Gaia",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Health::Health::IsDead"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "Health",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Health::Health::Hit"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "Health",
-                    "20",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Flash::Flash::Flash"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "Flash",
-                    "0.66",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Health::Health::IsDead"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "Health",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Animation"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "!=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "Cronus",
-                "Health",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Attacking",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Flash::Flash::IsFlashing"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Flash",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Uranus",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Health::Health::Hit"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Health",
-                    "25",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Collides",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SeparateFromObjects"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Collides",
-                    "no"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Scythe",
-                    "",
-                    "",
-                    "yes"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Scythe",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
+                    "value": "VarSceneTxt"
                   },
                   "parameters": [
                     "DialogText",
                     "=",
-                    "\"Cronus picks up the scythe...\""
+                    "\"\""
                   ],
                   "subInstructions": []
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Create"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "",
-                    "ScytheWeapon",
-                    "Cronus.X()",
-                    "Cronus.Y()",
-                    ""
+                    "DialogGroup"
                   ],
                   "subInstructions": []
                 },
@@ -5503,8 +4281,32 @@
                     "value": "SetSceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "ScytheCollected",
-                    "True"
+                    "BlockInput",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogSpeaker",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "DialogBlockTime",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -5519,11 +4321,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SceneVariableAsBoolean"
+                    "value": "VarSceneTxt"
                   },
                   "parameters": [
-                    "BlockInput",
-                    "True"
+                    "DialogText",
+                    "!=",
+                    "\"\""
                   ],
                   "subInstructions": []
                 }
@@ -5534,7 +4337,75 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "DialogBlockTime",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "DialogText",
+                        "=",
+                        "VariableString(DialogText)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BlockInput",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "DialogGroup",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BlockInput",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -5553,7 +4424,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "colorB": 228,
@@ -5566,6 +4438,39 @@
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BlockInput",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
             {
               "disabled": false,
               "folded": false,
@@ -5605,79 +4510,10 @@
                     "Space"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
                 }
               ],
               "actions": [],
               "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Cancel Dialog",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "DialogText",
-                        "!=",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "DialogBlockTime",
-                        ">",
-                        "250"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarSceneTxt"
-                      },
-                      "parameters": [
-                        "DialogText",
-                        "=",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -5701,19 +4537,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "Speakers",
-                        "Cronus",
-                        "Cronus.Width() + Speakers.Width()/2",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "VarObjetTxt"
                       },
                       "parameters": [
@@ -5732,6 +4555,19 @@
                       "parameters": [
                         "BlockInput",
                         "False"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Speakers",
+                        "Cronus",
+                        "Cronus.Width() + Speakers.Width()/2",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -5835,106 +4671,22 @@
                       "events": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Dialog Show/Hide",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "DialogGroup"
-                  ],
-                  "subInstructions": []
                 },
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [
-                    "BlockInput",
-                    "False"
-                  ],
-                  "subInstructions": []
+                  "comment": "Cancel Dialog",
+                  "comment2": ""
                 },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogSpeaker",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "!=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
                 {
                   "disabled": false,
                   "folded": false,
@@ -5943,12 +4695,24 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "DialogText",
+                        "!=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "VarScene"
                       },
                       "parameters": [
                         "DialogBlockTime",
-                        "=",
-                        "0"
+                        ">",
+                        "250"
                       ],
                       "subInstructions": []
                     }
@@ -5957,34 +4721,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "TextObject::String"
+                        "value": "ModVarSceneTxt"
                       },
                       "parameters": [
                         "DialogText",
                         "=",
-                        "VariableString(DialogText)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "BlockInput",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "DialogGroup",
-                        ""
+                        "\"\""
                       ],
                       "subInstructions": []
                     }
@@ -6084,6 +4826,392 @@
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Collision",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Attacking",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Flash::Flash::IsFlashing"
+                      },
+                      "parameters": [
+                        "Uranus",
+                        "Flash",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Uranus",
+                        "100",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "Uranus",
+                        "Health",
+                        "25",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Scythe",
+                        "",
+                        "",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Scythe",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "DialogText",
+                        "=",
+                        "\"Cronus picks up the scythe...\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ScytheCollected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "State",
+                    "=",
+                    "\"attack\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Health::Health::IsDead"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Health",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Uranus",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Health",
+                        "20",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Flash",
+                        "2",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Health::Health::IsDead"
+                      },
+                      "parameters": [
+                        "Gaia",
+                        "Health",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Gaia",
+                        "Uranus",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "Gaia",
+                        "Health",
+                        "20",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "Gaia",
+                        "Flash",
+                        "2",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Collides",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Collides",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Collides",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Collides",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
@@ -6106,56 +5234,22 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SceneVariableAsBoolean"
+                "value": "Health::Health::IsDead"
               },
               "parameters": [
-                "ScytheCollected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreAutour"
-              },
-              "parameters": [
-                "ScytheWeapon",
-                "Cronus",
-                "Cronus.Width()",
-                "2 * TimeFromStart() * 180"
+                "Uranus",
+                "Health",
+                ""
               ],
               "subInstructions": []
             },
             {
               "type": {
-                "inverted": false,
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "ScytheWeapon",
-                "=",
-                "AngleBetweenPositions(ScytheWeapon.X(), ScytheWeapon.Y(),Cronus.X(), Cronus.Y()) + 270"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
+                "inverted": true,
                 "value": "Health::Health::IsDead"
               },
               "parameters": [
-                "Uranus",
+                "Gaia",
                 "Health",
                 ""
               ],
@@ -6186,6 +5280,109 @@
                 "DefaultMessage",
                 "=",
                 "\"You've removed his power, and will usher in a new age...\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Gaia",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Animation"
+              },
+              "parameters": [
+                "Gaia",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Gaia",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "DEBUG",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "UranusHealth",
+                "=",
+                "\"Uranus: \" + ToString(Uranus.Health::PropertyHealth())"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "CronusHealth",
+                "=",
+                "\"Cronus: \" + ToString(Cronus.Health::PropertyHealth())"
               ],
               "subInstructions": []
             }
@@ -6371,7 +5568,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6384,35 +5581,9 @@
                 "False"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "Cronus",
-                "Attacking",
-                "!=",
-                "1"
-              ],
-              "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "DialogBlockTime",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,
@@ -6573,7 +5744,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6717,7 +5888,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6989,7 +6160,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7245,6 +6416,78 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Cronus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Animation"
+              },
+              "parameters": [
+                "Cronus",
+                "!=",
+                "3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Cronus",
+                "=",
+                "3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ]
     },
@@ -7316,56 +6559,28 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Damage and Death",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "Health::Health::IsJustDamaged"
+                "value": "VarObjetTxt"
               },
               "parameters": [
                 "Uranus",
-                "Health",
-                ""
+                "State",
+                "=",
+                "\"attack\""
               ],
               "subInstructions": []
             },
             {
               "type": {
-                "inverted": true,
-                "value": "Flash::Flash::IsFlashing"
+                "inverted": false,
+                "value": "AnimationEnded"
               },
               "parameters": [
-                "Uranus",
-                "Flash",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "Uranus",
-                "Health",
-                ""
+                "Uranus"
               ],
               "subInstructions": []
             }
@@ -7374,106 +6589,18 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Flash::Flash::Flash"
+                "value": "ModVarObjetTxt"
               },
               "parameters": [
                 "Uranus",
-                "Flash",
-                "0.66",
-                ""
+                "State",
+                "=",
+                "\"seek\""
               ],
               "subInstructions": []
             }
           ],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Health::Health::IsDead"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Health",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjetTxt"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "State",
-                    "=",
-                    "\"dead\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "=",
-                    "3"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjetTxt"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "TargetName",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    "no"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Seeking behavior",
-          "comment2": ""
+          "events": []
         },
         {
           "disabled": false,
@@ -7521,6 +6648,180 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Damage and Death",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsJustDamaged"
+              },
+              "parameters": [
+                "Uranus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Uranus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Flash::Flash::Flash"
+              },
+              "parameters": [
+                "Uranus",
+                "Flash",
+                "2",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Uranus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"dead\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Uranus",
+                "=",
+                "3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "TargetName",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PathfindingBehavior::MaxSpeed"
+              },
+              "parameters": [
+                "Uranus",
+                "Pathfinding",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Uranus",
+                "Pathfinding",
+                "no"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Flash::Flash::Stop"
+              },
+              "parameters": [
+                "Uranus",
+                "Flash",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Seeking behavior",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -7703,14 +7004,6 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -7769,55 +7062,6 @@
                   },
                   "parameters": [
                     "Uranus",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Collides",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SeparateFromObjects"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Collides",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PathfindingBehavior::Speed"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
                     "=",
                     "0"
                   ],
@@ -7948,7 +7192,7 @@
                       "parameters": [
                         "Uranus",
                         "Targets",
-                        "Uranus.Width() * 0.75",
+                        "Uranus.Width() - RandomInRange(0, Uranus.Width())",
                         ""
                       ],
                       "subInstructions": []
@@ -7986,67 +7230,6 @@
               ]
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Attacking",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjetTxt"
-              },
-              "parameters": [
-                "Uranus",
-                "State",
-                "=",
-                "\"attack\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "AnimationEnded"
-              },
-              "parameters": [
-                "Uranus"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "Uranus",
-                "State",
-                "=",
-                "\"seek\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         },
         {
           "disabled": false,
@@ -10080,7 +9263,19 @@
         "heal"
       ],
       "dependencies": [],
-      "eventsFunctions": [],
+      "eventsFunctions": [
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Expression",
+          "name": "Function",
+          "private": false,
+          "sentence": "",
+          "events": [],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
       "eventsBasedBehaviors": [
         {
           "description": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
