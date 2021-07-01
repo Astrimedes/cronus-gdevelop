@@ -6445,22 +6445,7 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "ScytheWeapon",
-                        "Cronus.X()",
-                        "Cronus.Y()",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": []
                 },
                 {
