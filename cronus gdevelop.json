@@ -1184,7 +1184,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.5028000000000014
+        "zoomFactor": 0.6828000000000014
       },
       "objectsGroups": [
         {
@@ -1310,38 +1310,6 @@
           "x": 122,
           "y": 502,
           "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 197,
-          "layer": "Dialog",
-          "locked": true,
-          "name": "Dialog",
-          "persistentUuid": "270c700c-f764-49e4-a4c0-05f1ff36cf11",
-          "width": 646,
-          "x": 78,
-          "y": 216,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 87,
-          "layer": "Dialog",
-          "locked": true,
-          "name": "DialogText",
-          "persistentUuid": "d6ca7b64-7243-4e11-9ee8-9f6c81031fa6",
-          "width": 604,
-          "x": 99,
-          "y": 251,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4439,7 +4407,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Dialog Show/Hide",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4553,23 +4521,36 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "TextObject::String"
+                        "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
-                        "DialogText",
-                        "=",
-                        "VariableString(DialogText)"
+                        "BlockInput",
+                        "True"
                       ],
                       "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
+                        "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
                       },
                       "parameters": [
-                        "BlockInput",
-                        "True"
+                        "",
+                        "\"DialogLayout\"",
+                        "0",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "DialogText",
+                        "=",
+                        "VariableString(DialogText)"
                       ],
                       "subInstructions": []
                     },
@@ -4621,6 +4602,14 @@
                   "events": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
             }
           ],
           "parameters": []
@@ -4718,7 +4707,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Collision",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5099,7 +5088,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Input",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6194,7 +6183,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11680,6 +11669,59 @@
       ]
     }
   ],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "associatedLayout": "Level 1",
+      "name": "DialogLayout",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 197,
+          "layer": "Dialog",
+          "locked": false,
+          "name": "Dialog",
+          "persistentUuid": "b3810ffc-f7a4-46c2-8243-d2f9f53064f8",
+          "width": 646,
+          "x": 43,
+          "y": 198,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 132,
+          "layer": "Dialog",
+          "locked": false,
+          "name": "DialogText",
+          "persistentUuid": "3c295f4e-5d41-4fe1-9309-484d4d1b2634",
+          "width": 604,
+          "x": 63,
+          "y": 236,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.5799999999999996
+      }
+    }
+  ],
   "externalSourceFiles": []
 }
