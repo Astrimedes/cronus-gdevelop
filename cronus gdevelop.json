@@ -1247,7 +1247,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.5228000000000013
+        "zoomFactor": 0.40280000000000127
       },
       "objectsGroups": [
         {
@@ -5139,16 +5139,35 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "CollisionNP"
+                            "value": "BuiltinCommonInstructions::And"
                           },
-                          "parameters": [
-                            "AttackHit",
-                            "Uranus",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "AttackHit",
+                                "Uranus",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Visible"
+                              },
+                              "parameters": [
+                                "AttackHit"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -5921,6 +5940,55 @@
                 "GaiaCorpse",
                 "=",
                 "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Gaia",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Distance"
+              },
+              "parameters": [
+                "Cronus",
+                "Gaia",
+                "Gaia.Width() * 2",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "Gaia",
+                "Cronus.X()",
+                "Cronus.Y()",
+                "360",
+                ""
               ],
               "subInstructions": []
             }
@@ -7390,6 +7458,19 @@
                 "3"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -7417,12 +7498,34 @@
             {
               "type": {
                 "inverted": false,
-                "value": "AnimationEnded"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "AttackHit"
-              ],
-              "subInstructions": []
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationEnded"
+                  },
+                  "parameters": [
+                    "AttackHit"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Attacking",
+                    "!=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -7714,6 +7817,14 @@
                 "Health",
                 ""
               ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
               "subInstructions": []
             }
           ],
@@ -8097,6 +8208,19 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::Speed"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Pathfinding",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -8359,7 +8483,7 @@
                         "Uranus",
                         "AttackDelay",
                         "=",
-                        "1400"
+                        "RandomFloatInRange(1250, 1750)"
                       ],
                       "subInstructions": []
                     }
