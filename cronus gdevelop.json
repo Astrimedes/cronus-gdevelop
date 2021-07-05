@@ -1247,7 +1247,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.40280000000000127
+        "zoomFactor": 0.9628000000000018
       },
       "objectsGroups": [
         {
@@ -1323,7 +1323,7 @@
           "name": "AttackGroup",
           "objects": [
             {
-              "name": "AttackHit"
+              "name": "CronusAttack"
             }
           ]
         }
@@ -1358,6 +1358,16 @@
           "name": "ScytheCollected",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "Debug",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Temp",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -1407,7 +1417,13 @@
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "MoveSpeed",
+              "type": "string",
+              "value": "180"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -1789,22 +1805,6 @@
           "x": 700,
           "y": 500,
           "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "UranusAtkDelayDsp",
-          "persistentUuid": "eed4c196-53ba-47f8-a7b9-f793cbd7e9e9",
-          "width": 0,
-          "x": -964,
-          "y": -262,
-          "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2712,7 +2712,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.16699999570846558,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4439,25 +4439,6 @@
           ]
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "UranusAtkDelayDsp",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Uranus Attack Delay:",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
           "name": "GaiaCorpse",
           "tags": "",
           "type": "Sprite",
@@ -4497,7 +4478,7 @@
           ]
         },
         {
-          "name": "AttackHit",
+          "name": "CronusAttack",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -4510,7 +4491,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.16699999570846558,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -5149,7 +5130,7 @@
                                 "value": "CollisionNP"
                               },
                               "parameters": [
-                                "AttackHit",
+                                "CronusAttack",
                                 "Uranus",
                                 "",
                                 "",
@@ -5163,7 +5144,7 @@
                                 "value": "Visible"
                               },
                               "parameters": [
-                                "AttackHit"
+                                "CronusAttack"
                               ],
                               "subInstructions": []
                             }
@@ -5987,7 +5968,7 @@
                 "Gaia",
                 "Cronus.X()",
                 "Cronus.Y()",
-                "360",
+                "200",
                 ""
               ],
               "subInstructions": []
@@ -6009,6 +5990,189 @@
           },
           "comment": "DEBUG",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RControl"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LControl"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RShift"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LShift"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RAlt"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LAlt"
+                  ],
+                  "subInstructions": []
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Temp",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Temp",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Temp",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -6053,6 +6217,92 @@
           "events": []
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::EnableDebugDraw"
+              },
+              "parameters": [
+                "",
+                "",
+                "no",
+                "no",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::EnableDebugDraw"
+              },
+              "parameters": [
+                "",
+                "no",
+                "no",
+                "no",
+                "no"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -6064,6 +6314,42 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Cronus",
+                "Uranus",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Cronus",
+                "Uranus",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
@@ -6135,6 +6421,14 @@
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ],
@@ -6327,7 +6621,7 @@
               },
               "parameters": [
                 "",
-                "AttackHit",
+                "CronusAttack",
                 "0",
                 "0",
                 ""
@@ -6340,7 +6634,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "AttackHit"
+                "CronusAttack"
               ],
               "subInstructions": []
             }
@@ -7219,7 +7513,7 @@
                     "value": "MettreXY"
                   },
                   "parameters": [
-                    "AttackHit",
+                    "CronusAttack",
                     "=",
                     "Cronus.PointX(\"Attack\")",
                     "=",
@@ -7233,7 +7527,7 @@
                     "value": "ChangeSprite"
                   },
                   "parameters": [
-                    "AttackHit",
+                    "CronusAttack",
                     "=",
                     "0"
                   ],
@@ -7245,7 +7539,7 @@
                     "value": "Montre"
                   },
                   "parameters": [
-                    "AttackHit",
+                    "CronusAttack",
                     ""
                   ],
                   "subInstructions": []
@@ -7256,7 +7550,7 @@
                     "value": "PlayAnimation"
                   },
                   "parameters": [
-                    "AttackHit"
+                    "CronusAttack"
                   ],
                   "subInstructions": []
                 }
@@ -7508,7 +7802,7 @@
                     "value": "AnimationEnded"
                   },
                   "parameters": [
-                    "AttackHit"
+                    "CronusAttack"
                   ],
                   "subInstructions": []
                 },
@@ -7535,7 +7829,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "AttackHit"
+                "CronusAttack"
               ],
               "subInstructions": []
             }
@@ -7565,7 +7859,7 @@
                 "value": "FlipX"
               },
               "parameters": [
-                "AttackHit",
+                "CronusAttack",
                 "yes"
               ],
               "subInstructions": []
@@ -7596,7 +7890,7 @@
                 "value": "FlipX"
               },
               "parameters": [
-                "AttackHit",
+                "CronusAttack",
                 "no"
               ],
               "subInstructions": []
@@ -7616,7 +7910,7 @@
                 "value": "MettreXY"
               },
               "parameters": [
-                "AttackHit",
+                "CronusAttack",
                 "=",
                 "Cronus.PointX(\"Attack\")",
                 "=",
@@ -7927,20 +8221,7 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "UranusAtkDelayDsp",
-                "=",
-                "\"Uranus Attack Delay: \" + ToString(round(Uranus.Variable(AttackDelay)))"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": []
         },
         {
@@ -8612,11 +8893,992 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ]
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "author": "@4ian",
+      "description": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
+      "extensionNamespace": "",
+      "fullName": "Health (life points and damages for objects)",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWhlYXJ0LWhhbGYtZnVsbCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xNi41LDVDMTUsNSAxMy41OCw1LjkxIDEzLDcuMlYxNy43NEMxNy4yNSwxMy44NyAyMCwxMS4yIDIwLDguNUMyMCw2LjUgMTguNSw1IDE2LjUsNU0xNi41LDNDMTkuNTgsMyAyMiw1LjQxIDIyLDguNUMyMiwxMi4yNyAxOC42LDE1LjM2IDEzLjQ1LDIwLjAzTDEyLDIxLjM1TDEwLjU1LDIwLjAzQzUuNCwxNS4zNiAyLDEyLjI3IDIsOC41QzIsNS40MSA0LjQyLDMgNy41LDNDOS4yNCwzIDEwLjkxLDMuODEgMTIsNS4wOEMxMy4wOSwzLjgxIDE0Ljc2LDMgMTYuNSwzWiIgLz48L3N2Zz4=",
+      "name": "Health",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/heart-half-full.svg",
+      "shortDescription": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
+      "version": "0.0.1",
+      "tags": [
+        "health",
+        "life",
+        "damage",
+        "hit",
+        "heal"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
+          "fullName": "Health",
+          "name": "Health",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Add some damage to the object, decreasing its life.",
+              "fullName": "Damage the object",
+              "functionType": "Action",
+              "name": "Hit",
+              "private": false,
+              "sentence": "Damage _PARAM0_, removing _PARAM2_ from its health",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "\"DamageCooldown\"",
+                            "Object.Behavior::PropertyDamageCooldown()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Health::Health::PropertyCooldownActive"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "-",
+                        "GetArgumentAsNumber(\"DamageValue\")"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"DamageCooldown\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyCooldownActive"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyIsJustDamaged"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Value of the damage to do (will be removed from object health)",
+                  "longDescription": "",
+                  "name": "DamageValue",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the object is considered dead (no more health)",
+              "fullName": "Is dead",
+              "functionType": "Condition",
+              "name": "IsDead",
+              "private": false,
+              "sentence": "_PARAM0_ is dead",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::PropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "<=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyIsJustDamaged"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the object was just damaged previously in the events.",
+              "fullName": "Is just damaged",
+              "functionType": "Condition",
+              "name": "IsJustDamaged",
+              "private": false,
+              "sentence": "_PARAM0_ has just been damaged",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::PropertyIsJustDamaged"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Heal the object, incrasing its life.",
+              "fullName": "Heal the object",
+              "functionType": "Action",
+              "name": "Heal",
+              "private": false,
+              "sentence": "Heal _PARAM0_, adding _PARAM2_ to its health",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "+",
+                        "GetArgumentAsNumber(\"HealValue\")"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::PropertyMaxHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "min(Object.Behavior::PropertyHealth(), Object.Behavior::PropertyMaxHealth())"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "How much to heal (will be added to object health)",
+                  "longDescription": "",
+                  "name": "HealValue",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Change the object health to set it to a specific value (check if the actions to damage or heal the object are not better suited to your use case before using this one).",
+              "fullName": "Change object health",
+              "functionType": "Action",
+              "name": "SetHealth",
+              "private": false,
+              "sentence": "Set health of _PARAM0_ to _PARAM2_",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "GetArgumentAsNumber(\"Value\")"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::PropertyMaxHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::SetPropertyHealth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "min(Object.Behavior::PropertyHealth(), Object.Behavior::PropertyMaxHealth())"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "New health value",
+                  "longDescription": "",
+                  "name": "Value",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "expression"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "The health of the object",
+              "fullName": "Health",
+              "functionType": "Expression",
+              "name": "Health",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Object.Behavior::PropertyHealth()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Health::Health",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "100",
+              "type": "Number",
+              "label": "Health",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Health"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Damage cooldown (in seconds) (0 for no cooldown)",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "DamageCooldown"
+            },
+            {
+              "value": "100",
+              "type": "Number",
+              "label": "Maximum health (0 for no maximum)",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "MaxHealth"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "IsJustDamaged"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "CooldownActive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "@4ian",
+      "description": "Provides an action to make the object bounce from another object it just touched. Add a permanent force to the object and, when in collision with another one, use the action to make it bounce realistically.\n\nThis *won't work* with Physics engine or Platformer characters. This is working with objects that are moved using actions or behaviors using **the forces**.",
+      "extensionNamespace": "",
+      "fullName": "Bounce",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXZvbGxleWJhbGwiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIsMkExMCwxMCAwIDAsMSAyMiwxMkExMCwxMCAwIDAsMSAxMiwyMkExMCwxMCAwIDAsMSAyLDEyQTEwLDEwIDAgMCwxIDEyLDJNMTMuNiwyMC4zNUMxNS45NiwxOC4wNCAxNy42OSwxNS4wOCAxOC41LDExLjc2QzE3Ljg0LDExLjYyIDE3LjE4LDExLjU0IDE2LjUsMTEuNUMxNS41NiwxNS4xMSAxMy40MSwxOC4yMiAxMC41LDIwLjM3QzExLDIwLjQ1IDExLjUsMjAuNSAxMiwyMC41QzEyLjU1LDIwLjUgMTMuMDgsMjAuNDUgMTMuNiwyMC4zNU05LjIzLDIwLjA0QzEyLjIzLDE4LjA3IDE0LjUsMTUuMDUgMTUuNDYsMTEuNUMxNC43MSwxMS41NSAxMy45NywxMS42NSAxMy4yNywxMS44MUMxMi4xOCwxNC44OSA5Ljk3LDE3LjQ0IDcuMTMsMTguOTdDNy43NywxOS40MiA4LjUsMTkuNzggOS4yMywyMC4wNE0yMC41LDEyLjM3QzIwLjE2LDEyLjIzIDE5LjgxLDEyLjExIDE5LjQ2LDEyQzE4Ljc2LDE0LjkgMTcuMzksMTcuNTMgMTUuNTQsMTkuNzNDMTguMzYsMTguNDQgMjAuMzUsMTUuNjQgMjAuNSwxMi4zN00zLjU2LDExLjA0QzMuNSwxMS4zNSAzLjUsMTEuNjggMy41LDEyQzMuNSwxNC41IDQuNTcsMTYuNzMgNi4yNywxOC4yOEM2Ljg2LDE4IDcuNDEsMTcuNjYgNy45NCwxNy4yOUM2LjA4LDE1LjU0IDQuNTgsMTMuNDEgMy41NiwxMS4wNE01LjMzLDYuNzRDNC43Myw3LjUgNC4yNiw4LjM1IDMuOTUsOS4yOEM0LjkyLDEyLjEzIDYuNTgsMTQuNjYgOC43NCwxNi42N0M5LjI1LDE2LjI0IDkuNzIsMTUuNzcgMTAuMTUsMTUuMjZDNy43NCwxMy4wMyA2LDEwLjA4IDUuMzMsNi43NE04LjA0LDQuNUM3LjM2LDQuODUgNi43Myw1LjMgNi4xOCw1LjgyQzYuNzEsOS4yMSA4LjM3LDEyLjIzIDEwLjc3LDE0LjQ3QzExLjE3LDEzLjkxIDExLjUsMTMuMzIgMTEuODIsMTIuN0M5LjY4LDEwLjU2IDguMjgsNy42OSA4LjA0LDQuNU0xOS45Niw5LjAzQzE4LjcsOC42OCAxNy4zNyw4LjUgMTYsOC41QzE0LjEsOC41IDEyLjI4LDguODUgMTAuNjEsOS41QzEwLjk2LDEwLjEgMTEuMzUsMTAuNjcgMTEuOCwxMS4yQzEzLjEyLDEwLjc1IDE0LjUzLDEwLjUgMTYsMTAuNUMxNy41NywxMC41IDE5LjA4LDEwLjc4IDIwLjQ3LDExLjI5QzIwLjQsMTAuNSAyMC4yMyw5Ljc0IDE5Ljk2LDkuMDNNMTcuNTQsNS41N0MxNy4wMyw1LjUgMTYuNSw1LjUgMTYsNS41QzEzLjY5LDUuNSAxMS40Nyw1Ljk0IDkuNDQsNi43M0M5LjYyLDcuMzggOS44Niw4IDEwLjE0LDguNjFDMTEuOTYsNy44OSAxMy45Myw3LjUgMTYsNy41QzE3LjE4LDcuNSAxOC4zMiw3LjYzIDE5LjQyLDcuODdDMTguOTMsNyAxOC4yOSw2LjIxIDE3LjU0LDUuNTdNMTYsNC41QzE0Ljc5LDMuODcgMTMuNDQsMy41IDEyLDMuNUMxMC45NSwzLjUgOS45NCwzLjcgOSw0LjA1QzkuMDQsNC42MyA5LjExLDUuMiA5LjIxLDUuNzVDMTEuMzEsNC45NSAxMy42LDQuNSAxNiw0LjVaIiAvPjwvc3ZnPg==",
+      "name": "Bounce",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/volleyball.svg",
+      "shortDescription": "Provides an action to make the object bounce from another object it just touched. Add a permanent force to the object and, when in collision with another one, use the action to make it bounce realistically.",
+      "version": "0.0.1",
+      "tags": [
+        "bounce",
+        "bullet"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Provides an action to make the object bounce from another object it just touched. Add a permanent force to the object and, when in collision with another one, use the action to make it bounce realistically.",
+          "fullName": "Bounce",
+          "name": "Bounce",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Bounce the object off another object it is currently colliding with, according to the angle and the speed of forces applied on the object.\nMake sure to test for a collision between the two objects before launching this action. All the forces will be removed from the object, and a new permanent force will be added to make the object bounce.",
+              "fullName": "Bounce off another object",
+              "functionType": "Action",
+              "name": "BounceOff",
+              "private": false,
+              "sentence": "Bounce _PARAM0_ off _PARAM2_",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "To bounce the object realistically, we first separate it from the obstacle. The collision engine will do it by moving the object through the shortest \"normal vector\" of the edge that was collided.\nWe store the position of the object before being moved so that we know the angle of this \"normal vector\". Once we know it, we add a force in the direction of the normal vector, and we add the difference between the normal vector and the previous angle of movemement.",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Bounce::Bounce::SetPropertyOldX"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Bounce::Bounce::SetPropertyOldY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Y()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Bounce::Bounce::SetPropertyOldForceAngle"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceAngle()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Bounce::Bounce::SetPropertyOldForceLength"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.ForceLength()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SeparateFromObjects"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Obstacle",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldX()"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Object",
+                                "!=",
+                                "Object.Behavior::PropertyOldY()"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Bounce::Bounce::SetPropertyNormalAngle"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "ToDeg(atan2(Object.Y() - Object.Behavior::PropertyOldY(), Object.X() - Object.Behavior::PropertyOldX()))"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Object"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Object.Behavior::PropertyNormalAngle()+AngleDifference(Object.Behavior::PropertyNormalAngle(), Object.Behavior::PropertyOldForceAngle()+180)",
+                            "Object.Behavior::PropertyOldForceLength()",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Bounce::Bounce",
+                  "type": "behavior"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "The objects to bounce on",
+                  "longDescription": "",
+                  "name": "Obstacle",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldX"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldY"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldForceAngle"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "OldForceLength"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "NormalAngle"
+            }
+          ]
+        }
+      ]
+    },
     {
       "author": "westboy, daliyoucefmedakram@gmail.com",
       "description": "Animate the text to simulate it being written character by character (also called \"typewriter\" effect), with a customizable time between each character. Useful for dialogue scenes or visual novels.\n\nAdd the behavior to a Text object (or BBText object) and choose the interval between characters.\n\n* When the text changes, the automatic typing starts again from the beginning with the new text.\n* You can change the speed of the text typing by changing the interval with events.\n* Use a condition to check if the typing finished.\n* You can also pause the typing and resume it after.",
@@ -10500,701 +11762,35 @@
       ]
     },
     {
-      "author": "@4ian",
-      "description": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
+      "author": "",
+      "description": "",
       "extensionNamespace": "",
-      "fullName": "Health (life points and damages for objects)",
+      "fullName": "",
       "helpPath": "",
-      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWhlYXJ0LWhhbGYtZnVsbCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xNi41LDVDMTUsNSAxMy41OCw1LjkxIDEzLDcuMlYxNy43NEMxNy4yNSwxMy44NyAyMCwxMS4yIDIwLDguNUMyMCw2LjUgMTguNSw1IDE2LjUsNU0xNi41LDNDMTkuNTgsMyAyMiw1LjQxIDIyLDguNUMyMiwxMi4yNyAxOC42LDE1LjM2IDEzLjQ1LDIwLjAzTDEyLDIxLjM1TDEwLjU1LDIwLjAzQzUuNCwxNS4zNiAyLDEyLjI3IDIsOC41QzIsNS40MSA0LjQyLDMgNy41LDNDOS4yNCwzIDEwLjkxLDMuODEgMTIsNS4wOEMxMy4wOSwzLjgxIDE0Ljc2LDMgMTYuNSwzWiIgLz48L3N2Zz4=",
-      "name": "Health",
-      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/heart-half-full.svg",
-      "shortDescription": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
-      "version": "0.0.1",
-      "tags": [
-        "health",
-        "life",
-        "damage",
-        "hit",
-        "heal"
-      ],
+      "iconUrl": "",
+      "name": "TopDownAttack",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "tags": [],
       "dependencies": [],
-      "eventsFunctions": [
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
         {
           "description": "",
           "fullName": "",
-          "functionType": "Expression",
-          "name": "Function",
-          "private": false,
-          "sentence": "",
-          "events": [],
-          "parameters": [],
-          "objectGroups": []
-        }
-      ],
-      "eventsBasedBehaviors": [
-        {
-          "description": "Add actions and conditions to manage the life of the object. Object can get damages, lose some health and you can check with a condition if it's dead.",
-          "fullName": "Health",
-          "name": "Health",
+          "name": "MyBehavior",
           "objectType": "",
-          "eventsFunctions": [
-            {
-              "description": "Add some damage to the object, decreasing its life.",
-              "fullName": "Damage the object",
-              "functionType": "Action",
-              "name": "Hit",
-              "private": false,
-              "sentence": "Damage _PARAM0_, removing _PARAM2_ from its health",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ObjectTimer"
-                          },
-                          "parameters": [
-                            "Object",
-                            "\"DamageCooldown\"",
-                            "Object.Behavior::PropertyDamageCooldown()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "Health::Health::PropertyCooldownActive"
-                          },
-                          "parameters": [
-                            "Object",
-                            "Behavior"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "-",
-                        "GetArgumentAsNumber(\"DamageValue\")"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "Object",
-                        "\"DamageCooldown\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyCooldownActive"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyIsJustDamaged"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Value of the damage to do (will be removed from object health)",
-                  "longDescription": "",
-                  "name": "DamageValue",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "expression"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "Check if the object is considered dead (no more health)",
-              "fullName": "Is dead",
-              "functionType": "Condition",
-              "name": "IsDead",
-              "private": false,
-              "sentence": "_PARAM0_ is dead",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::PropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "<=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "",
-              "fullName": "",
-              "functionType": "Action",
-              "name": "doStepPreEvents",
-              "private": false,
-              "sentence": "",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyIsJustDamaged"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "no"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "Check if the object was just damaged previously in the events.",
-              "fullName": "Is just damaged",
-              "functionType": "Condition",
-              "name": "IsJustDamaged",
-              "private": false,
-              "sentence": "_PARAM0_ has just been damaged",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::PropertyIsJustDamaged"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "Heal the object, incrasing its life.",
-              "fullName": "Heal the object",
-              "functionType": "Action",
-              "name": "Heal",
-              "private": false,
-              "sentence": "Heal _PARAM0_, adding _PARAM2_ to its health",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "+",
-                        "GetArgumentAsNumber(\"HealValue\")"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::PropertyMaxHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        ">",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "=",
-                        "min(Object.Behavior::PropertyHealth(), Object.Behavior::PropertyMaxHealth())"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "How much to heal (will be added to object health)",
-                  "longDescription": "",
-                  "name": "HealValue",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "expression"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "Change the object health to set it to a specific value (check if the actions to damage or heal the object are not better suited to your use case before using this one).",
-              "fullName": "Change object health",
-              "functionType": "Action",
-              "name": "SetHealth",
-              "private": false,
-              "sentence": "Set health of _PARAM0_ to _PARAM2_",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "=",
-                        "GetArgumentAsNumber(\"Value\")"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::PropertyMaxHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        ">",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Health::Health::SetPropertyHealth"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "=",
-                        "min(Object.Behavior::PropertyHealth(), Object.Behavior::PropertyMaxHealth())"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "New health value",
-                  "longDescription": "",
-                  "name": "Value",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "expression"
-                }
-              ],
-              "objectGroups": []
-            },
-            {
-              "description": "The health of the object",
-              "fullName": "Health",
-              "functionType": "Expression",
-              "name": "Health",
-              "private": false,
-              "sentence": "",
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetReturnNumber"
-                      },
-                      "parameters": [
-                        "Object.Behavior::PropertyHealth()"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ],
-              "parameters": [
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Object",
-                  "longDescription": "",
-                  "name": "Object",
-                  "optional": false,
-                  "supplementaryInformation": "",
-                  "type": "object"
-                },
-                {
-                  "codeOnly": false,
-                  "defaultValue": "",
-                  "description": "Behavior",
-                  "longDescription": "",
-                  "name": "Behavior",
-                  "optional": false,
-                  "supplementaryInformation": "Health::Health",
-                  "type": "behavior"
-                }
-              ],
-              "objectGroups": []
-            }
-          ],
-          "propertyDescriptors": [
-            {
-              "value": "100",
-              "type": "Number",
-              "label": "Health",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "Health"
-            },
-            {
-              "value": "0",
-              "type": "Number",
-              "label": "Damage cooldown (in seconds) (0 for no cooldown)",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "DamageCooldown"
-            },
-            {
-              "value": "100",
-              "type": "Number",
-              "label": "Maximum health (0 for no maximum)",
-              "description": "",
-              "extraInformation": [],
-              "hidden": false,
-              "name": "MaxHealth"
-            },
-            {
-              "value": "",
-              "type": "Boolean",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": true,
-              "name": "IsJustDamaged"
-            },
-            {
-              "value": "",
-              "type": "Boolean",
-              "label": "",
-              "description": "",
-              "extraInformation": [],
-              "hidden": true,
-              "name": "CooldownActive"
-            }
-          ]
+          "eventsFunctions": [],
+          "propertyDescriptors": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "name": "MyBehavior2",
+          "objectType": "",
+          "eventsFunctions": [],
+          "propertyDescriptors": []
         }
       ]
     }
@@ -11284,22 +11880,6 @@
           "x": 30,
           "y": 30,
           "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "UranusAtkDelayDsp",
-          "persistentUuid": "4bf43363-a308-44d5-8fe3-369590aebd1c",
-          "width": 0,
-          "x": 272,
-          "y": 34,
-          "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
