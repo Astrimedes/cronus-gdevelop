@@ -1283,7 +1283,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.38280000000000125
+        "zoomFactor": 0.5628000000000013
       },
       "objectsGroups": [
         {
@@ -1360,6 +1360,9 @@
           "objects": [
             {
               "name": "CronusAttack"
+            },
+            {
+              "name": "UranusAttack"
             }
           ]
         }
@@ -1432,8 +1435,8 @@
           "name": "Gaia",
           "persistentUuid": "8f803af3-3e4b-405e-b73b-8c3f96bf4406",
           "width": 0,
-          "x": 122,
-          "y": 502,
+          "x": 344,
+          "y": 336,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -1448,8 +1451,8 @@
           "name": "Cronus",
           "persistentUuid": "7fcf99dd-8bed-45d8-b605-c019490b1e15",
           "width": 37,
-          "x": 200,
-          "y": 500,
+          "x": 480,
+          "y": 439,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -1816,22 +1819,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 150,
-          "layer": "",
-          "locked": false,
-          "name": "StoneWall",
-          "persistentUuid": "3e12ef35-de71-49ee-b851-b80adc48e9c6",
-          "width": 250,
-          "x": 250,
-          "y": 250,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 100,
           "layer": "",
           "locked": false,
@@ -1841,6 +1828,22 @@
           "x": 700,
           "y": 500,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "StoneBlock",
+          "persistentUuid": "0568adc9-a586-4e36-a2b5-96f5f120628b",
+          "width": 0,
+          "x": 547,
+          "y": 262,
+          "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2333,8 +2336,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2375,8 +2378,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2417,8 +2420,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2459,8 +2462,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2513,8 +2516,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2555,8 +2558,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2597,8 +2600,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2639,8 +2642,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2681,8 +2684,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2723,8 +2726,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2777,8 +2780,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2819,8 +2822,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2861,8 +2864,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2903,8 +2906,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2957,8 +2960,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3011,8 +3014,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3065,8 +3068,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3119,8 +3122,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3173,8 +3176,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3227,8 +3230,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3269,8 +3272,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3311,8 +3314,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3353,8 +3356,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3395,8 +3398,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3437,8 +3440,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3491,8 +3494,8 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 8.000422477722168,
+                        "y": 8.473395347595215
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3581,19 +3584,21 @@
               "CooldownActive": false
             },
             {
+              "acceleration": 180,
+              "cellHeight": 24,
+              "cellWidth": 24,
+              "extraBorder": 8,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
-              "cellHeight": 32,
-              "cellWidth": 32,
-              "extraBorder": 16,
               "maxSpeed": 90,
-              "acceleration": 90,
               "angleOffset": 0,
               "allowDiagonals": true,
               "angularMaxSpeed": 180,
               "rotateObject": false
             },
             {
+              "deceleration": 5000,
+              "maxSpeed": 100,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 200,
@@ -3601,9 +3606,7 @@
               "angleOffset": 0,
               "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
-              "deceleration": 9999,
               "ignoreDefaultControls": true,
-              "maxSpeed": 100,
               "movementAngleOffset": 0,
               "rotateObject": false,
               "viewpoint": "TopDown"
@@ -3621,17 +3624,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Idle.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3673,17 +3682,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_1.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3713,17 +3728,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_2.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3753,17 +3774,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_3.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3793,17 +3820,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_4.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3833,17 +3866,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_5.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3873,17 +3912,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Walking_6.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3925,17 +3970,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Attack_1.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -3965,17 +4016,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Attack_2.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4005,17 +4062,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Attack_3.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4045,17 +4108,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Attack_4.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4085,17 +4154,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Attack_5.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4137,17 +4212,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Sleeping.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4189,17 +4270,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Wakeup_1.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4229,17 +4316,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Wakeup_2.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -4269,17 +4362,23 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Grizzly_Wakeup_3.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Attack",
+                          "x": 45.79999923706055,
+                          "y": 19.25
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.500459671020508,
+                        "y": 20.19301414489746
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 21.299999237060547,
+                        "y": 20.649999618530273
                       },
                       "customCollisionMask": [
                         [
@@ -5467,7 +5566,7 @@
                         "value": "Flash::Flash::IsFlashing"
                       },
                       "parameters": [
-                        "Cronus",
+                        "Targets",
                         "Flash",
                         ""
                       ],
@@ -5479,7 +5578,7 @@
                         "value": "Health::Health::IsDead"
                       },
                       "parameters": [
-                        "Cronus",
+                        "Targets",
                         "Health",
                         ""
                       ],
@@ -5488,16 +5587,58 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "CollisionNP"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Cronus",
-                        "Uranus",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "Uranus",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "UranusAttack",
+                                "Targets",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Visible"
+                              },
+                              "parameters": [
+                                "UranusAttack"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "actions": [
@@ -5507,9 +5648,22 @@
                         "value": "Health::Health::Hit"
                       },
                       "parameters": [
-                        "Cronus",
+                        "Targets",
                         "Health",
                         "20",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "Flash",
+                        "0.75",
                         ""
                       ],
                       "subInstructions": []
@@ -5518,7 +5672,7 @@
                   "events": []
                 },
                 {
-                  "disabled": false,
+                  "disabled": true,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -6004,6 +6158,14 @@
                 "Health",
                 ""
               ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
               "subInstructions": []
             }
           ],
@@ -8041,6 +8203,42 @@
                 "yes"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "UranusAttack",
+                "0",
+                "0",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "UranusAttack"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeScaleHeight"
+              },
+              "parameters": [
+                "UranusAttack",
+                "*",
+                "4"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -8669,7 +8867,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n// if (!pathfinding.pathFound() || enemyVars.get(\"TargetName\").getAsString() != targetVars.get(\"Name\").getAsString()) {\n    pathfinding.moveTo(runtimeScene, target.x, target.y);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n// }\npathfinding.setMaxSpeed(0);\npathfinding.setSpeed(0);\n\n/** @type {gdjs.TopDownMovementRuntimeBehavior} */\nvar topDownMove = enemy.getBehavior(\"TopDownMovement\");\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\nlet xDist = x - enemy.x;\nlet yDist = y - enemy.y; \n\nlet minDist = 10;\nif (xDist > 0) {\n    topDownMove.simulateRightKey();\n} else if (xDist < 0) {\n    topDownMove.simulateLeftKey();\n}\nif (yDist > 0) {\n    topDownMove.simulateDownKey();\n} else if (yDist < 0) {\n    topDownMove.simulateUpKey();\n}\n\n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.5) + (Math.random() * (enemy.getWidth() * 0.3));\nlet attacking = false;\nif (enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nif (xDist > minDist) enemy.flipX(false);\nif (xDist < -minDist) enemy.flipX(true);\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n\n\n\n\n",
+                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n// if (!pathfinding.pathFound() || enemyVars.get(\"TargetName\").getAsString() != targetVars.get(\"Name\").getAsString()) {\n    let hw = enemy.getWidth()/2;\n    let targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \n    let targetY = target.y + (enemy.getHeight()/2);\n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n// }\npathfinding.setMaxSpeed(0);\npathfinding.setSpeed(0);\n\n/** @type {gdjs.TopDownMovementRuntimeBehavior} */\nvar topDownMove = enemy.getBehavior(\"TopDownMovement\");\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\nlet xDist = x - enemy.x;\nlet yDist = y - enemy.y; \n\nlet minDist = 10;\nif (xDist > 0) {\n    topDownMove.simulateRightKey();\n} else if (xDist < 0) {\n    topDownMove.simulateLeftKey();\n}\nif (yDist > 0) {\n    topDownMove.simulateDownKey();\n} else if (yDist < 0) {\n    topDownMove.simulateUpKey();\n}\n\n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.5) + (Math.random() * (enemy.getWidth() * 0.3));\nlet attacking = false;\nif ( enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nminDist = attacking ? 0 : minDist;\nif (xDist > minDist) enemy.flipX(false);\nif (xDist < -minDist) enemy.flipX(true);\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n\n\n\n\n",
                   "parameterObjects": "Targets",
                   "useStrict": true,
                   "eventsSheetExpanded": true
@@ -9161,20 +9359,7 @@
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Uranus",
-                "=",
-                "2"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,
@@ -9208,6 +9393,203 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Animation"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "!=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Animation"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Sprite"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "UranusAttack"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "UranusAttack",
+                    "=",
+                    "Uranus.PointX(\"Attack\")",
+                    "=",
+                    "Uranus.PointY(\"Attack\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "UranusAttack",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlayAnimation"
+                  },
+                  "parameters": [
+                    "UranusAttack"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FlippedX"
+                      },
+                      "parameters": [
+                        "Uranus"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "UranusAttack",
+                        "no"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlippedX"
+                      },
+                      "parameters": [
+                        "Uranus"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "UranusAttack",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "UranusAttack",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         },
@@ -9259,6 +9641,81 @@
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"attack\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "UranusAttack",
+                "=",
+                "Uranus.PointX(\"Attack\")",
+                "=",
+                "Uranus.PointY(\"Attack\")"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AnimationEnded"
+              },
+              "parameters": [
+                "UranusAttack"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "UranusAttack"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ]
