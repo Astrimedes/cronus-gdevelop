@@ -1283,7 +1283,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.5628000000000013
+        "zoomFactor": 0.6028000000000013
       },
       "objectsGroups": [
         {
@@ -3584,12 +3584,12 @@
               "CooldownActive": false
             },
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 180,
               "cellHeight": 24,
               "cellWidth": 24,
               "extraBorder": 8,
-              "name": "Pathfinding",
-              "type": "PathfindingBehavior::PathfindingBehavior",
               "maxSpeed": 90,
               "angleOffset": 0,
               "allowDiagonals": true,
@@ -3597,10 +3597,10 @@
               "rotateObject": false
             },
             {
-              "deceleration": 5000,
-              "maxSpeed": 100,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "deceleration": 5000,
+              "maxSpeed": 100,
               "acceleration": 200,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -4648,7 +4648,15 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Expire",
+              "type": "Expire::Expire",
+              "MaxLife": 0.36,
+              "Life": 0.36,
+              "Fades": true
+            }
+          ],
           "animations": [
             {
               "name": "NewObject",
@@ -4738,7 +4746,15 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Expire",
+              "type": "Expire::Expire",
+              "MaxLife": 0.44,
+              "Life": 0.44,
+              "Fades": true
+            }
+          ],
           "animations": [
             {
               "name": "NewObject",
@@ -5388,35 +5404,16 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "BuiltinCommonInstructions::And"
+                            "value": "CollisionNP"
                           },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "CronusAttack",
-                                "Uranus",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Visible"
-                              },
-                              "parameters": [
-                                "CronusAttack"
-                              ],
-                              "subInstructions": []
-                            }
-                          ]
+                          "parameters": [
+                            "CronusAttack",
+                            "Uranus",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
                         }
                       ]
                     }
@@ -6573,7 +6570,7 @@
           "parameters": []
         },
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -6826,6 +6823,10 @@
           "type": "Bounce::Bounce"
         },
         {
+          "name": "Expire",
+          "type": "Expire::Expire"
+        },
+        {
           "name": "Flash",
           "type": "Flash::Flash"
         },
@@ -6858,50 +6859,6 @@
       "lastChangeTimeStamp": 0,
       "name": "Player",
       "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "CronusAttack",
-                "0",
-                "0",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "CronusAttack"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
         {
           "disabled": false,
           "folded": false,
@@ -7650,41 +7607,31 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "NbObjet"
+                  },
+                  "parameters": [
+                    "CronusAttack",
+                    "<",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreXY"
+                    "value": "Create"
                   },
                   "parameters": [
+                    "",
                     "CronusAttack",
-                    "=",
                     "Cronus.PointX(\"Attack\")",
-                    "=",
-                    "Cronus.PointY(\"Attack\")"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "CronusAttack",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "CronusAttack",
+                    "Cronus.PointY(\"Attack\")",
                     ""
                   ],
                   "subInstructions": []
@@ -7692,23 +7639,80 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PlayAnimation"
+                    "value": "ChangeAnimation"
                   },
                   "parameters": [
-                    "CronusAttack"
+                    "CronusAttack",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlippedX"
+                      },
+                      "parameters": [
+                        "Cronus"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "CronusAttack",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "FlippedX"
+                      },
+                      "parameters": [
+                        "Cronus"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FlipX"
+                      },
+                      "parameters": [
+                        "CronusAttack",
+                        "no"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         },
@@ -7928,143 +7932,6 @@
           },
           "comment": "Attack Sprites",
           "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "AnimationEnded"
-                  },
-                  "parameters": [
-                    "CronusAttack"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "Attacking",
-                    "!=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "CronusAttack"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FlippedX"
-              },
-              "parameters": [
-                "Cronus"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FlipX"
-              },
-              "parameters": [
-                "CronusAttack",
-                "yes"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "FlippedX"
-              },
-              "parameters": [
-                "Cronus"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FlipX"
-              },
-              "parameters": [
-                "CronusAttack",
-                "no"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "CronusAttack",
-                "=",
-                "Cronus.PointX(\"Attack\")",
-                "=",
-                "Cronus.PointY(\"Attack\")"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         }
       ]
     },
@@ -8793,7 +8660,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n// if (!pathfinding.pathFound() || enemyVars.get(\"TargetName\").getAsString() != targetVars.get(\"Name\").getAsString()) {\n    let hw = enemy.getWidth()/2;\n    let targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \n    let targetY = target.y + (enemy.getHeight()/2);\n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n// }\npathfinding.setMaxSpeed(0);\npathfinding.setSpeed(0);\n\n/** @type {gdjs.TopDownMovementRuntimeBehavior} */\nvar topDownMove = enemy.getBehavior(\"TopDownMovement\");\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\nlet xDist = x - enemy.x;\nlet yDist = y - enemy.y; \n\nlet minDist = 10;\nif (xDist > 0) {\n    topDownMove.simulateRightKey();\n} else if (xDist < 0) {\n    topDownMove.simulateLeftKey();\n}\nif (yDist > 0) {\n    topDownMove.simulateDownKey();\n} else if (yDist < 0) {\n    topDownMove.simulateUpKey();\n}\n\n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.5) + (Math.random() * (enemy.getWidth() * 0.3));\nlet attacking = false;\nif (yDist < (enemy.getHeight() * 0.6) &&  enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nminDist = attacking ? 0 : minDist;\nif (target.x - enemy.x > 0) {\n    enemy.flipX(false);\n} else {\n    enemy.flipX(true);\n}\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n\n\n\n\n",
+                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n// if (!pathfinding.pathFound() || enemyVars.get(\"TargetName\").getAsString() != targetVars.get(\"Name\").getAsString()) {\n    let hw = enemy.getWidth()/2;\n    let targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \n    let targetY = target.y;\n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n// }\npathfinding.setMaxSpeed(0);\npathfinding.setSpeed(0);\n\n/** @type {gdjs.TopDownMovementRuntimeBehavior} */\nvar topDownMove = enemy.getBehavior(\"TopDownMovement\");\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\nlet xDist = x - enemy.x;\nlet yDist = y - enemy.y; \n\nif (xDist > 0) {\n    topDownMove.simulateRightKey();\n} else if (xDist < 0) {\n    topDownMove.simulateLeftKey();\n}\nif (yDist > 0) {\n    topDownMove.simulateDownKey();\n} else if (yDist < 0) {\n    topDownMove.simulateUpKey();\n}\n\n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.5) + (Math.random() * (enemy.getWidth() * 0.3));\nlet attacking = false;\nif (yDist < (enemy.getHeight() * 0.6) &&  enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nif (targetX - enemy.x > 0) {\n    enemy.flipX(false);\n} else {\n    enemy.flipX(true);\n}\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n\n\n\n\n",
                   "parameterObjects": "Targets",
                   "useStrict": true,
                   "eventsSheetExpanded": true
@@ -12392,6 +12259,210 @@
               "extraInformation": [],
               "hidden": false,
               "name": "Property2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "",
+      "description": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "Expire",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "tags": [],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "",
+          "fullName": "",
+          "name": "Expire",
+          "objectType": "Sprite",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Expire::Expire::PropertyLife"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Expire::Expire::SetPropertyLife"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "-",
+                        "TimeDelta()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": true,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Expire::Expire::PropertyFades"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "Object",
+                            "=",
+                            "Object.Behavior::PropertyLife()/Object.Behavior::PropertyMaxLife()"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Expire::Expire::PropertyLife"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "<=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "Expire::Expire",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": [
+                {
+                  "name": "Group",
+                  "objects": []
+                }
+              ]
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0.5",
+              "type": "Number",
+              "label": "Max Life in seconds until delete",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "MaxLife"
+            },
+            {
+              "value": "0.5",
+              "type": "Number",
+              "label": "Current life remaining in seconds",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Life"
+            },
+            {
+              "value": "true",
+              "type": "Boolean",
+              "label": "Fade away as lifetime decreases (reduce opacity)",
+              "description": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "Fades"
             }
           ]
         }
