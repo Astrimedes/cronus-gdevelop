@@ -3570,9 +3570,9 @@
               "CooldownActive": false
             },
             {
-              "acceleration": 180,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
+              "acceleration": 180,
               "cellHeight": 24,
               "cellWidth": 24,
               "extraBorder": 8,
@@ -8010,42 +8010,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "UranusAttack",
-                "0",
-                "0",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "UranusAttack"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeScaleHeight"
-              },
-              "parameters": [
-                "UranusAttack",
-                "*",
-                "4"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -8087,7 +8051,7 @@
               },
               "parameters": [
                 "PathTarget",
-                "PathTarget",
+                "=",
                 "127"
               ],
               "subInstructions": []
@@ -8258,7 +8222,7 @@
               "parameters": [
                 "Uranus",
                 "Flash",
-                "0.75\n",
+                "0.334\n",
                 ""
               ],
               "subInstructions": []
@@ -8658,308 +8622,10 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n\nlet hw = enemy.getWidth()/2;\nlet targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \nlet targetY = target.y;\n\nlet targetXDist = targetX - enemy.x;\n if (targetXDist < -0.01) {\n    enemy.flipX(true);\n } else {\n     enemy.flipX(false);\n }\n\n// Set a debug indicator of target\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet goal = runtimeScene.getObjects(\"PathTarget\")[0] || runtimeScene.createObject(\"PathTarget\");\n\nlet timeSincePath = enemy.getTimerElapsedTimeInSeconds(\"pathfind\");\nlet maxTime = 2;\nif (!pathfinding.pathFound() || (pathfinding.destinationReached() && timeSincePath > 0.334) || timeSincePath > maxTime) {\n    \n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n\n    enemy.resetTimer(\"pathfind\");\n}\n\n// get scene vars\nlet sceneVars = runtimeScene.getVariables();\n\n// block movement for dialog present or no path found\nlet canMove = !sceneVars.get(\"DialogText\").getAsString() && pathfinding.pathFound();\n\n// set speed\nconst MAX_SPEED = 180;\nconst spd = canMove ? MAX_SPEED : 0;\npathfinding.setMaxSpeed(spd);\npathfinding.setSpeed(spd/2);\n\n// exit early!\nif (!canMove) return;\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\n// move goal here\ngoal.setCenterPositionInScene(x, y);\n\nlet xDist = target.x - enemy.x;\nlet yDist = target.y - enemy.y; \n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.4) + (Math.random() * (enemy.getWidth() * 0.15));\nlet attacking = false;\nif (yDist < (enemy.getHeight() * 0.25) &&  enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n",
+                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n\nlet hw = enemy.getWidth()/2;\nlet targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \nlet targetY = target.y;\n\nlet targetXDist = targetX - enemy.x;\n if (targetXDist < -0.01 || target.x - enemy.x < -0.01) {\n    enemy.flipX(true);\n } else {\n     enemy.flipX(false);\n }\n\n// Set a debug indicator of target\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet goal = runtimeScene.getObjects(\"PathTarget\")[0] || runtimeScene.createObject(\"PathTarget\");\n\nlet timeSincePath = enemy.getTimerElapsedTimeInSeconds(\"pathfind\");\nlet maxTime = 2;\nif (!pathfinding.pathFound() || (pathfinding.destinationReached() && timeSincePath > 0.334) || timeSincePath > maxTime) {\n    \n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n\n    enemy.resetTimer(\"pathfind\");\n}\n\n// get scene vars\nlet sceneVars = runtimeScene.getVariables();\n\n// block movement for dialog present or no path found\nlet canMove = !sceneVars.get(\"DialogText\").getAsString() && pathfinding.pathFound();\n\n// set speed\nconst MAX_SPEED = 180;\nconst spd = canMove ? MAX_SPEED : 0;\npathfinding.setMaxSpeed(spd);\npathfinding.setSpeed(spd/2);\n\n// exit early!\nif (!canMove) return;\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\n// move goal here\ngoal.setCenterPositionInScene(x, y);\n\nlet xDist = target.x - enemy.x;\nlet yDist = target.y - enemy.y; \n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.4) + (Math.random() * (enemy.getWidth() * 0.15));\nlet attacking = false;\nlet targetDist = enemy.getDistanceToObject(target);\nif (yDist < (enemy.getHeight() * 0.1) &&  targetDist < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n",
                   "parameterObjects": "Targets",
                   "useStrict": true,
                   "eventsSheetExpanded": true
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "PathfindingBehavior::PathFound"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "Temp",
-                    "=",
-                    "RandomInRange(0, 7)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TopDownMovementBehavior::SimulateUpKey"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "TopDownMovement"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "5"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "6"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "7"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TopDownMovementBehavior::SimulateDownKey"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "TopDownMovement"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "4"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "7"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TopDownMovementBehavior::SimulateRightKey"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "TopDownMovement"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "3"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Temp",
-                            "=",
-                            "5\n"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TopDownMovementBehavior::SimulateLeftKey"
-                      },
-                      "parameters": [
-                        "Uranus",
-                        "TopDownMovement"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
                 }
               ]
             },
@@ -9093,18 +8759,20 @@
                   },
                   "parameters": [
                     "Uranus",
-                    "=",
+                    ">=",
                     "1"
                   ],
                   "subInstructions": []
                 },
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "Visible"
+                    "inverted": false,
+                    "value": "NbObjet"
                   },
                   "parameters": [
-                    "UranusAttack"
+                    "UranusAttack",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -9113,26 +8781,14 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreXY"
+                    "value": "Create"
                   },
                   "parameters": [
+                    "",
                     "UranusAttack",
-                    "=",
                     "Uranus.PointX(\"Attack\")",
-                    "=",
-                    "Uranus.PointY(\"Attack\")"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "UranusAttack",
-                    "=",
-                    "0"
+                    "Uranus.PointY(\"Attack\")",
+                    ""
                   ],
                   "subInstructions": []
                 },
@@ -9143,6 +8799,18 @@
                   },
                   "parameters": [
                     "UranusAttack"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeScaleHeight"
+                  },
+                  "parameters": [
+                    "UranusAttack",
+                    "=",
+                    "4"
                   ],
                   "subInstructions": []
                 }
@@ -9215,149 +8883,12 @@
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "UranusAttack",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": []
                 }
               ]
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Stop Pathfinding Movement when appropriate",
-          "comment2": ""
-        },
-        {
-          "disabled": true,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "DialogText",
-                "!=",
-                "\"\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PathfindingBehavior::MaxSpeed"
-              },
-              "parameters": [
-                "Uranus",
-                "Pathfinding",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjetTxt"
-              },
-              "parameters": [
-                "Uranus",
-                "State",
-                "=",
-                "\"attack\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "UranusAttack",
-                "=",
-                "Uranus.PointX(\"Attack\")",
-                "=",
-                "Uranus.PointY(\"Attack\")"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "AnimationEnded"
-              },
-              "parameters": [
-                "UranusAttack"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "UranusAttack"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ]
     }
@@ -12399,8 +11930,33 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Expire::Expire::PropertyFades"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "round((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 255)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": []
                 }
               ],
