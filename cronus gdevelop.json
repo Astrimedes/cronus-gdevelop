@@ -1250,6 +1250,19 @@
         "name": "NewObject-4.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Target round button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Target round button.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Line Light/Target round button.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -1283,7 +1296,7 @@
         "gridWidth": 50,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.6028000000000013
+        "zoomFactor": 0.3828000000000012
       },
       "objectsGroups": [
         {
@@ -1711,22 +1724,6 @@
           "layer": "",
           "locked": false,
           "name": "StoneWall",
-          "persistentUuid": "12108fed-72d9-4257-a379-1d4a28840fc2",
-          "width": 100,
-          "x": 900,
-          "y": 250,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 100,
-          "layer": "",
-          "locked": false,
-          "name": "StoneWall",
           "persistentUuid": "f5c92130-2a08-4a2f-8fa7-a19a5933754f",
           "width": 100,
           "x": 800,
@@ -1828,22 +1825,6 @@
           "x": 700,
           "y": 500,
           "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StoneBlock",
-          "persistentUuid": "0568adc9-a586-4e36-a2b5-96f5f120628b",
-          "width": 0,
-          "x": 547,
-          "y": 262,
-          "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3555,6 +3536,11 @@
               "name": "AttackDelay",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "LastPathTime",
+              "type": "number",
+              "value": 0
             }
           ],
           "behaviors": [
@@ -3577,16 +3563,16 @@
             {
               "name": "Health",
               "type": "Health::Health",
-              "Health": 500,
-              "DamageCooldown": 0.25,
-              "MaxHealth": 500,
+              "Health": 300,
+              "DamageCooldown": 0.5,
+              "MaxHealth": 300,
               "IsJustDamaged": false,
               "CooldownActive": false
             },
             {
+              "acceleration": 180,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
-              "acceleration": 180,
               "cellHeight": 24,
               "cellWidth": 24,
               "extraBorder": 8,
@@ -3595,21 +3581,6 @@
               "allowDiagonals": true,
               "angularMaxSpeed": 180,
               "rotateObject": false
-            },
-            {
-              "name": "TopDownMovement",
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "deceleration": 5000,
-              "maxSpeed": 100,
-              "acceleration": 200,
-              "allowDiagonals": true,
-              "angleOffset": 0,
-              "angularMaxSpeed": 180,
-              "customIsometryAngle": 30,
-              "ignoreDefaultControls": true,
-              "movementAngleOffset": 0,
-              "rotateObject": false,
-              "viewpoint": "TopDown"
             }
           ],
           "animations": [
@@ -3633,11 +3604,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3691,11 +3662,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3737,11 +3708,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3783,11 +3754,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3829,11 +3800,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3875,11 +3846,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3921,11 +3892,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -3979,11 +3950,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4025,11 +3996,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4071,11 +4042,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4117,11 +4088,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4163,11 +4134,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4221,11 +4192,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4279,11 +4250,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4325,11 +4296,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4371,11 +4342,11 @@
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 21.500459671020508,
-                        "y": 20.19301414489746
+                        "x": 23.879573822021484,
+                        "y": 16.183307647705078
                       },
                       "centerPoint": {
-                        "automatic": false,
+                        "automatic": true,
                         "name": "centre",
                         "x": 21.299999237060547,
                         "y": 20.649999618530273
@@ -4829,6 +4800,45 @@
                         "name": "centre",
                         "x": 15,
                         "y": 17.649999618530273
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PathTarget",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Target round button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
                       },
                       "customCollisionMask": []
                     }
@@ -8032,6 +8042,55 @@
                 "4"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Uranus",
+                "LastPathTime",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "PathTarget",
+                "0",
+                "0",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "PathTarget"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Opacity"
+              },
+              "parameters": [
+                "PathTarget",
+                "PathTarget",
+                "127"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -8076,6 +8135,69 @@
                 "State",
                 "=",
                 "\"seek\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "PathTarget",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "PathTarget"
               ],
               "subInstructions": []
             }
@@ -8472,20 +8594,16 @@
           "actions": [],
           "events": [
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "Flash::Flash::IsFlashing"
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
                   },
-                  "parameters": [
-                    "Uranus",
-                    "Flash",
-                    ""
-                  ],
+                  "parameters": [],
                   "subInstructions": []
                 }
               ],
@@ -8493,131 +8611,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "PathfindingBehavior::MaxSpeed"
+                    "value": "ResetObjectTimer"
                   },
                   "parameters": [
                     "Uranus",
-                    "Pathfinding",
-                    "=",
-                    "90"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": true,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Flash::Flash::IsFlashing"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Flash",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PathfindingBehavior::MaxSpeed"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PathfindingBehavior::Speed"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": true,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PathfindingBehavior::Speed"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    ">",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": true,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PathfindingBehavior::Speed"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "Pathfinding",
-                    "<",
-                    "0.01"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "=",
-                    "0"
+                    "\"pathfind\""
                   ],
                   "subInstructions": []
                 }
@@ -8660,7 +8658,7 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n// if (!pathfinding.pathFound() || enemyVars.get(\"TargetName\").getAsString() != targetVars.get(\"Name\").getAsString()) {\n    let hw = enemy.getWidth()/2;\n    let targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \n    let targetY = target.y;\n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n// }\npathfinding.setMaxSpeed(0);\npathfinding.setSpeed(0);\n\n/** @type {gdjs.TopDownMovementRuntimeBehavior} */\nvar topDownMove = enemy.getBehavior(\"TopDownMovement\");\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\nlet xDist = x - enemy.x;\nlet yDist = y - enemy.y; \n\nif (xDist > 0) {\n    topDownMove.simulateRightKey();\n} else if (xDist < 0) {\n    topDownMove.simulateLeftKey();\n}\nif (yDist > 0) {\n    topDownMove.simulateDownKey();\n} else if (yDist < 0) {\n    topDownMove.simulateUpKey();\n}\n\n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.5) + (Math.random() * (enemy.getWidth() * 0.3));\nlet attacking = false;\nif (yDist < (enemy.getHeight() * 0.6) &&  enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nif (targetX - enemy.x > 0) {\n    enemy.flipX(false);\n} else {\n    enemy.flipX(true);\n}\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n\n\n\n\n",
+                  "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n\nlet hw = enemy.getWidth()/2;\nlet targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \nlet targetY = target.y;\n\nlet targetXDist = targetX - enemy.x;\n if (targetXDist < -0.01) {\n    enemy.flipX(true);\n } else {\n     enemy.flipX(false);\n }\n\n// Set a debug indicator of target\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet goal = runtimeScene.getObjects(\"PathTarget\")[0] || runtimeScene.createObject(\"PathTarget\");\n\nlet timeSincePath = enemy.getTimerElapsedTimeInSeconds(\"pathfind\");\nlet maxTime = 2;\nif (!pathfinding.pathFound() || (pathfinding.destinationReached() && timeSincePath > 0.334) || timeSincePath > maxTime) {\n    \n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n\n    enemy.resetTimer(\"pathfind\");\n}\n\n// get scene vars\nlet sceneVars = runtimeScene.getVariables();\n\n// block movement for dialog present or no path found\nlet canMove = !sceneVars.get(\"DialogText\").getAsString() && pathfinding.pathFound();\n\n// set speed\nconst MAX_SPEED = 180;\nconst spd = canMove ? MAX_SPEED : 0;\npathfinding.setMaxSpeed(spd);\npathfinding.setSpeed(spd/2);\n\n// exit early!\nif (!canMove) return;\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\n// move goal here\ngoal.setCenterPositionInScene(x, y);\n\nlet xDist = target.x - enemy.x;\nlet yDist = target.y - enemy.y; \n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.4) + (Math.random() * (enemy.getWidth() * 0.15));\nlet attacking = false;\nif (yDist < (enemy.getHeight() * 0.25) &&  enemy.getDistanceToObject(target) < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n",
                   "parameterObjects": "Targets",
                   "useStrict": true,
                   "eventsSheetExpanded": true
@@ -9252,7 +9250,7 @@
           "comment2": ""
         },
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
