@@ -1,0 +1,5591 @@
+{
+  "b": 42,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Level_321",
+  "name": "Level 1",
+  "oglFOV": 90,
+  "oglZFar": 500,
+  "oglZNear": 1,
+  "r": 139,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 87,
+  "uiSettings": {
+    "grid": false,
+    "gridB": 255,
+    "gridG": 180,
+    "gridHeight": 50,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridR": 158,
+    "gridType": "rectangular",
+    "gridWidth": 50,
+    "snap": false,
+    "windowMask": false,
+    "zoomFactor": 0.3828000000000012
+  },
+  "objectsGroups": [
+    {
+      "name": "Walls",
+      "objects": [
+        {
+          "name": "StoneBlock"
+        },
+        {
+          "name": "LevelBoundary"
+        },
+        {
+          "name": "StoneWall"
+        }
+      ]
+    },
+    {
+      "name": "DialogGroup",
+      "objects": [
+        {
+          "name": "DialogText"
+        },
+        {
+          "name": "Dialog"
+        }
+      ]
+    },
+    {
+      "name": "Speakers",
+      "objects": [
+        {
+          "name": "Gaia"
+        }
+      ]
+    },
+    {
+      "name": "Invisible",
+      "objects": [
+        {
+          "name": "LevelBoundary"
+        },
+        {
+          "name": "BoundaryMax"
+        },
+        {
+          "name": "BoundaryMin"
+        }
+      ]
+    },
+    {
+      "name": "Targets",
+      "objects": [
+        {
+          "name": "Cronus"
+        },
+        {
+          "name": "Gaia"
+        }
+      ]
+    },
+    {
+      "name": "HudGroup",
+      "objects": [
+        {
+          "name": "CronusHealth"
+        },
+        {
+          "name": "UranusHealth"
+        }
+      ]
+    },
+    {
+      "name": "AttackGroup",
+      "objects": [
+        {
+          "name": "CronusAttack"
+        },
+        {
+          "name": "UranusAttack"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "DialogText",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "BlockInput",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "DialogBlockTime",
+      "type": "string",
+      "value": "0"
+    },
+    {
+      "name": "DialogSpeaker",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "name": "WeaponGiven",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "ScytheCollected",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Debug",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Temp",
+      "type": "string",
+      "value": ""
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1300,
+      "layer": "",
+      "locked": true,
+      "name": "GroundTile",
+      "persistentUuid": "d57dd366-e9a0-44ac-8604-01b98ceb39af",
+      "width": 2050,
+      "x": -450,
+      "y": -300,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": -92.8624038696289,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Gaia",
+      "persistentUuid": "8f803af3-3e4b-405e-b73b-8c3f96bf4406",
+      "width": 0,
+      "x": 344,
+      "y": 336,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 31,
+      "layer": "",
+      "locked": false,
+      "name": "Cronus",
+      "persistentUuid": "7fcf99dd-8bed-45d8-b605-c019490b1e15",
+      "width": 37,
+      "x": 480,
+      "y": 439,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "MoveSpeed",
+          "type": "string",
+          "value": "180"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1350,
+      "layer": "",
+      "locked": true,
+      "name": "LevelBoundary",
+      "persistentUuid": "bdd9dccd-af82-4e81-844b-eec524d88ca0",
+      "width": 50,
+      "x": 1600,
+      "y": -350,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": true,
+      "name": "LevelBoundary",
+      "persistentUuid": "34cc0212-b945-4709-8eea-ed2ae21a8480",
+      "width": 2100,
+      "x": -450,
+      "y": 1000,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": true,
+      "name": "LevelBoundary",
+      "persistentUuid": "b6cf2a29-9355-42d1-bff9-adbf90a1286d",
+      "width": 2050,
+      "x": -450,
+      "y": -350,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1400,
+      "layer": "",
+      "locked": true,
+      "name": "LevelBoundary",
+      "persistentUuid": "9468e92b-4e85-4c8b-bc75-125bd24447d3",
+      "width": 50,
+      "x": -500,
+      "y": -350,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 29,
+      "layer": "",
+      "locked": false,
+      "name": "BoundaryMin",
+      "persistentUuid": "2f4e46e1-68d4-4a8b-8edb-8230c3ecbc36",
+      "width": 24,
+      "x": -695,
+      "y": -582,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 21,
+      "layer": "",
+      "locked": false,
+      "name": "BoundaryMax",
+      "persistentUuid": "663173b4-0435-456e-b67f-06628d93f9f1",
+      "width": 21,
+      "x": 1801,
+      "y": 1189,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "Uranus",
+      "persistentUuid": "432d414f-afab-4df0-86fe-2ebeeea860af",
+      "width": 100,
+      "x": 1343,
+      "y": -87,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 3461,
+      "layer": "Background",
+      "locked": true,
+      "name": "EmptyCloudBackground",
+      "persistentUuid": "50fd71a7-e721-41dd-a18d-dd8c1f102267",
+      "width": 5116,
+      "x": -1671,
+      "y": -1229,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "be303a23-9c3b-4bd4-b408-cfbb71681cc3",
+      "width": 100,
+      "x": 700,
+      "y": 0,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "a1eeee4f-b95d-402c-bd57-a35fb03d6d97",
+      "width": 300,
+      "x": 250,
+      "y": 0,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "8e05a94d-35e3-44cb-9dc6-9417c5f753c0",
+      "width": 100,
+      "x": 350,
+      "y": 800,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "1a39eb57-601f-4ffa-9343-cd8fd8c77269",
+      "width": 300,
+      "x": 1250,
+      "y": 150,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "feb29949-eba2-4c58-9657-69682051058b",
+      "width": 300,
+      "x": 1000,
+      "y": 700,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "5860990a-ee0e-4f94-8ee4-c34075527c51",
+      "width": 300,
+      "x": -400,
+      "y": -200,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "02e321f1-cb4e-4287-a20d-1e9f7ea6e667",
+      "width": 300,
+      "x": 250,
+      "y": 600,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "f5c92130-2a08-4a2f-8fa7-a19a5933754f",
+      "width": 100,
+      "x": 800,
+      "y": -150,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "923d8a58-73ee-412c-9d3a-843c6ab11269",
+      "width": 100,
+      "x": 1050,
+      "y": -50,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "0f0977da-264f-4f5d-9048-bfc230bc1e7d",
+      "width": 100,
+      "x": -300,
+      "y": 750,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "88256b34-adb9-4df6-b2b8-0bb555b69684",
+      "width": 100,
+      "x": 0,
+      "y": 0,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "636371b6-0dd7-4c91-9432-962be6294595",
+      "width": 100,
+      "x": 0,
+      "y": 500,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "4a014ac9-b74e-4058-bace-b6cca79706f3",
+      "width": 100,
+      "x": 400,
+      "y": -250,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "StoneWall",
+      "persistentUuid": "c559086b-b46f-4fbc-8970-5fc08820a8db",
+      "width": 100,
+      "x": 700,
+      "y": 500,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "name": "LevelBoundary",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StoneBlock",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "StoneBlock.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ScythePickup",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Knife",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Knife-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gaia",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "DialogMessage",
+          "type": "string",
+          "value": "\"\""
+        },
+        {
+          "name": "DefaultMessage",
+          "type": "string",
+          "value": "\"\""
+        },
+        {
+          "name": "Name",
+          "type": "string",
+          "value": "\"Gaia\""
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Bounce",
+          "type": "Bounce::Bounce",
+          "OldX": 0,
+          "OldY": 0,
+          "OldForceAngle": 0,
+          "OldForceLength": 0,
+          "NormalAngle": 0
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0.4,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "acceleration": 400,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "cellHeight": 20,
+          "cellWidth": 20,
+          "extraBorder": 0,
+          "maxSpeed": 200,
+          "rotateObject": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Green Character (9).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GreenCharacter9-dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\GreenCharacter9-dead-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "height": 128,
+      "name": "EmptyCloudBackground",
+      "tags": "",
+      "texture": "tiled_Empty Cloud Background.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "name": "ground",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "height": 32,
+      "name": "GroundTile",
+      "tags": "",
+      "texture": "NewObject-1-0.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "DialogText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 3,
+          "leftEdgeAnchor": 3,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 3,
+          "topEdgeAnchor": 3
+        },
+        {
+          "name": "Text_AutoTyping",
+          "type": "AutoTyping::Text_AutoTyping",
+          "Interval": 0.025
+        }
+      ],
+      "string": "",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 41,
+        "g": 49,
+        "r": 61
+      }
+    },
+    {
+      "name": "Dialog",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 3,
+          "leftEdgeAnchor": 3,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 3,
+          "topEdgeAnchor": 3
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "C:\\Users\\miket\\Documents\\GDevelop projects\\My project3\\NewObject-1-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cronus",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "MoveSpeed",
+          "type": "string",
+          "value": "250"
+        },
+        {
+          "name": "Moving",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Attacking",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Name",
+          "type": "string",
+          "value": "Cronus"
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Bounce",
+          "type": "Bounce::Bounce",
+          "OldX": 0,
+          "OldY": 0,
+          "OldForceAngle": 0,
+          "OldForceLength": 0,
+          "NormalAngle": 0
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0.4,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "acceleration": 360,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "customIsometryAngle": 30,
+          "deceleration": 9000,
+          "ignoreDefaultControls": true,
+          "maxSpeed": 180,
+          "movementAngleOffset": 0,
+          "rotateObject": false,
+          "viewpoint": "TopDown"
+        }
+      ],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.25,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Idle_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Idle_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Idle_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Idle_4.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Run",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.16699999570846558,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_4.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_5.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Run_6.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Punching",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Mr. Man_Punching_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Mr. Man_Punching_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Punching-3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Mr. Man_Punching_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hurt",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Hurt.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Falling Touch Ground",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Falling Touch Ground.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Falling",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Falling.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Flying Kick",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Flying Kick.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jumping",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Jumping.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Swimming",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.16670000553131104,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_4.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_5.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Swimming_6.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Victory Pose",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Mr. Man_Victory Pose.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 18,
+                      "y": 8
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8.000422477722168,
+                    "y": 8.473395347595215
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Uranus",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "State",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "TargetName",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "AllowedAttack",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "AttackDelay",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LastPathTime",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Bounce",
+          "type": "Bounce::Bounce",
+          "OldX": 0,
+          "OldY": 0,
+          "OldForceAngle": 0,
+          "OldForceLength": 0,
+          "NormalAngle": 0
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 300,
+          "DamageCooldown": 0.5,
+          "MaxHealth": 300,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "allowDiagonals": false,
+          "acceleration": 180,
+          "cellHeight": 24,
+          "cellWidth": 24,
+          "extraBorder": 8,
+          "maxSpeed": 90,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "rotateObject": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Idle.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Walking",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.16670000553131104,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_4.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_5.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Walking_6.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Attack",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.20000000298023224,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Attack_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Attack_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Attack_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Attack_4.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Attack_5.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sleeping",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Sleeping.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Wakeup",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.33329999446868896,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Wakeup_1.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Wakeup_2.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Grizzly_Wakeup_3.png",
+                  "points": [
+                    {
+                      "name": "Attack",
+                      "x": 45.79999923706055,
+                      "y": 19.25
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 23.879573822021484,
+                    "y": 16.183307647705078
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 21.299999237060547,
+                    "y": 20.649999618530273
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 35.56315231323242,
+                        "y": 6.4697265625
+                      },
+                      {
+                        "x": 46.81315231323242,
+                        "y": 16.99056053161621
+                      },
+                      {
+                        "x": 44.208984375,
+                        "y": 32
+                      },
+                      {
+                        "x": 6.500650882720947,
+                        "y": 31.7822265625
+                      },
+                      {
+                        "x": 6.708984375,
+                        "y": 16.99056053161621
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BoundaryMax",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewObject-1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BoundaryMin",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewObject-1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ScytheWeapon",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\Knife-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CronusHealth",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Cronus:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "UranusHealth",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 0,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Uranus:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "height": 32,
+      "name": "StoneWall",
+      "tags": "",
+      "texture": "StoneBlock.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
+        }
+      ]
+    },
+    {
+      "name": "GaiaCorpse",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\GreenCharacter9-dead-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UranusAttack",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.36,
+          "Life": 0.36,
+          "Fades": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.1599999964237213,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-2-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-3-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-4-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CronusAttack",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.44,
+          "Life": 0.44,
+          "Fades": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-1-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewObject-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 15.300000190734863,
+                    "y": 17.350000381469727
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 15,
+                    "y": 17.649999618530273
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PathTarget",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Target round button.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Initialize",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "DialogText",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Gaia",
+                "DialogMessage",
+                "=",
+                "\"Cronus, bravest of my children, take this scythe...\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Gaia",
+                "DefaultMessage",
+                "=",
+                "\"Destroy your father Uranus when he comes for me tonight.\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Gaia",
+                "Name",
+                "=",
+                "\"Gaia\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Cronus",
+                "Name",
+                "=",
+                "\"Cronus\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "TargetName",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "BlockInput",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Uranus",
+                "AllowedAttack",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"DialogLayout\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "DialogGroup"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"HudLayout\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "Invisible"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Dialog Show/Hide",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "DialogText",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "DialogGroup"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "BlockInput",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "DialogSpeaker",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DialogBlockTime",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "DialogText",
+                "!=",
+                "\"\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "DialogBlockTime",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BlockInput",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "VariableString(DialogText)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "DialogGroup",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BlockInput",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "DialogBlockTime",
+                    "+",
+                    "TimeDelta()*1000"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Camera",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FixCamera"
+              },
+              "parameters": [
+                "",
+                "Cronus",
+                "BoundaryMin.X()",
+                "BoundaryMin.Y()",
+                "BoundaryMax.X()",
+                "BoundaryMax.Y()",
+                "yes",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Cronus.X() * 0.08",
+                "\"Background\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "Cronus.Y() * 0.08",
+                "\"Background\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Collision",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Cronus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "Attacking",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Flash::Flash::IsFlashing"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Flash",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Cronus",
+                        "Uranus",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "CronusAttack",
+                        "Uranus",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "Health",
+                    "25",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "ScythePickup",
+                    "",
+                    "",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ScythePickup",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "\"Cronus picks up the scythe...\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "ScytheCollected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "AllowedAttack",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"attack\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Uranus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Sprite"
+              },
+              "parameters": [
+                "Uranus",
+                ">",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Flash::Flash::IsFlashing"
+                  },
+                  "parameters": [
+                    "Targets",
+                    "Flash",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Targets",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "Uranus",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "UranusAttack",
+                            "Targets",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Visible"
+                          },
+                          "parameters": [
+                            "UranusAttack"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Targets",
+                    "Health",
+                    "20",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Flash::Flash::Flash"
+                  },
+                  "parameters": [
+                    "Targets",
+                    "Flash",
+                    "0.75",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "AI",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Enemy"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Input",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Cronus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "BlockInput",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Player"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Trigger Dialogs",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Space"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Conversation",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Speakers",
+                    "DialogMessage",
+                    "!=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BlockInput",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Speakers",
+                    "Cronus",
+                    "Cronus.Width() + Speakers.Width() / 2",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "Speakers.VariableString(DialogMessage)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Speakers",
+                    "DialogMessage",
+                    "=",
+                    "Speakers.VariableString(DefaultMessage)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogSpeaker",
+                    "=",
+                    "Speakers.VariableString(Name)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "DialogSpeaker",
+                        "=",
+                        "\"Gaia\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "WeaponGiven",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "ScythePickup",
+                        "Cronus.X() + Speakers.Width() + Cronus.Width()",
+                        "Speakers.Y() - (Speakers.Height() / 2)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "WeaponGiven",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Cancel Dialog",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "!=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "DialogBlockTime",
+                    ">",
+                    "250"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AutoTyping::Text_AutoTyping::TypingFinished"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "Text_AutoTyping",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Event Flags",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Uranus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Gaia",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Gaia",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Gaia",
+            "DialogMessage",
+            "=",
+            "\"You've removed his power, and will usher in a new age...\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Gaia",
+            "DefaultMessage",
+            "=",
+            "\"You've removed his power, and will usher in a new age...\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Gaia",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "GaiaCorpse",
+            "Gaia.X()",
+            "Gaia.Y()",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "Gaia",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "GaiaCorpse",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Gaia",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Distance"
+          },
+          "parameters": [
+            "Cronus",
+            "Gaia",
+            "Gaia.Width() * 2",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "RotateTowardPosition"
+          },
+          "parameters": [
+            "Gaia",
+            "Cronus.X()",
+            "Cronus.Y()",
+            "200",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "DEBUG",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Or"
+          },
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "RControl"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "LControl"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "RShift"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "LShift"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "RAlt"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "LAlt"
+              ],
+              "subInstructions": []
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SetSceneVariableAsBoolean"
+          },
+          "parameters": [
+            "Temp",
+            "False"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Temp",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Temp",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "UranusHealth",
+            "=",
+            "\"Uranus: \" + ToString(Uranus.Health::PropertyHealth())"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "CronusHealth",
+            "=",
+            "\"Cronus: \" + ToString(Cronus.Health::PropertyHealth())"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "Debug",
+            "True"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DebuggerTools::EnableDebugDraw"
+          },
+          "parameters": [
+            "",
+            "",
+            "no",
+            "no",
+            "yes"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "Debug",
+            "False"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DebuggerTools::EnableDebugDraw"
+          },
+          "parameters": [
+            "",
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Separate - last",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [],
+      "parameters": []
+    },
+    {
+      "disabled": true,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Cronus",
+            "Uranus",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Cronus",
+            "Uranus",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Cronus",
+            "Walls",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Cronus",
+            "Walls",
+            "no"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Uranus",
+            "Walls",
+            "",
+            "",
+            "yes"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Uranus",
+            "Walls",
+            "yes"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 8118952,
+      "ambientLightColorR": -2147483616,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Background",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 36,
+      "ambientLightColorG": 7869616,
+      "ambientLightColorR": 32,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 6024528,
+      "ambientLightColorR": 67108864,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "UI",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 0,
+      "ambientLightColorR": 1,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Dialog",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    },
+    {
+      "name": "Bounce",
+      "type": "Bounce::Bounce"
+    },
+    {
+      "name": "Expire",
+      "type": "Expire::Expire"
+    },
+    {
+      "name": "Flash",
+      "type": "Flash::Flash"
+    },
+    {
+      "name": "Health",
+      "type": "Health::Health"
+    },
+    {
+      "name": "Pathfinding",
+      "type": "PathfindingBehavior::PathfindingBehavior"
+    },
+    {
+      "name": "PathfindingObstacle",
+      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+    },
+    {
+      "name": "Text_AutoTyping",
+      "type": "AutoTyping::Text_AutoTyping"
+    },
+    {
+      "name": "TopDownMovement",
+      "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    }
+  ]
+}

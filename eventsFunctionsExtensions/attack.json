@@ -1,0 +1,44 @@
+{
+  "author": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "Attack",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "tags": [],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "",
+      "name": "Attack",
+      "objectType": "",
+      "eventsFunctions": [],
+      "propertyDescriptors": [
+        {
+          "value": "0.25",
+          "type": "Number",
+          "label": "Timeout",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "Property"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "Property2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,947 @@
+{
+  "associatedLayout": "Level 1",
+  "lastChangeTimeStamp": 0,
+  "name": "Enemy",
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Determine State",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"idle\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "Uranus",
+            "Pathfinding",
+            "yes"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Uranus",
+            "LastPathTime",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "PathTarget",
+            "0",
+            "0",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "PathTarget"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "PathTarget",
+            "=",
+            "127"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"attack\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "AnimationEnded"
+          },
+          "parameters": [
+            "Uranus"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"seek\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "Debug",
+            "True"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Montre"
+          },
+          "parameters": [
+            "PathTarget",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "Debug",
+            "True"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "PathTarget"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Damage and Death",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsJustDamaged"
+          },
+          "parameters": [
+            "Uranus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Uranus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Flash::Flash::Flash"
+          },
+          "parameters": [
+            "Uranus",
+            "Flash",
+            "0.334\n",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Uranus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"dead\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Uranus",
+            "=",
+            "3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "TargetName",
+            "=",
+            "\"\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PathfindingBehavior::MaxSpeed"
+          },
+          "parameters": [
+            "Uranus",
+            "Pathfinding",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "Uranus",
+            "Pathfinding",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Flash::Flash::Stop"
+          },
+          "parameters": [
+            "Uranus",
+            "Flash",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Behavior and States",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "Uranus",
+            "AllowedAttack",
+            "False"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Uranus",
+                "AttackDelay",
+                ">",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Uranus",
+                "AttackDelay",
+                "-",
+                "TimeDelta() * 1000.0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "AttackDelay",
+                    "<=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "AllowedAttack",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Uranus",
+                    "AttackDelay",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"idle\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Uranus",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Uranus",
+                "AllowedAttack",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"seek\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"seek\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Uranus",
+                "\"pathfind\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Flash::Flash::IsFlashing"
+              },
+              "parameters": [
+                "Uranus",
+                "Flash",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Uranus",
+                "AllowedAttack",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nvar enemy = runtimeScene.getObjects(\"Uranus\")[0];\nlet enemyVars = enemy.getVariables();\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet objs = objects;\nobjs.sort((a,b) => enemy.getDistanceToObject(a) - enemy.getDistanceToObject(b));\n\nlet targets = objects.filter(sp => sp.getBehavior(\"Health\")._behaviorData.Health > 0);\nif (!targets.length) {\n    enemy.setAnimation(0);\n    return;\n}\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nvar pathfinding = enemy.getBehavior(\"Pathfinding\");\n\nlet hw = enemy.getWidth()/2;\nlet targetX = target.x + (Math.sign(enemy.x - target.x) * hw); \nlet targetY = target.y;\n\nlet targetXDist = targetX - enemy.x;\n if (targetXDist < -0.01 || target.x - enemy.x < -0.01) {\n    enemy.flipX(true);\n } else {\n     enemy.flipX(false);\n }\n\n// Set a debug indicator of target\n\n/** @type {gdjs.SpriteRuntimeObject} */\nlet goal = runtimeScene.getObjects(\"PathTarget\")[0] || runtimeScene.createObject(\"PathTarget\");\n\nlet timeSincePath = enemy.getTimerElapsedTimeInSeconds(\"pathfind\");\nlet maxTime = 2;\nif (!pathfinding.pathFound() || (pathfinding.destinationReached() && timeSincePath > 0.334) || timeSincePath > maxTime) {\n    \n    pathfinding.moveTo(runtimeScene, targetX, targetY);\n    enemyVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n\n    enemy.resetTimer(\"pathfind\");\n}\n\n// get scene vars\nlet sceneVars = runtimeScene.getVariables();\n\n// block movement for dialog present or no path found\nlet canMove = !sceneVars.get(\"DialogText\").getAsString() && pathfinding.pathFound();\n\n// set speed\nconst MAX_SPEED = 120;\nconst spd = canMove ? MAX_SPEED : 0;\npathfinding.setMaxSpeed(spd);\n\n// exit early!\nif (!canMove) return;\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\n// move goal here\ngoal.setCenterPositionInScene(x, y);\n\nlet xDist = target.x - enemy.x;\nlet yDist = target.y - enemy.y; \n\n// decide to attack based on random distance\nlet attackDist = (enemy.getWidth() * 0.4) + (Math.random() * (enemy.getWidth() * 0.15));\nlet attacking = false;\nlet targetDist = enemy.getDistanceToObject(target);\nif (yDist < (enemy.getHeight() * 0.1) &&  targetDist < attackDist) {\n    enemy.setVariableString(enemyVars.get(\"State\"), \"attack\");\n    enemy.setVariableBoolean(enemyVars.get(\"AllowedAttack\"), false);\n    enemy.setVariableNumber(enemyVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nenemy.setAnimation(anim);\n",
+              "parameterObjects": "Targets",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjetTxt"
+          },
+          "parameters": [
+            "Uranus",
+            "State",
+            "=",
+            "\"attack\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "AnimationEnded"
+              },
+              "parameters": [
+                "Uranus"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Uranus",
+                "State",
+                "=",
+                "\"seek\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Animation"
+              },
+              "parameters": [
+                "Uranus",
+                "!=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Uranus",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Animation"
+              },
+              "parameters": [
+                "Uranus",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Sprite"
+              },
+              "parameters": [
+                "Uranus",
+                ">=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "NbObjet"
+              },
+              "parameters": [
+                "UranusAttack",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "UranusAttack",
+                "Uranus.PointX(\"Attack\")",
+                "Uranus.PointY(\"Attack\")",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "UranusAttack"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeScaleHeight"
+              },
+              "parameters": [
+                "UranusAttack",
+                "=",
+                "4"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippedX"
+                  },
+                  "parameters": [
+                    "Uranus"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "UranusAttack",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlippedX"
+                  },
+                  "parameters": [
+                    "Uranus"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "UranusAttack",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

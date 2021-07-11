@@ -1,0 +1,52 @@
+{
+  "associatedLayout": "Level 1",
+  "name": "HudLayout",
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "UranusHealth",
+      "persistentUuid": "db2c96fd-a8ae-42e2-9cef-22fb0884d75c",
+      "width": 0,
+      "x": 640,
+      "y": 30,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "CronusHealth",
+      "persistentUuid": "4deb46da-a525-446a-9717-1d881c37ac7a",
+      "width": 0,
+      "x": 30,
+      "y": 30,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "editionSettings": {
+    "grid": false,
+    "gridB": 255,
+    "gridG": 180,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridR": 158,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "snap": true,
+    "windowMask": false,
+    "zoomFactor": 0.5799999999999996
+  }
+}

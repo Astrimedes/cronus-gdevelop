@@ -1,0 +1,1081 @@
+{
+  "associatedLayout": "Level 1",
+  "lastChangeTimeStamp": 0,
+  "name": "Player",
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Movement",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Right"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Up"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Down"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Moving",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "BlockInput",
+            "False"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "Flash::Flash::IsFlashing"
+          },
+          "parameters": [
+            "Cronus",
+            "Flash",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Cronus",
+                "no"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Cronus",
+                "TopDownMovement",
+                "\"Right\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Cronus",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Cronus",
+                "TopDownMovement",
+                "\"Left\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Up"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Cronus",
+                "TopDownMovement",
+                "\"Up\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TopDownMovementBehavior::SimulateControl"
+              },
+              "parameters": [
+                "Cronus",
+                "TopDownMovement",
+                "\"Down\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": true,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "-0.293 * Cronus.Variable(MoveSpeed)",
+                    "-0.293 * Cronus.Variable(MoveSpeed)",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": true,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "Cronus",
+                    "0.293 * Cronus.Variable(MoveSpeed)",
+                    "-0.293 * Cronus.Variable(MoveSpeed)",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Attack",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Space"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "BlockInput",
+            "False"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "ScytheCollected",
+            "True"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Flash::Flash::IsFlashing"
+              },
+              "parameters": [
+                "Cronus",
+                "Flash",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Attacking",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Cronus",
+                "Moving",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "Count(ScytheWeapon)",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Check Animation State",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AnimationEnded"
+          },
+          "parameters": [
+            "Cronus"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Animation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Attacking",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Moving",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Attacking",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Animation"
+          },
+          "parameters": [
+            "Cronus",
+            "!=",
+            "2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "2"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "NbObjet"
+              },
+              "parameters": [
+                "CronusAttack",
+                "<",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "CronusAttack",
+                "Cronus.PointX(\"Attack\")",
+                "Cronus.PointY(\"Attack\")",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "CronusAttack",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlippedX"
+                  },
+                  "parameters": [
+                    "Cronus"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "CronusAttack",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippedX"
+                  },
+                  "parameters": [
+                    "Cronus"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "CronusAttack",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Attacking",
+            "!=",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Moving",
+            "!=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsDead"
+          },
+          "parameters": [
+            "Cronus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Animation"
+          },
+          "parameters": [
+            "Cronus",
+            "!=",
+            "3"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Moving",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Attacking",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Health::Health::IsJustDamaged"
+          },
+          "parameters": [
+            "Cronus",
+            "Health",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Flash::Flash::Flash"
+          },
+          "parameters": [
+            "Cronus",
+            "Flash",
+            "0.75",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Flash::Flash::IsFlashing"
+          },
+          "parameters": [
+            "Cronus",
+            "Flash",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "Cronus",
+            "=",
+            "3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Cronus",
+            "Attacking",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Attack Sprites",
+      "comment2": ""
+    }
+  ]
+}
