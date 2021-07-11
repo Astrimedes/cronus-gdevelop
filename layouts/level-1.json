@@ -1008,16 +1008,16 @@
           "CooldownActive": false
         },
         {
+          "acceleration": 3600,
+          "deceleration": 99999,
+          "maxSpeed": 180,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-          "acceleration": 360,
           "allowDiagonals": true,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
           "customIsometryAngle": 30,
-          "deceleration": 9000,
           "ignoreDefaultControls": true,
-          "maxSpeed": 180,
           "movementAngleOffset": 0,
           "rotateObject": false,
           "viewpoint": "TopDown"
@@ -2297,14 +2297,14 @@
           "CooldownActive": false
         },
         {
+          "acceleration": 3600,
+          "maxSpeed": 160,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
           "allowDiagonals": false,
-          "acceleration": 180,
           "cellHeight": 24,
           "cellWidth": 24,
           "extraBorder": 8,
-          "maxSpeed": 90,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
           "rotateObject": false
@@ -2325,8 +2325,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2383,8 +2383,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2429,8 +2429,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2475,8 +2475,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2521,8 +2521,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2567,8 +2567,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2613,8 +2613,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2671,8 +2671,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2717,8 +2717,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2763,8 +2763,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2809,8 +2809,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2855,8 +2855,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2913,8 +2913,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -2971,8 +2971,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -3017,8 +3017,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -3063,8 +3063,8 @@
                   "points": [
                     {
                       "name": "Attack",
-                      "x": 45.79999923706055,
-                      "y": 19.25
+                      "x": 49.833984375,
+                      "y": 18.81510353088379
                     }
                   ],
                   "originPoint": {
@@ -3362,7 +3362,7 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.1599999964237213,
+              "timeBetweenFrames": 0.25,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,

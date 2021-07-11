@@ -641,7 +641,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -729,6 +729,40 @@
             {
               "type": {
                 "inverted": false,
+                "value": "Animation"
+              },
+              "parameters": [
+                "Uranus",
+                "!=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Uranus",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
                 "value": "AnimationEnded"
               },
               "parameters": [
@@ -766,40 +800,6 @@
               },
               "parameters": [
                 "Uranus",
-                "!=",
-                "2"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Uranus",
-                "=",
-                "2"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Animation"
-              },
-              "parameters": [
-                "Uranus",
                 "=",
                 "2"
               ],
@@ -819,14 +819,20 @@
             },
             {
               "type": {
-                "inverted": false,
-                "value": "NbObjet"
+                "inverted": true,
+                "value": "AnimationEnded"
               },
               "parameters": [
-                "UranusAttack",
-                "=",
-                "0"
+                "Uranus"
               ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
               "subInstructions": []
             }
           ],
@@ -848,22 +854,34 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PlayAnimation"
-              },
-              "parameters": [
-                "UranusAttack"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "ChangeScaleHeight"
               },
               "parameters": [
                 "UranusAttack",
                 "=",
                 "4"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeScaleWidth"
+              },
+              "parameters": [
+                "UranusAttack",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "UranusAttack"
               ],
               "subInstructions": []
             }
