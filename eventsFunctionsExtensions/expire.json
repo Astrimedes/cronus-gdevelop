@@ -10,7 +10,14 @@
   "shortDescription": "",
   "version": "",
   "tags": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "exportName": "my-dependency",
+      "name": "New Dependency",
+      "type": "npm",
+      "version": "1.0.0"
+    }
+  ],
   "eventsFunctions": [],
   "eventsBasedBehaviors": [
     {
@@ -63,7 +70,7 @@
               ],
               "events": [
                 {
-                  "disabled": true,
+                  "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -88,7 +95,7 @@
                       "parameters": [
                         "Object",
                         "=",
-                        "Object.Behavior::PropertyLife()/Object.Behavior::PropertyMaxLife()"
+                        "(1 - cos(((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 3.1415926) / 2)) * 255"
                       ],
                       "subInstructions": []
                     }
@@ -125,39 +132,6 @@
                   "parameters": [
                     "Object",
                     ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Expire::Expire::PropertyFades"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Opacity"
-                  },
-                  "parameters": [
-                    "Object",
-                    "=",
-                    "round((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 255)"
                   ],
                   "subInstructions": []
                 }

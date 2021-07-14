@@ -23,15 +23,12 @@
     "gridWidth": 50,
     "snap": false,
     "windowMask": false,
-    "zoomFactor": 0.3828000000000012
+    "zoomFactor": 0.3228000000000012
   },
   "objectsGroups": [
     {
       "name": "Walls",
       "objects": [
-        {
-          "name": "StoneBlock"
-        },
         {
           "name": "LevelBoundary"
         },
@@ -81,6 +78,9 @@
         },
         {
           "name": "Gaia"
+        },
+        {
+          "name": "Barrier"
         }
       ]
     },
@@ -555,6 +555,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Barrier",
+      "persistentUuid": "78613f74-c69b-4706-9a2e-5e3048af5369",
+      "width": 0,
+      "x": 551,
+      "y": 242,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -605,17 +621,39 @@
       ]
     },
     {
-      "name": "StoneBlock",
+      "name": "Barrier",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Name",
+          "type": "string",
+          "value": "Barrier"
+        }
+      ],
       "behaviors": [
         {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "impassable": false,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 2,
-          "impassable": true
+          "cost": 2
         }
       ],
       "animations": [
@@ -633,8 +671,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 25.72916603088379,
+                    "y": 25.151519775390625
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1008,11 +1046,11 @@
           "CooldownActive": false
         },
         {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 3600,
           "deceleration": 99999,
           "maxSpeed": 180,
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "allowDiagonals": true,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
@@ -2297,11 +2335,11 @@
           "CooldownActive": false
         },
         {
-          "acceleration": 3600,
-          "maxSpeed": 160,
+          "allowDiagonals": true,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
-          "allowDiagonals": false,
+          "acceleration": 3600,
+          "maxSpeed": 160,
           "cellHeight": 24,
           "cellWidth": 24,
           "extraBorder": 8,
@@ -4398,6 +4436,39 @@
                     "Targets",
                     "Flash",
                     "0.75",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Targets",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Targets",
                     ""
                   ],
                   "subInstructions": []
