@@ -33,6 +33,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "HelpText",
+      "persistentUuid": "cf462870-c722-436e-93d6-0d8298f80871",
+      "width": 0,
+      "x": 0,
+      "y": 528,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {

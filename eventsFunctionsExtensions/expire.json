@@ -2,12 +2,12 @@
   "author": "",
   "description": "",
   "extensionNamespace": "",
-  "fullName": "",
+  "fullName": "Expire",
   "helpPath": "",
-  "iconUrl": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMTYsMmMtMC42LDAtMSwwLjQtMSwxdjVjMCwwLjYsMC40LDEsMSwxczEtMC40LDEtMVYzQzE3LDIuNCwxNi42LDIsMTYsMnoiLz4NCgk8cGF0aCBkPSJNNy41LDYuMWMtMC40LTAuNC0xLTAuNC0xLjQsMHMtMC40LDEsMCwxLjRsMy41LDMuNWMwLjIsMC4yLDAuNSwwLjMsMC43LDAuM3MwLjUtMC4xLDAuNy0wLjNjMC40LTAuNCwwLjQtMSwwLTEuNEw3LjUsNi4xDQoJCXoiLz4NCgk8cGF0aCBkPSJNOSwxNmMwLTAuNi0wLjQtMS0xLTFIM2MtMC42LDAtMSwwLjQtMSwxczAuNCwxLDEsMWg1QzguNiwxNyw5LDE2LjYsOSwxNnoiLz4NCgk8cGF0aCBkPSJNOS42LDIwLjlsLTMuNSwzLjVjLTAuNCwwLjQtMC40LDEsMCwxLjRjMC4yLDAuMiwwLjUsMC4zLDAuNywwLjNzMC41LTAuMSwwLjctMC4zbDMuNS0zLjVjMC40LTAuNCwwLjQtMSwwLTEuNA0KCQlTMTAsMjAuNiw5LjYsMjAuOXoiLz4NCgk8cGF0aCBkPSJNMTYsMjNjLTAuNiwwLTEsMC40LTEsMXY1YzAsMC42LDAuNCwxLDEsMXMxLTAuNCwxLTF2LTVDMTcsMjMuNCwxNi42LDIzLDE2LDIzeiIvPg0KCTxwYXRoIGQ9Ik0yMi40LDIwLjljLTAuNC0wLjQtMS0wLjQtMS40LDBzLTAuNCwxLDAsMS40bDMuNSwzLjVjMC4yLDAuMiwwLjUsMC4zLDAuNywwLjNzMC41LTAuMSwwLjctMC4zYzAuNC0wLjQsMC40LTEsMC0xLjQNCgkJTDIyLjQsMjAuOXoiLz4NCgk8cGF0aCBkPSJNMjksMTVoLTVjLTAuNiwwLTEsMC40LTEsMXMwLjQsMSwxLDFoNWMwLjYsMCwxLTAuNCwxLTFTMjkuNiwxNSwyOSwxNXoiLz4NCgk8cGF0aCBkPSJNMjEuNywxMS4zYzAuMywwLDAuNS0wLjEsMC43LTAuM2wzLjUtMy41YzAuNC0wLjQsMC40LTEsMC0xLjRzLTEtMC40LTEuNCwwbC0zLjUsMy41Yy0wLjQsMC40LTAuNCwxLDAsMS40DQoJCUMyMS4xLDExLjIsMjEuNCwxMS4zLDIxLjcsMTEuM3oiLz4NCjwvZz4NCjwvc3ZnPg0K",
   "name": "Expire",
-  "previewIconUrl": "",
-  "shortDescription": "",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Interface Elements/Interface Elements_interface_ui_loading_wait_buffering_circular.svg",
+  "shortDescription": "Sprites will expire after the given time",
   "version": "",
   "tags": [],
   "dependencies": [
@@ -42,46 +42,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Expire::Expire::PropertyLife"
+                    "value": "Expire::Expire::PropertyActive"
                   },
                   "parameters": [
                     "Object",
-                    "Behavior",
-                    ">",
-                    "0"
+                    "Behavior"
                   ],
                   "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Expire::Expire::SetPropertyLife"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "-",
-                    "TimeDelta()"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Expire::Expire::PropertyFades"
+                        "value": "Expire::Expire::PropertyLife"
                       },
                       "parameters": [
                         "Object",
-                        "Behavior"
+                        "Behavior",
+                        ">",
+                        "0"
                       ],
                       "subInstructions": []
                     }
@@ -90,12 +76,81 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Opacity"
+                        "value": "Expire::Expire::SetPropertyLife"
                       },
                       "parameters": [
                         "Object",
-                        "=",
-                        "(1 - cos(((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 3.1415926) / 2)) * 255"
+                        "Behavior",
+                        "-",
+                        "TimeDelta()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Expire::Expire::PropertyFades"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "Object",
+                            "=",
+                            "(1 - cos(((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 3.1415926) / 2)) * 255"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Expire::Expire::PropertyLife"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "<=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -103,40 +158,6 @@
                   "events": []
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Expire::Expire::PropertyLife"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "<=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Object",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ],
           "parameters": [
@@ -191,11 +212,20 @@
         {
           "value": "true",
           "type": "Boolean",
-          "label": "Fade away as lifetime decreases (reduce opacity)",
+          "label": "Reduce opactity (fade away) as lifetime decreases",
           "description": "",
           "extraInformation": [],
           "hidden": false,
           "name": "Fades"
+        },
+        {
+          "value": "",
+          "type": "Boolean",
+          "label": "Expire according to Life remaining in seconds",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "Active"
         }
       ]
     }

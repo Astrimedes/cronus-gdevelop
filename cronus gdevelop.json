@@ -1263,6 +1263,379 @@
           "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Line Light/Target round button.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Hurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Hurt.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Hurt.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Idle_1.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Idle_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Idle_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Idle_2.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Idle_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_1.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_2.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_3.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_3.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_4.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_4.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_5.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_5.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Running_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Running_6.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Running_6.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Bub_Squished.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bub_Squished.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Bub/Bub_Squished.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Hurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Hurt.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Hurt.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Idle_1.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Idle_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Idle_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Idle_2.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Idle_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Protection.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Protection.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Protection.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_1.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_2.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_3.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_3.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_4.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_4.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_5.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_5.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Spikey Bub_Running_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Spikey Bub_Running_6.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Spikey Bub/Spikey Bub_Running_6.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Falling.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Falling.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Falling.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Hurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Hurt.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Hurt.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Running_1.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Running_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Jumping.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Jumping.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Jumping.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Running_2.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Running_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Running_3.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Running_3.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Running_4.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Running_4.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Standing.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Devo the Devil_Standing.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Devo the Devil/Devo the Devil_Standing.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/StoneBlock-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\StoneBlock-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1284,6 +1657,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/enemy"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/hudevents"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/simpleenemy"
     }
   ],
   "eventsFunctionsExtensions": [
@@ -1305,11 +1686,11 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/attack"
+      "referenceTo": "/eventsFunctionsExtensions/expire"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/expire"
+      "referenceTo": "/eventsFunctionsExtensions/seek"
     }
   ],
   "externalLayouts": [

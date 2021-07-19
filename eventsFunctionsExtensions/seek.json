@@ -1,0 +1,159 @@
+{
+  "author": "Astrimedes",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "Seek",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPHBvbHlsaW5lIGNsYXNzPSJzdDAiIHBvaW50cz0iMTcsMjYgNSwyNiA1LDQgMjcsNCAyNywyNiAyNSwyNiAiLz4NCjxwb2x5bGluZSBjbGFzcz0ic3QwIiBwb2ludHM9IjUsMTkgMTYsOCAyNywxOSAiLz4NCjxsaW5lIGNsYXNzPSJzdDAiIHgxPSIxMiIgeTE9IjQiIHgyPSIxOSIgeTI9IjExIi8+DQo8bGluZSBjbGFzcz0ic3QwIiB4MT0iMjIiIHkxPSI0IiB4Mj0iMjIiIHkyPSIxNCIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjUsMTcuNWMtMS45LTEuOS01LjEtMS45LTcsMGMtMS45LDEuOS0xLjksNS4xLDAsN2MxLjQsMS41LDMuNiwxLjgsNS40LDEuMWMwLjYtMC4yLDEuMi0wLjYsMS42LTEuMQ0KCUMyMi40LDIyLjYsMjIuNCwxOS41LDIwLjUsMTcuNXoiLz4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMS41LDIzbDMuOSwzLjZjMC44LDAuOCwwLjgsMiwwLDIuOGwwLDBjLTAuOCwwLjgtMiwwLjgtMi44LDBsLTMuNS0zLjUiLz4NCjwvc3ZnPg0K",
+  "name": "Seek",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Maps and Navigation/Maps and Navigation_map_find_search.svg",
+  "shortDescription": "Assign seek destination and pathfinding time interval, find the next direction to move",
+  "version": "",
+  "tags": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Seek towards the closest sprite instance",
+      "fullName": "",
+      "functionType": "Action",
+      "name": "SeekNearest",
+      "private": false,
+      "sentence": "_PARAM1_ Seek towards the nearest _PARAM2_, using the standard delay if applicable unless _PARAM3_ is True.",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "/** @type {gdjs.SpriteRuntimeObject} */\nlet self = eventsFunctionContext.getObjects(\"Seeker\")[0];\nlet selfVars = self.getVariables();\n\nlet changeNow = !!eventsFunctionContext.getArgument(\"ChangeTargetNow\");\n\n\n/** @type {gdjs.SpriteRuntimeObject[]} */\nlet targets = objects;\nif (!targets.length) {\n    self.setAnimation(0);\n    return;\n}\n\n// sort by distance\ntargets.sort((a,b) => self.getDistanceToObject(a) - self.getDistanceToObject(b));\n/** @type {gdjs.SpriteRuntimeObject} */\nlet target = targets[0];\nlet targetVars = target.getVariables();\n\n/** @type {gdjs.PathfindingRuntimeBehavior} */\nlet pathfinding = self.getBehavior(\"Pathfinding\");\nlet seeking = self.getBehavior(\"Seek\");\nconsole.log(seeking);\n\nlet hw = self.getWidth()/2;\nlet targetX = target.x + (Math.sign(self.x - target.x) * hw); \nlet targetY = target.y;\n\nlet targetXDist = targetX - self.x;\n if (targetXDist < -0.01 || target.x - self.x < -0.01) {\n    self.flipX(true);\n } else {\n     self.flipX(false);\n }\n\nlet timeSincePath = self.getTimerElapsedTimeInSeconds(\"seek-pathfind\");\nlet maxTime = 2;\nif (timeSincePath > maxTime || !pathfinding.pathFound() || (pathfinding.destinationReached() && timeSincePath > 0.334)) {\n    // retry if necessary...\n    let maxTries = 10;\n    let pathFound = false;\n    let origTargetX = targetX;\n    let origTargetY = targetY;\n    for(let i=0; (i < maxTries) && !pathFound; i++) {\n        pathfinding.moveTo(runtimeScene, targetX, targetY);\n        pathFound = pathfinding.pathFound();\n\n        if (!pathFound) {\n            targetX = origTargetX + ( -hw + (Math.random() * hw * 2));\n            targetY = origTargetY + (-hw + (Math.random() * hw * 2));\n        }\n    }\n    \n\n    selfVars.get(\"TargetName\").setString(targetVars.get(\"Name\").getAsString());\n\n    self.resetTimer(\"seek-pathfind\");\n}\n\n// get scene vars\nlet sceneVars = runtimeScene.getVariables();\n\n// block movement for dialog present or no path found\nlet canMove = pathfinding.pathFound() && !sceneVars.get(\"DialogText\").getAsString();\n\n// set speed\nconst MAX_SPEED = 120;\nconst spd = canMove ? MAX_SPEED : 0;\npathfinding.setMaxSpeed(spd);\n\n// exit early!\nif (!canMove) return;\n\n// movement according to path\nlet x = pathfinding.getNextNodeX();\nlet y = pathfinding.getNextNodeY();\n\n// move goal here\ngoal.setCenterPositionInScene(x, y);\n\nlet xDist = target.x - self.x;\nlet yDist = target.y - self.y; \n\n// decide to attack based on random distance\nlet attackDist = (self.getWidth() * 0.55) + (Math.random() * (self.getWidth() * 0.15));\nlet attacking = false;\nlet targetDist = self.getDistanceToObject(target);\nif (yDist < (self.getHeight() * 0.5) &&  targetDist < attackDist) {\n    self.setVariableString(selfVars.get(\"State\"), \"attack\");\n    self.setVariableBoolean(selfVars.get(\"AllowedAttack\"), false);\n    self.setVariableNumber(selfVars.get(\"AttackDelay\"), 1250 + (Math.random() * 500));\n}\n\nlet anim = attacking ? 3 : xDist || yDist ? 1 : 0;\nself.setAnimation(anim);\n\n",
+          "parameterObjects": "TargetSprite",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "The object (with Seek behavior) that will seek towards the nearest targetsprite, using a pathfinding delay.",
+          "longDescription": "",
+          "name": "Seeker",
+          "optional": false,
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Any sprite or group of sprites to pathfind towards (finding closest)",
+          "longDescription": "",
+          "name": "TargetSprite",
+          "optional": false,
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Immediately begin seeking the new target, ignoring the standard pathfinding delay.",
+          "longDescription": "",
+          "name": "ChangeTargetNow",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "trueorfalse"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "",
+      "name": "Seek",
+      "objectType": "Sprite",
+      "eventsFunctions": [],
+      "propertyDescriptors": [
+        {
+          "value": "",
+          "type": "Number",
+          "label": "X Location the unit is seeking towards",
+          "description": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "DestinationX"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Y Location the unit is seeking towards",
+          "description": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "DestinationY"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Signed distance to the next X pathfinding node (use for movement)",
+          "description": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "NextX"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Signed distance to the next Y pathfinding node (use for movement)",
+          "description": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "NextY"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Signed X distance to maintain between unit and destination target (allow spacing for attack/interact, etc)",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "MinXOffset"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "Signed Y distance to maintain between unit and destination target (allow spacing for attack/interact, etc)",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "MinYOffset"
+        },
+        {
+          "value": "",
+          "type": "Boolean",
+          "label": "Flip sprite horizontally to face NextX",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "FlipX"
+        },
+        {
+          "value": "",
+          "type": "Boolean",
+          "label": "Flip sprite vertically to face NextY",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "FlipY"
+        }
+      ]
+    }
+  ]
+}
