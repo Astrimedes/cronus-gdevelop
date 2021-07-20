@@ -8,7 +8,7 @@
       "height": 0,
       "layer": "UI",
       "locked": false,
-      "name": "UranusHealth",
+      "name": "BossHealth",
       "persistentUuid": "db2c96fd-a8ae-42e2-9cef-22fb0884d75c",
       "width": 0,
       "x": 640,
@@ -24,7 +24,7 @@
       "height": 0,
       "layer": "UI",
       "locked": false,
-      "name": "CronusHealth",
+      "name": "PlayerHealth",
       "persistentUuid": "4deb46da-a525-446a-9717-1d881c37ac7a",
       "width": 0,
       "x": 30,
@@ -49,6 +49,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "Score",
+      "persistentUuid": "6b60bc84-69a7-4468-acb5-db9318eee677",
+      "width": 0,
+      "x": 139,
+      "y": 30,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "UI",
+      "locked": false,
+      "name": "Fuel",
+      "persistentUuid": "0201099b-5b34-49d9-9ab1-38aea9595df1",
+      "width": 0,
+      "x": 30,
+      "y": 76,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -63,6 +95,6 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.5799999999999996
+    "zoomFactor": 0.8599999999999999
   }
 }

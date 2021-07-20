@@ -23,7 +23,7 @@
     "gridWidth": 50,
     "snap": false,
     "windowMask": false,
-    "zoomFactor": 0.6328000000000014
+    "zoomFactor": 0.7528000000000015
   },
   "objectsGroups": [
     {
@@ -88,10 +88,10 @@
       "name": "HudGroup",
       "objects": [
         {
-          "name": "CronusHealth"
+          "name": "PlayerHealth"
         },
         {
-          "name": "UranusHealth"
+          "name": "BossHealth"
         }
       ]
     },
@@ -108,17 +108,6 @@
     },
     {
       "name": "EnemyGroup",
-      "objects": [
-        {
-          "name": "Bub"
-        },
-        {
-          "name": "SpikeyBub"
-        }
-      ]
-    },
-    {
-      "name": "EnemyGroupCopy",
       "objects": [
         {
           "name": "Bub"
@@ -169,6 +158,16 @@
       "name": "Temp",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "Score",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Fuel",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -197,8 +196,8 @@
       "name": "Gaia",
       "persistentUuid": "8f803af3-3e4b-405e-b73b-8c3f96bf4406",
       "width": 0,
-      "x": 344,
-      "y": 336,
+      "x": 381.5050048828125,
+      "y": 319.76092529296875,
       "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
@@ -213,8 +212,8 @@
       "name": "Cronus",
       "persistentUuid": "7fcf99dd-8bed-45d8-b605-c019490b1e15",
       "width": 38,
-      "x": 480,
-      "y": 439,
+      "x": 496.0010070800781,
+      "y": 429.94677734375,
       "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
@@ -574,6 +573,726 @@
       "x": 700,
       "y": 500,
       "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "e8fbd7db-eb19-43d9-aa98-f399a581e50b",
+      "width": 17,
+      "x": 548.1428833007812,
+      "y": 336.2983703613281,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "8b50273b-ac7f-444c-b437-52780c05cece",
+      "width": 17,
+      "x": 543.4020385742188,
+      "y": 494.326171875,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "3ea14916-5899-492d-b197-beee3c19d5a3",
+      "width": 17,
+      "x": 514.95703125,
+      "y": 265.18585205078125,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "853c84b1-c483-415d-bd08-f7a1c3680867",
+      "width": 17,
+      "x": -145.59921264648438,
+      "y": 213.03668212890625,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "5e33b125-c63a-4e3f-a751-84468e918d5d",
+      "width": 17,
+      "x": 55.096107482910156,
+      "y": 350.5208740234375,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "e0e7fb96-9879-4c9a-b470-523c39952c68",
+      "width": 17,
+      "x": 56.67638397216797,
+      "y": 227.25918579101562,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "b0c03783-2d77-43a9-90e6-b24f248b7b78",
+      "width": 17,
+      "x": 358.509521484375,
+      "y": 140.34388732910156,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "39777512-8dd8-4658-a554-c89df6799fb2",
+      "width": 17,
+      "x": 559.204833984375,
+      "y": 246.22251892089844,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "8a98f2da-446b-4ce6-ac1e-ebff05b54f6d",
+      "width": 17,
+      "x": 460,
+      "y": 475,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "ac57904a-890a-4185-b2f1-5a6b85c5c870",
+      "width": 17,
+      "x": 283,
+      "y": 524,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "dbdf0a1a-33cf-42d5-97f2-c626d5c6c6e9",
+      "width": 17,
+      "x": 108.8255615234375,
+      "y": 435.85589599609375,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "f47321b2-c970-4642-9be7-be121785026d",
+      "width": 17,
+      "x": 81.9608383178711,
+      "y": 279.4083557128906,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "915567fc-d607-4836-b0a2-2012c6773b60",
+      "width": 17,
+      "x": 288.9772644042969,
+      "y": 228.83946228027344,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "002d13cb-290e-4a9a-a0a8-670ba4493358",
+      "width": 17,
+      "x": 481.7712097167969,
+      "y": 209.87611389160156,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "2626f9ad-940a-4996-9453-953ee26782c0",
+      "width": 17,
+      "x": 669.8242797851562,
+      "y": 356.84197998046875,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "ce9ca96c-3581-488b-bf75-58cd49b28734",
+      "width": 17,
+      "x": 668,
+      "y": 490,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "4d0ac738-5b55-4a7e-a026-73be0dd796b8",
+      "width": 17,
+      "x": 725,
+      "y": 418,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "e07e5366-e78a-44e5-bd2f-672659eb2955",
+      "width": 17,
+      "x": 592.3906860351562,
+      "y": 336.2983703613281,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "074d0c1d-bbae-4702-b620-6a64ebc973b6",
+      "width": 17,
+      "x": 195.74085998535156,
+      "y": 465.88116455078125,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "1ac21750-f9d8-46d5-b02e-f141bf723031",
+      "width": 17,
+      "x": -20.75724220275879,
+      "y": 356.84197998046875,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "6e4fb11b-2977-4825-8550-134f7c38d250",
+      "width": 17,
+      "x": -253.05812072753906,
+      "y": 574.9203491210938,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "1dd98a4a-38e0-423c-96b8-842599b88821",
+      "width": 17,
+      "x": -273.60174560546875,
+      "y": 306.2730712890625,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "23a2657f-b18e-4a7f-b3b2-9bdfef2d1f6d",
+      "width": 17,
+      "x": 23.49054527282715,
+      "y": 175.11000061035156,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "a65d0cba-93c5-41b9-a254-1112386ebf04",
+      "width": 17,
+      "x": 386.95452880859375,
+      "y": 200.3944549560547,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "d0f64885-f738-45ef-b54c-8d42cbde676a",
+      "width": 17,
+      "x": 451.74591064453125,
+      "y": 393.1883850097656,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "9a737a72-56b3-4c73-b468-fee9ef4d75bf",
+      "width": 17,
+      "x": 601.872314453125,
+      "y": 183.0113983154297,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "6df3a0fa-69ac-4872-94d2-4d5e897860b8",
+      "width": 17,
+      "x": 638,
+      "y": 270,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "2a799d60-dbae-470a-9e95-ce5c5fa3221d",
+      "width": 17,
+      "x": 315.8420104980469,
+      "y": 408.99114990234375,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "057bda4a-3216-44bb-8028-4dd951359dae",
+      "width": 17,
+      "x": -80.80781555175781,
+      "y": 214.61695861816406,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "30ebcc2b-54dc-4061-8f4c-ab9bcb3afbda",
+      "width": 17,
+      "x": -309.9481506347656,
+      "y": 7.60051965713501,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "25733513-70c4-462d-9010-6c0a0059e8bd",
+      "width": 17,
+      "x": -379.4803771972656,
+      "y": 173.52972412109375,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "e4d5f956-4bd7-4577-b6cc-d2a85ab3bcac",
+      "width": 17,
+      "x": -322.5903625488281,
+      "y": 448.49810791015625,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "55a586c2-2b5f-43d6-9783-a99b131e9033",
+      "width": 17,
+      "x": -336.8128662109375,
+      "y": 546.475341796875,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "501660de-9e42-4d80-85c8-26a62f537174",
+      "width": 17,
+      "x": -77.64725494384766,
+      "y": 892.5562744140625,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "18d73520-3ef5-4fdb-a2f4-541b214b4eb3",
+      "width": 17,
+      "x": 142.0113983154297,
+      "y": 867.2718505859375,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "d063c42c-b467-4c65-ab13-30380aa86bb4",
+      "width": 17,
+      "x": 237,
+      "y": 780,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "22361fce-326c-48cf-8a6a-395d1d69dd6f",
+      "width": 17,
+      "x": 582.9089965820312,
+      "y": 823.0240478515625,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "18841294-a8c2-42e4-a95e-2e04ebe0bcf9",
+      "width": 17,
+      "x": 715.65234375,
+      "y": 791.41845703125,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "c437113a-a324-4f93-ba0c-78df0fa877ed",
+      "width": 17,
+      "x": 823,
+      "y": 543,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "f1474445-b769-4f2d-892f-b9ec2f0a0c2f",
+      "width": 17,
+      "x": 600,
+      "y": -67,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "902a7282-65a3-4ee0-9f26-419dd4307bc0",
+      "width": 17,
+      "x": 725.134033203125,
+      "y": -136.2047882080078,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "ddbb6fcf-7d49-4d98-b622-47ef1471da6e",
+      "width": 17,
+      "x": 544.9822998046875,
+      "y": -213.63841247558594,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "33171b51-188c-42ba-9d4f-ce424cb4f9a4",
+      "width": 17,
+      "x": 277.9153137207031,
+      "y": -194.67507934570312,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "94c8a91c-d6c4-4df7-8701-40100c8db8ac",
+      "width": 17,
+      "x": -69.74586486816406,
+      "y": -164.64979553222656,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 57,
+      "layer": "",
+      "locked": false,
+      "name": "Tree",
+      "persistentUuid": "cba53517-a6cf-436e-b7cf-76d150242ea2",
+      "width": 17,
+      "x": -261,
+      "y": -96,
+      "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1884,7 +2603,8 @@
           "MaxLife": 0.44,
           "Life": 0.44,
           "Fades": true,
-          "Active": true
+          "Active": true,
+          "Expiring": true
         }
       ],
       "animations": [
@@ -2868,7 +3588,8 @@
           "MaxLife": 0.36,
           "Life": 0.36,
           "Fades": true,
-          "Active": true
+          "Active": true,
+          "Expiring": true
         }
       ],
       "animations": [
@@ -3482,7 +4203,7 @@
     {
       "bold": false,
       "italic": false,
-      "name": "CronusHealth",
+      "name": "PlayerHealth",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
@@ -3500,7 +4221,7 @@
           "topEdgeAnchor": 1
         }
       ],
-      "string": "Cronus:",
+      "string": "Player:",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -3512,7 +4233,7 @@
     {
       "bold": false,
       "italic": false,
-      "name": "UranusHealth",
+      "name": "BossHealth",
       "smoothed": true,
       "tags": "",
       "type": "TextObject::Text",
@@ -3530,7 +4251,7 @@
           "topEdgeAnchor": 1
         }
       ],
-      "string": "Uranus:",
+      "string": "Boss:",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -3550,7 +4271,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Arrow Keys: Move\nTab: Place 'barrier'\nSpace: Interact/Attack",
+      "string": "Arrow Keys: Move\nTab: Place 'barrier' (costs 3 wood)\nSpace: Interact/Attack",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -3593,6 +4314,14 @@
           "NormalAngle": 0
         },
         {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Active": false
+        },
+        {
           "name": "Flash",
           "type": "Flash::Flash",
           "HalfPeriodTime": 0.1,
@@ -3609,6 +4338,8 @@
           "CooldownActive": false
         },
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 1500,
           "allowDiagonals": false,
           "angleOffset": 0,
@@ -3619,9 +4350,7 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 120,
-          "name": "Pathfinding",
-          "rotateObject": false,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "rotateObject": false
         }
       ],
       "animations": [
@@ -3939,6 +4668,14 @@
           "NormalAngle": 0
         },
         {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Active": false
+        },
+        {
           "name": "Flash",
           "type": "Flash::Flash",
           "HalfPeriodTime": 0.1,
@@ -3955,6 +4692,8 @@
           "CooldownActive": false
         },
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 1500,
           "allowDiagonals": false,
           "angleOffset": 0,
@@ -3965,9 +4704,7 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 120,
-          "name": "Pathfinding",
-          "rotateObject": false,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "rotateObject": false
         }
       ],
       "animations": [
@@ -4497,6 +5234,115 @@
           ]
         }
       ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Score",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Score:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "name": "Tree",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.25,
+          "Life": 0.25,
+          "Fades": true,
+          "Active": false
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Trunk (1).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Fuel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Wood:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "events": [
@@ -4549,20 +5395,7 @@
                 "Gaia",
                 "DialogMessage",
                 "=",
-                "\"Cronus, bravest of my children, take this scythe...\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "Gaia",
-                "DefaultMessage",
-                "=",
-                "\"Destroy your father Uranus when he comes for me tonight.\""
+                "\"They will come soon... Take this weapon, and defend us!\""
               ],
               "subInstructions": []
             },
@@ -4669,6 +5502,30 @@
               "parameters": [
                 "Cronus",
                 "\"barrier\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Score",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Fuel",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -5116,7 +5973,42 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Health::Health::IsDead"
+                          },
+                          "parameters": [
+                            "Uranus",
+                            "Health",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "500"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -5218,6 +6110,40 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Health::Health::IsDead"
+                          },
+                          "parameters": [
+                            "EnemyGroup",
+                            "Health",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Score",
+                            "+",
+                            "10"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
                       "events": []
@@ -5266,7 +6192,7 @@
                   "parameters": [
                     "DialogText",
                     "=",
-                    "\"Cronus picks up the scythe...\""
+                    "\"You pick up the weapon. You can hear them coming!\""
                   ],
                   "subInstructions": []
                 },
@@ -5277,18 +6203,6 @@
                   },
                   "parameters": [
                     "ScytheCollected",
-                    "True"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Uranus",
-                    "AllowedAttack",
                     "True"
                   ],
                   "subInstructions": []
@@ -5312,7 +6226,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5560,11 +6474,53 @@
             {
               "type": {
                 "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Score",
+                ">=",
+                "100"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Uranus",
+                "AllowedAttack",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
                 "value": "Timer"
               },
               "parameters": [
                 "",
-                "2",
+                "6",
                 "\"enemy\""
               ],
               "subInstructions": []
@@ -5771,7 +6727,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5811,10 +6767,23 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Gaia",
+                    "Cronus",
+                    "Cronus.Width() + Gaia.Width() / 2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "VarObjetTxt"
                   },
                   "parameters": [
-                    "Speakers",
+                    "Gaia",
                     "DialogMessage",
                     "!=",
                     "\"\""
@@ -5831,19 +6800,6 @@
                     "False"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Distance"
-                  },
-                  "parameters": [
-                    "Speakers",
-                    "Cronus",
-                    "Cronus.Width() + Speakers.Width() / 2",
-                    ""
-                  ],
-                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -5855,20 +6811,7 @@
                   "parameters": [
                     "DialogText",
                     "=",
-                    "Speakers.VariableString(DialogMessage)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjetTxt"
-                  },
-                  "parameters": [
-                    "Speakers",
-                    "DialogMessage",
-                    "=",
-                    "Speakers.VariableString(DefaultMessage)"
+                    "Gaia.VariableString(DialogMessage)"
                   ],
                   "subInstructions": []
                 },
@@ -5880,7 +6823,7 @@
                   "parameters": [
                     "DialogSpeaker",
                     "=",
-                    "Speakers.VariableString(Name)"
+                    "Gaia.VariableString(Name)"
                   ],
                   "subInstructions": []
                 }
@@ -5890,19 +6833,29 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  "conditions": [],
+                  "actions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "VarSceneTxt"
+                        "value": "ModVarObjetTxt"
                       },
                       "parameters": [
-                        "DialogSpeaker",
+                        "Gaia",
+                        "DialogMessage",
                         "=",
-                        "\"Gaia\""
+                        "\"\""
                       ],
                       "subInstructions": []
-                    },
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
                         "inverted": false,
@@ -6018,8 +6971,111 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Collect Fuel",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "DialogText",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "CronusAttack",
+                    "Tree",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Expire::Expire::Expiring"
+                  },
+                  "parameters": [
+                    "Tree",
+                    "Expire",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Fuel",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Expire::Expire::SetExpiring"
+                  },
+                  "parameters": [
+                    "Tree",
+                    "Expire",
+                    "True",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Build Barrier",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -6046,6 +7102,18 @@
                 "Cronus",
                 "\"barrier\"",
                 "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Fuel",
+                ">=",
+                "3"
               ],
               "subInstructions": []
             }
@@ -6085,6 +7153,18 @@
               "parameters": [
                 "Cronus",
                 "\"barrier\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Fuel",
+                "-",
+                "3"
               ],
               "subInstructions": []
             }

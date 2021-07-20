@@ -59,9 +59,9 @@
             "value": "TextObject::String"
           },
           "parameters": [
-            "UranusHealth",
+            "BossHealth",
             "=",
-            "\"Uranus: \" + ToString(Uranus.Health::PropertyHealth())"
+            "\"Boss: \" + ToString(Uranus.Health::PropertyHealth())"
           ],
           "subInstructions": []
         }
@@ -80,9 +80,9 @@
             "value": "TextObject::String"
           },
           "parameters": [
-            "CronusHealth",
+            "PlayerHealth",
             "=",
-            "\"Cronus: \" + ToString(Cronus.Health::PropertyHealth())"
+            "\"Player: \" + ToString(Cronus.Health::PropertyHealth())"
           ],
           "subInstructions": []
         }
@@ -93,77 +93,43 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "conditions": [],
+      "actions": [
         {
           "type": {
             "inverted": false,
-            "value": "NbObjet"
+            "value": "TextObject::String"
           },
           "parameters": [
-            "HelpText",
-            ">",
-            "0"
+            "Score",
+            "=",
+            "\"Score: \" + ToString(Variable(Score))"
           ],
           "subInstructions": []
         }
       ],
-      "actions": [],
-      "events": [
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
         {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Opacity"
-              },
-              "parameters": [
-                "HelpText",
-                "=",
-                "lerp(255, 0, TimerElapsedTime(\"help-text\") / 45)"
-              ],
-              "subInstructions": []
-            }
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "Fuel",
+            "=",
+            "\"Wood: \" + ToString(Variable(Fuel))"
           ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::Opacity"
-              },
-              "parameters": [
-                "HelpText",
-                "<",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Delete"
-              },
-              "parameters": [
-                "HelpText",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "subInstructions": []
         }
-      ]
+      ],
+      "events": []
     }
   ]
 }

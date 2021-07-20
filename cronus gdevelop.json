@@ -1636,6 +1636,19 @@
         "name": "assets\\StoneBlock-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Trunk (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Trunk (1).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Foliage Pack (100 assets)/PNG/Retina/Trunk (1).png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
