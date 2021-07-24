@@ -1,16 +1,16 @@
 {
-  "b": 42,
+  "b": 255,
   "disableInputWhenNotFocused": true,
   "mangledName": "Level_321",
   "name": "Level 1",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 139,
+  "r": 255,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 87,
+  "v": 255,
   "uiSettings": {
     "grid": false,
     "gridB": 255,
@@ -23,7 +23,7 @@
     "gridWidth": 50,
     "snap": false,
     "windowMask": false,
-    "zoomFactor": 0.7528000000000015
+    "zoomFactor": 0.8528000000000016
   },
   "objectsGroups": [
     {
@@ -892,7 +892,7 @@
       "width": 17,
       "x": -20.75724220275879,
       "y": 356.84197998046875,
-      "zOrder": 21,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1395,8 +1395,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1437,8 +1437,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1479,8 +1479,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1521,8 +1521,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1575,8 +1575,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1617,8 +1617,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1659,8 +1659,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1701,8 +1701,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1743,8 +1743,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1785,8 +1785,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1839,8 +1839,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1881,8 +1881,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1923,8 +1923,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1965,8 +1965,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2019,8 +2019,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2073,8 +2073,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2127,8 +2127,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2181,8 +2181,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2235,8 +2235,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2289,8 +2289,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2331,8 +2331,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2373,8 +2373,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2415,8 +2415,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2457,8 +2457,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2499,8 +2499,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2553,8 +2553,8 @@
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8.000422477722168,
-                    "y": 8.473395347595215
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -3919,6 +3919,10 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "LightObstacleBehavior",
+          "type": "Lighting::LightObstacleBehavior"
+        },
+        {
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
           "cost": 2,
@@ -4014,7 +4018,7 @@
           "Interval": 0.025
         }
       ],
-      "string": "",
+      "string": "Dialog",
       "font": "",
       "characterSize": 30,
       "color": {
@@ -4225,9 +4229,9 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -4255,9 +4259,9 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -4275,10 +4279,82 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
+    },
+    {
+      "name": "Tree",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.25,
+          "Life": 0.25,
+          "Fades": true,
+          "Active": false
+        },
+        {
+          "name": "LightObstacleBehavior",
+          "type": "Lighting::LightObstacleBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.02500000037252903,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Trunk (1).png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 19,
+                        "y": 12
+                      },
+                      {
+                        "x": 74,
+                        "y": 12
+                      },
+                      {
+                        "x": 74,
+                        "y": 275
+                      },
+                      {
+                        "x": 19,
+                        "y": 275
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Bub",
@@ -5260,59 +5336,10 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
-    },
-    {
-      "name": "Tree",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "Expire",
-          "type": "Expire::Expire",
-          "MaxLife": 0.25,
-          "Life": 0.25,
-          "Fades": true,
-          "Active": false
-        }
-      ],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.02500000037252903,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Trunk (1).png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     {
       "bold": false,
@@ -5339,9 +5366,51 @@
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "name": "Light1",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "radius": 150,
+        "color": "#f8e71c",
+        "debugMode": false,
+        "texture": ""
+      }
+    },
+    {
+      "name": "Light2",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "radius": 150,
+        "color": "#f8e71c",
+        "debugMode": false,
+        "texture": ""
+      }
+    },
+    {
+      "name": "EnemyLight",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "radius": 75,
+        "color": "#979171",
+        "debugMode": false,
+        "texture": ""
       }
     }
   ],
@@ -5540,13 +5609,139 @@
             "includeConfig": 0
           },
           "target": "HudEvents"
-        },
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Enemy Lights",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Bub",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "Bub"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "0",
+                "0",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "Bub"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": true,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "SpikeyBub",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "SpikeyBub"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "0",
+                "0",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "SpikeyBub"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ],
@@ -5758,7 +5953,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5846,6 +6041,124 @@
       "creationTime": 0,
       "disabled": false,
       "folded": false,
+      "name": "Lighting",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Gaia",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCenter"
+              },
+              "parameters": [
+                "Light2",
+                "=",
+                "Gaia.CenterX()",
+                "=",
+                "Gaia.CenterY()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Cronus",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCenter"
+              },
+              "parameters": [
+                "Light1",
+                "=",
+                "Cronus.CenterX()",
+                "=",
+                "Cronus.CenterY()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Remove lights that are 'orphaned'",
+          "comment2": ""
+        },
+        {
+          "disabled": true,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Lights",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": true,
       "name": "Collision",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -6510,7 +6823,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6648,6 +6961,14 @@
                       "subInstructions": []
                     }
                   ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
                   "events": []
                 }
               ]
@@ -7165,6 +7486,32 @@
                 "Fuel",
                 "-",
                 "3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "EnemyLight",
+                "Cronus.PointX(\"Attack\")",
+                "Cronus.PointY(\"Attack\")",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "EnemyLight",
+                "=",
+                "1001"
               ],
               "subInstructions": []
             }
@@ -7892,8 +8239,99 @@
           "viewportRight": 1,
           "viewportTop": 0,
           "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        },
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
         }
       ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "followBaseLayerCamera": true,
+      "isLightingLayer": true,
+      "name": "Lighting",
+      "visibility": true,
+      "cameras": [],
       "effects": []
     },
     {
@@ -7939,6 +8377,10 @@
     {
       "name": "Health",
       "type": "Health::Health"
+    },
+    {
+      "name": "LightObstacleBehavior",
+      "type": "Lighting::LightObstacleBehavior"
     },
     {
       "name": "Pathfinding",

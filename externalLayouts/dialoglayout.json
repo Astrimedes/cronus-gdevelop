@@ -11,9 +11,9 @@
       "name": "Dialog",
       "persistentUuid": "b3810ffc-f7a4-46c2-8243-d2f9f53064f8",
       "width": 646,
-      "x": 103,
-      "y": 251,
-      "zOrder": 1,
+      "x": 85,
+      "y": 212,
+      "zOrder": 100,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -21,15 +21,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 125,
+      "height": 127,
       "layer": "Dialog",
       "locked": false,
       "name": "DialogText",
-      "persistentUuid": "3c295f4e-5d41-4fe1-9309-484d4d1b2634",
-      "width": 603,
-      "x": 125,
-      "y": 273,
-      "zOrder": 1000,
+      "persistentUuid": "ddd46a26-9f14-439e-8537-23af94e398e5",
+      "width": 506,
+      "x": 161,
+      "y": 242,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -47,6 +47,6 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.7399999999999998
+    "zoomFactor": 0.41999999999999954
   }
 }

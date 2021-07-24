@@ -26,7 +26,20 @@
     "verticalSync": false,
     "platformSpecificAssets": {},
     "loadingScreen": {
-      "showGDevelopSplash": false
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": false,
+      "showProgressBar": true
     },
     "extensionProperties": [],
     "platforms": [
@@ -1649,6 +1662,303 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Foliage Pack (100 assets)/PNG/Retina/Trunk (1).png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/TopDownCharacter/Character/Character_Right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TopDownCharacter\\Character\\Character_Right.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkRight-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkRight-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkRight-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkRight-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkLeft-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkLeft-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkLeft-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkLeft-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkLeft-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkLeft-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkLeft-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkLeft-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUp-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUp-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUp-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUp-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUp-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUp-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUp-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUp-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDown-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDown-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDown-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDown-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDown-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDown-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDown-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDown-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpRight-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpRight-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpRight-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpRight-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownRight-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownRight-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownRight-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownRight-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownLeft-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownLeft-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownLeft-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownLeft-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownLeft-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownLeft-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkDownLeft-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkDownLeft-4.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1660,6 +1970,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/level-1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/nighttime"
     }
   ],
   "externalEvents": [

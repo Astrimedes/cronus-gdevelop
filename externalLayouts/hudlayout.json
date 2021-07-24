@@ -13,7 +13,7 @@
       "width": 0,
       "x": 640,
       "y": 30,
-      "zOrder": 19,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -29,7 +29,7 @@
       "width": 0,
       "x": 30,
       "y": 30,
-      "zOrder": 18,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -45,7 +45,7 @@
       "width": 0,
       "x": 0,
       "y": 528,
-      "zOrder": 20,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -61,7 +61,7 @@
       "width": 0,
       "x": 139,
       "y": 30,
-      "zOrder": 21,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -77,7 +77,7 @@
       "width": 0,
       "x": 30,
       "y": 76,
-      "zOrder": 22,
+      "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -95,6 +95,6 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.8599999999999999
+    "zoomFactor": 0.5399999999999996
   }
 }

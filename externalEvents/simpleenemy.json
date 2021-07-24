@@ -25,6 +25,21 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initialize enemy",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -78,6 +93,17 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "\"light\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "ChangeScale"
                   },
                   "parameters": [
@@ -94,9 +120,9 @@
                   },
                   "parameters": [
                     "EnemyGroup",
-                    "init",
+                    "interval",
                     "=",
-                    "1"
+                    "RandomFloatInRange(0.75, 2)"
                   ],
                   "subInstructions": []
                 },
@@ -107,14 +133,50 @@
                   },
                   "parameters": [
                     "EnemyGroup",
-                    "interval",
+                    "init",
                     "=",
-                    "RandomFloatInRange(0.75, 2)"
+                    "1"
                   ],
                   "subInstructions": []
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "\"light\"",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Normal living enemy code",
+              "comment2": ""
             },
             {
               "disabled": false,
@@ -229,7 +291,7 @@
                 },
                 {
                   "disabled": false,
-                  "folded": false,
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -737,6 +799,57 @@
                   "events": []
                 },
                 {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Light Control",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "EnemyLight",
+                        "EnemyGroup"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetCenter"
+                      },
+                      "parameters": [
+                        "EnemyLight",
+                        "=",
+                        "EnemyGroup.CenterX()",
+                        "=",
+                        "EnemyGroup.CenterY()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
@@ -832,6 +945,14 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
                 }
               ]
             },

@@ -1,0 +1,152 @@
+{
+  "b": 209,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "LightTest",
+  "name": "LightTest",
+  "oglFOV": 90,
+  "oglZFar": 500,
+  "oglZNear": 1,
+  "r": 209,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 209,
+  "uiSettings": {
+    "grid": false,
+    "gridB": 255,
+    "gridG": 180,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridR": 158,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "snap": true,
+    "windowMask": false,
+    "zoomFactor": 1
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "instances": [],
+  "objects": [
+    {
+      "name": "NewObject",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "radius": 50,
+        "color": "#ffffff",
+        "debugMode": false,
+        "texture": ""
+      }
+    }
+  ],
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"light\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Timer"
+          },
+          "parameters": [
+            "",
+            "2",
+            "\"light\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "NewObject",
+            "CameraX(\"\",0) + RandomFloatInRange(-250, 250)",
+            "CameraY(\"\",0) + RandomFloatInRange(-250, 250)",
+            "\"Lighting\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 2,
+      "ambientLightColorG": 134217728,
+      "ambientLightColorR": 1597132097,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 128,
+      "ambientLightColorG": 128,
+      "ambientLightColorR": 128,
+      "followBaseLayerCamera": true,
+      "isLightingLayer": true,
+      "name": "Lighting",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": []
+}
