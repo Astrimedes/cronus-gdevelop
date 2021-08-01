@@ -1,6 +1,6 @@
 {
-  "author": "",
-  "description": "",
+  "author": "Astrimedes",
+  "description": "Sprites will expire after the given time when active",
   "extensionNamespace": "",
   "fullName": "Expire",
   "helpPath": "",
@@ -89,7 +89,7 @@
                   ],
                   "events": [
                     {
-                      "disabled": false,
+                      "disabled": true,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -115,6 +115,39 @@
                             "Object",
                             "=",
                             "(1 - cos(((Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) * 3.1415926) / 2)) * 255"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Expire::Expire::PropertyFades"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "Object",
+                            "=",
+                            "pow(2, 2 * (Object.Behavior::PropertyLife() / Object.Behavior::PropertyMaxLife()) - 2) * 255"
                           ],
                           "subInstructions": []
                         }

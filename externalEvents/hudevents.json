@@ -43,6 +43,18 @@
             "\"help-text\""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "PlayerHealth",
+            "=",
+            "\"Player: \" + ToString(Cronus.Health::PropertyHealth())"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -52,20 +64,7 @@
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "BossHealth",
-            "=",
-            "\"Boss: \" + ToString(Uranus.Health::PropertyHealth())"
-          ],
-          "subInstructions": []
-        }
-      ],
+      "actions": [],
       "events": []
     },
     {
@@ -104,27 +103,6 @@
             "Score",
             "=",
             "\"Score: \" + ToString(Variable(Score))"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "TextObject::String"
-          },
-          "parameters": [
-            "Fuel",
-            "=",
-            "\"Wood: \" + ToString(Variable(Fuel))"
           ],
           "subInstructions": []
         }

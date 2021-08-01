@@ -28,7 +28,7 @@
           "parameters": [
             "Cronus",
             "AttackAllowed",
-            "False"
+            "True"
           ],
           "subInstructions": []
         }
@@ -638,17 +638,6 @@
           "parameters": [
             "BlockInput",
             "False"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "ScytheCollected",
-            "True"
           ],
           "subInstructions": []
         },

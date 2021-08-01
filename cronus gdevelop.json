@@ -1854,42 +1854,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "WalkUpLeft-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "WalkUpLeft-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "WalkUpLeft-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-3.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "WalkUpLeft-4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-4.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "WalkDownRight-1.png",
         "kind": "image",
         "metadata": "",
@@ -1959,6 +1923,384 @@
         "name": "WalkDownLeft-4.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttackDownRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttackDownRight-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttackDownRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttackDownRight-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttackDownRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttackDownRight-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttackDownRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttackDownRight-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-1-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-2-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-3-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-3-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PlayerAttack-4-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerAttack-4-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUpRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUpRight-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUpRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUpRight-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUpRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUpRight-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUpRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUpRight-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackRight-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackRight-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackRight-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackRight-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackRight-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackRight-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackRight-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackRight-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackRight-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackRight-5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackLeft-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackLeft-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackLeft-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackLeft-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackLeft-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackLeft-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackLeft-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackLeft-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackLeft-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackLeft-5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUp-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUp-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUp-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUp-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUp-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUp-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUp-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUp-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackUp-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackUp-5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackDown-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackDown-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackDown-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackDown-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackDown-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackDown-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackDown-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackDown-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "AttackDown-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AttackDown-5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "WalkUpLeft-4-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WalkUpLeft-4-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Castle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Castle-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1969,11 +2311,11 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/level-1"
+      "referenceTo": "/layouts/nighttime"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/nighttime"
+      "referenceTo": "/layouts/level-1"
     }
   ],
   "externalEvents": [
@@ -1991,10 +2333,26 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/simpleenemynight"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/simpleenemy"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/playeranimations"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/playerinput"
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/ysort"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/health"

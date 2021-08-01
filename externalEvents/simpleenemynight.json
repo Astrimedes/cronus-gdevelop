@@ -1,7 +1,7 @@
 {
-  "associatedLayout": "Level 1",
+  "associatedLayout": "NightTime",
   "lastChangeTimeStamp": 0,
-  "name": "SimpleEnemy",
+  "name": "SimpleEnemyNight",
   "events": [
     {
       "colorB": 228,
@@ -98,18 +98,6 @@
                   "parameters": [
                     "EnemyGroup",
                     "\"light\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeScale"
-                  },
-                  "parameters": [
-                    "EnemyGroup",
-                    "=",
-                    "2"
                   ],
                   "subInstructions": []
                 },
@@ -279,7 +267,7 @@
                         "value": "PickNearest"
                       },
                       "parameters": [
-                        "Targets",
+                        "PlayerTeam",
                         "EnemyGroup.CenterX()",
                         "EnemyGroup.CenterY()",
                         ""
@@ -306,7 +294,7 @@
                     },
                     {
                       "disabled": false,
-                      "folded": true,
+                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -360,9 +348,9 @@
                                 "value": "Distance"
                               },
                               "parameters": [
-                                "Targets",
+                                "PlayerTeam",
                                 "EnemyGroup",
-                                "EnemyGroup.Width() * 1.25",
+                                "PlayerTeam.Width() * 1.25",
                                 ""
                               ],
                               "subInstructions": []
@@ -378,8 +366,8 @@
                                 "EnemyGroup",
                                 "Pathfinding",
                                 "",
-                                "Targets.CenterX() + RandomFloatInRange(-EnemyGroup.Width(), EnemyGroup.Width())",
-                                "Targets.CenterY() + RandomFloatInRange(-EnemyGroup.Height(), EnemyGroup.Height())"
+                                "PlayerTeam.CenterX() + RandomFloatInRange(-PlayerTeam.Width(), PlayerTeam.Width())",
+                                "PlayerTeam.CenterY() + RandomFloatInRange(-PlayerTeam.Height(), PlayerTeam.Height())"
                               ],
                               "subInstructions": []
                             }
@@ -414,9 +402,9 @@
                             "value": "Distance"
                           },
                           "parameters": [
-                            "Targets",
+                            "PlayerTeam",
                             "EnemyGroup",
-                            "EnemyGroup.Width() * RandomFloatInRange(0.5, 1.5)",
+                            "(min(PlayerTeam.Width(), PlayerTeam.Height()) / 2) * RandomFloatInRange(1.1, 1.25)",
                             ""
                           ],
                           "subInstructions": []
@@ -445,30 +433,6 @@
                           "conditions": [
                             {
                               "type": {
-                                "inverted": true,
-                                "value": "Health::Health::IsDead"
-                              },
-                              "parameters": [
-                                "Targets",
-                                "Health",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "Flash::Flash::IsFlashing"
-                              },
-                              "parameters": [
-                                "Targets",
-                                "Flash",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
                                 "inverted": false,
                                 "value": "ObjectTimer"
                               },
@@ -478,48 +442,9 @@
                                 "2"
                               ],
                               "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "VarObjet"
-                              },
-                              "parameters": [
-                                "EnemyGroup",
-                                "allowedAttack",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
                             }
                           ],
                           "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Health::Health::Hit"
-                              },
-                              "parameters": [
-                                "Targets",
-                                "Health",
-                                "5",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Flash::Flash::Flash"
-                              },
-                              "parameters": [
-                                "Targets",
-                                "Flash",
-                                "0.75",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
                             {
                               "type": {
                                 "inverted": false,
@@ -528,6 +453,20 @@
                               "parameters": [
                                 "EnemyGroup",
                                 "\"attack\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "EnemyAttack",
+                                "EnemyGroup.CenterX() + XFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Width()/3)",
+                                "EnemyGroup.CenterY() + YFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Height()/3)",
+                                "\"\""
                               ],
                               "subInstructions": []
                             }
@@ -663,7 +602,7 @@
                                 "value": "Egal"
                               },
                               "parameters": [
-                                "Targets.CenterX() - EnemyGroup.CenterX()",
+                                "PlayerTeam.CenterX() - EnemyGroup.CenterX()",
                                 ">",
                                 "EnemyGroup.Width()/4"
                               ],
@@ -696,7 +635,7 @@
                                 "value": "Egal"
                               },
                               "parameters": [
-                                "Targets.CenterX() - EnemyGroup.CenterX()",
+                                "PlayerTeam.CenterX() - EnemyGroup.CenterX()",
                                 "<",
                                 "-EnemyGroup.Width()/4"
                               ],

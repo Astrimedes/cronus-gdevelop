@@ -1,8 +1,8 @@
 {
   "b": 255,
   "disableInputWhenNotFocused": true,
-  "mangledName": "Level_321",
-  "name": "Level 1",
+  "mangledName": "BaseLevel",
+  "name": "BaseLevel",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -23,7 +23,7 @@
     "gridWidth": 50,
     "snap": false,
     "windowMask": false,
-    "zoomFactor": 0.29280000000000106
+    "zoomFactor": 0.6128000000000012
   },
   "objectsGroups": [
     {
@@ -34,25 +34,6 @@
         },
         {
           "name": "StoneWall"
-        }
-      ]
-    },
-    {
-      "name": "DialogGroup",
-      "objects": [
-        {
-          "name": "DialogText"
-        },
-        {
-          "name": "Dialog"
-        }
-      ]
-    },
-    {
-      "name": "Speakers",
-      "objects": [
-        {
-          "name": "Gaia"
         }
       ]
     },
@@ -75,9 +56,6 @@
       "objects": [
         {
           "name": "Cronus"
-        },
-        {
-          "name": "Gaia"
         },
         {
           "name": "Barrier"
@@ -180,22 +158,6 @@
       "x": -450,
       "y": -300,
       "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": -92.8624038696289,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Gaia",
-      "persistentUuid": "8f803af3-3e4b-405e-b73b-8c3f96bf4406",
-      "width": 0,
-      "x": 381.5050048828125,
-      "y": 319.76092529296875,
-      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1952,170 +1914,6 @@
       ]
     },
     {
-      "name": "Gaia",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "DialogMessage",
-          "type": "string",
-          "value": "\"\""
-        },
-        {
-          "name": "DefaultMessage",
-          "type": "string",
-          "value": "\"\""
-        },
-        {
-          "name": "Name",
-          "type": "string",
-          "value": "\"Gaia\""
-        }
-      ],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "Bounce",
-          "type": "Bounce::Bounce",
-          "OldX": 0,
-          "OldY": 0,
-          "OldForceAngle": 0,
-          "OldForceLength": 0,
-          "NormalAngle": 0
-        },
-        {
-          "name": "Flash",
-          "type": "Flash::Flash",
-          "HalfPeriodTime": 0.1,
-          "IsFlashing": false,
-          "FlashDuration": 0
-        },
-        {
-          "name": "Health",
-          "type": "Health::Health",
-          "Health": 100,
-          "DamageCooldown": 0.4,
-          "MaxHealth": 100,
-          "IsJustDamaged": false,
-          "CooldownActive": false
-        },
-        {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "maxSpeed": 200,
-          "rotateObject": true
-        }
-      ],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.02500000037252903,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Green Character (9).png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "GreenCharacter9-dead",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.07999999821186066,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets\\GreenCharacter9-dead-1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "GaiaCorpse",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets\\GreenCharacter9-dead-1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Barrier",
       "tags": "",
       "type": "Sprite",
@@ -2203,46 +2001,6 @@
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
           "cost": 2,
           "impassable": true
-        }
-      ]
-    },
-    {
-      "name": "ScythePickup",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "Knife",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.02500000037252903,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "assets\\Knife-1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -3269,46 +3027,6 @@
       ]
     },
     {
-      "name": "PathTarget",
-      "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.02500000037252903,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "Target round button.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "bold": false,
       "italic": false,
       "name": "Score",
@@ -3369,43 +3087,15 @@
       }
     },
     {
-      "name": "Light1",
+      "name": "Torch",
       "tags": "",
       "type": "Lighting::LightObject",
       "variables": [],
       "effects": [],
       "behaviors": [],
       "content": {
-        "radius": 150,
-        "color": "#f8e71c",
-        "debugMode": false,
-        "texture": ""
-      }
-    },
-    {
-      "name": "Light2",
-      "tags": "",
-      "type": "Lighting::LightObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "radius": 150,
-        "color": "#f8e71c",
-        "debugMode": false,
-        "texture": ""
-      }
-    },
-    {
-      "name": "EnemyLight",
-      "tags": "",
-      "type": "Lighting::LightObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "radius": 75,
-        "color": "#979171",
+        "radius": 50,
+        "color": "#ffffff",
         "debugMode": false,
         "texture": ""
       }
@@ -3443,85 +3133,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarSceneTxt"
-              },
-              "parameters": [
-                "DialogText",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "Gaia",
-                "DialogMessage",
-                "=",
-                "\"They will come soon... Take this weapon, and defend us!\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "Gaia",
-                "Name",
-                "=",
-                "\"Gaia\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "Cronus",
-                "Name",
-                "=",
-                "\"Cronus\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "BlockInput",
                 "False"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
-              },
-              "parameters": [
-                "",
-                "\"DialogLayout\"",
-                "0",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "DialogGroup"
               ],
               "subInstructions": []
             },
@@ -3557,46 +3173,6 @@
                 "0"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Fuel",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Light1",
-                "0",
-                "0",
-                "\"Lighting\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Light2",
-                "0",
-                "0",
-                "\"Lighting\""
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
@@ -3609,219 +3185,6 @@
             "includeConfig": 0
           },
           "target": "HudEvents"
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "disabled": false,
-      "folded": false,
-      "name": "Enemy Lights",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "disabled": false,
-      "folded": false,
-      "name": "Dialog Show/Hide",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "DialogText",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "DialogGroup"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "BlockInput",
-                "False"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarSceneTxt"
-              },
-              "parameters": [
-                "DialogSpeaker",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "DialogBlockTime",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "DialogText",
-                "!=",
-                "\"\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "DialogBlockTime",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BlockInput",
-                    "True"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "=",
-                    "VariableString(DialogText)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "DialogGroup",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BlockInput",
-                    "True"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "DialogBlockTime",
-                    "+",
-                    "TimeDelta()*1000"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "parameters": []
@@ -3860,16 +3223,7 @@
                 ""
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+            },
             {
               "type": {
                 "inverted": false,
@@ -3883,16 +3237,7 @@
                 ""
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+            },
             {
               "type": {
                 "inverted": false,
@@ -3904,92 +3249,6 @@
                 "CameraY(\"\", 1) * 0.08",
                 "\"Background\"",
                 ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "disabled": false,
-      "folded": false,
-      "name": "Lighting",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "Gaia",
-                "Health",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetCenter"
-              },
-              "parameters": [
-                "Light2",
-                "=",
-                "Gaia.CenterX()",
-                "=",
-                "Gaia.CenterY()"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "Cronus",
-                "Health",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetCenter"
-              },
-              "parameters": [
-                "Light1",
-                "=",
-                "Cronus.CenterX()",
-                "=",
-                "Cronus.CenterY()"
               ],
               "subInstructions": []
             }
@@ -4032,7 +3291,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4051,45 +3310,6 @@
               ],
               "actions": [],
               "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "Score",
-                            "+",
-                            "500"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
-                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -4231,76 +3451,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "ScythePickup",
-                    "",
-                    "",
-                    "yes"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ScythePickup",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "=",
-                    "\"You pick up the weapon. You can hear them coming!\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "ScytheCollected",
-                    "True"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Cronus",
-                    "AttackAllowed",
-                    "True"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ]
         }
@@ -4342,7 +3492,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -4378,17 +3528,6 @@
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "ScytheCollected",
-                    "True"
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
@@ -4476,19 +3615,11 @@
                         "VariableString(Temp)",
                         "RandomFloatInRange(BoundaryMin.X() + 250, BoundaryMax.X() - 250)",
                         "RandomFloatInRange(BoundaryMin.Y() + 250, BoundaryMax.Y() - 250)",
-                        "\"\""
+                        ""
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
                   "events": []
                 }
               ]
@@ -4563,276 +3694,12 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Trigger Dialogs",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "Space"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Conversation",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Distance"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "Cronus",
-                    "Cronus.Width() + Gaia.Width() / 2",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "Gaia",
-                    "DialogMessage",
-                    "!=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BlockInput",
-                    "False"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "=",
-                    "Gaia.VariableString(DialogMessage)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogSpeaker",
-                    "=",
-                    "Gaia.VariableString(Name)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjetTxt"
-                      },
-                      "parameters": [
-                        "Gaia",
-                        "DialogMessage",
-                        "=",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "WeaponGiven",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "ScythePickup",
-                        "Cronus.X() + Speakers.Width() + Cronus.Width()",
-                        "Speakers.Y() - (Speakers.Height() / 2)",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "WeaponGiven",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Cancel Dialog",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "!=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "DialogBlockTime",
-                    ">",
-                    "250"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "AutoTyping::Text_AutoTyping::TypingFinished"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "Text_AutoTyping",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "DialogText",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
           "comment": "Build Barrier",
           "comment2": ""
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4842,7 +3709,7 @@
               },
               "parameters": [
                 "",
-                "Tab"
+                "Return"
               ],
               "subInstructions": []
             },
@@ -4870,21 +3737,7 @@
                 "Barrier",
                 "Cronus.PointX(\"Attack\")",
                 "Cronus.PointY(\"Attack\")",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Light1",
-                "Cronus.PointX(\"Attack\")",
-                "Cronus.PointY(\"Attack\")",
-                "\"Lighting\""
+                ""
               ],
               "subInstructions": []
             },
@@ -4896,6 +3749,20 @@
               "parameters": [
                 "Cronus",
                 "\"barrier\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "0",
+                "0",
+                "\"Lighting\""
               ],
               "subInstructions": []
             }
@@ -4915,237 +3782,15 @@
       "parameters": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Event Flags",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Health::Health::IsDead"
-          },
-          "parameters": [
-            "Gaia",
-            "Health",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "GaiaCorpse",
-            "Gaia.X()",
-            "Gaia.Y()",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Delete"
-          },
-          "parameters": [
-            "Gaia",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ChangePlan"
-          },
-          "parameters": [
-            "GaiaCorpse",
-            "=",
-            "1"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": true,
-            "value": "Health::Health::IsDead"
-          },
-          "parameters": [
-            "Gaia",
-            "Health",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": true,
-            "value": "Distance"
-          },
-          "parameters": [
-            "Cronus",
-            "Gaia",
-            "Gaia.Width() * 2",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "RotateTowardPosition"
-          },
-          "parameters": [
-            "Gaia",
-            "Cronus.X()",
-            "Cronus.Y()",
-            "200",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "DEBUG",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinCommonInstructions::Or"
-          },
-          "parameters": [],
-          "subInstructions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "RControl"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "LControl"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "RShift"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "LShift"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "RAlt"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyReleased"
-              },
-              "parameters": [
-                "",
-                "LAlt"
-              ],
-              "subInstructions": []
-            }
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "Temp",
-            "False"
-          ],
-          "subInstructions": []
-        }
-      ],
+      "name": "DEBUG",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "disabled": false,
@@ -5155,13 +3800,77 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SceneVariableAsBoolean"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Debug",
-                "True"
-              ],
-              "subInstructions": []
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RControl"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LControl"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RShift"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LShift"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "RAlt"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "LAlt"
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -5171,19 +3880,138 @@
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
-                "Debug",
+                "Temp",
                 "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Temp",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Temp",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "Debug",
+                "True"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "SetSceneVariableAsBoolean"
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::EnableDebugDraw"
               },
               "parameters": [
-                "Temp",
-                "True"
+                "",
+                "",
+                "no",
+                "no",
+                "yes"
               ],
               "subInstructions": []
             }
@@ -5209,12 +4037,9 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SceneVariableAsBoolean"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "Temp",
-                "False"
-              ],
+              "parameters": [],
               "subInstructions": []
             }
           ],
@@ -5222,104 +4047,22 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SetSceneVariableAsBoolean"
+                "value": "DebuggerTools::EnableDebugDraw"
               },
               "parameters": [
-                "Debug",
-                "True"
+                "",
+                "no",
+                "no",
+                "no",
+                "no"
               ],
               "subInstructions": []
             }
           ],
           "events": []
         }
-      ]
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "Debug",
-            "True"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": [],
-          "subInstructions": []
-        }
       ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "DebuggerTools::EnableDebugDraw"
-          },
-          "parameters": [
-            "",
-            "",
-            "no",
-            "no",
-            "yes"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "Debug",
-            "False"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": [],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "DebuggerTools::EnableDebugDraw"
-          },
-          "parameters": [
-            "",
-            "no",
-            "no",
-            "no",
-            "no"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
+      "parameters": []
     },
     {
       "colorB": 228,
@@ -5331,88 +4074,81 @@
       "name": "Separate - last",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
-      "events": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Cronus",
+                "Walls",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Cronus",
+                "Walls",
+                "no"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "Walls",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "Walls",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
       "parameters": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "Cronus",
-            "Walls",
-            "",
-            "",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "Cronus",
-            "Walls",
-            "no"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "EnemyGroup",
-            "Walls",
-            "",
-            "",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "EnemyGroup",
-            "Walls",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
     }
   ],
   "layers": [
@@ -5515,10 +4251,6 @@
     {
       "name": "PathfindingObstacle",
       "type": "PathfindingBehavior::PathfindingObstacleBehavior"
-    },
-    {
-      "name": "Seek",
-      "type": "Seek::Seek"
     },
     {
       "name": "Text_AutoTyping",
