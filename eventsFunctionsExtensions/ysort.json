@@ -48,7 +48,7 @@
                   "parameters": [
                     "Object",
                     "=",
-                    "Object.Y()"
+                    "Object.Y() + Object.Height()"
                   ],
                   "subInstructions": []
                 }

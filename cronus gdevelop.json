@@ -2300,7 +2300,7 @@
         "metadata": "",
         "name": "Castle-1.png",
         "smoothed": true,
-        "userAdded": false
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2329,6 +2329,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/gamepads"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/ysort"
