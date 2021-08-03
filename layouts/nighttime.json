@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.5599999999999996
+    "zoomFactor": 0.31999999999999973
   },
   "objectsGroups": [
     {
@@ -60,6 +60,20 @@
           "name": "EnemyAttack"
         }
       ]
+    },
+    {
+      "name": "AllActors",
+      "objects": [
+        {
+          "name": "Player"
+        },
+        {
+          "name": "Bub"
+        },
+        {
+          "name": "Castle"
+        }
+      ]
     }
   ],
   "variables": [
@@ -79,8 +93,8 @@
       "name": "Ground",
       "persistentUuid": "abd68d83-1b11-45d2-b047-bd98ad54b585",
       "width": 1872,
-      "x": -570,
-      "y": -203,
+      "x": 0,
+      "y": 0,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -95,25 +109,9 @@
       "name": "Player",
       "persistentUuid": "9ba84589-23de-412c-aff9-9822ad9b2a8a",
       "width": 0,
-      "x": 365,
-      "y": 282,
+      "x": 1020,
+      "y": 665,
       "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Bub",
-      "persistentUuid": "882074de-40cd-43f6-9380-d9fd7662e77a",
-      "width": 0,
-      "x": 713,
-      "y": 84,
-      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -127,57 +125,9 @@
       "name": "Castle",
       "persistentUuid": "cc1c984e-460a-4445-a321-e8b3ad840910",
       "width": 0,
-      "x": 346,
-      "y": 216,
+      "x": 1001,
+      "y": 599,
       "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Bub",
-      "persistentUuid": "f2d6a1d4-3b72-4716-a359-d485fcb8f826",
-      "width": 0,
-      "x": 78,
-      "y": 47,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Bub",
-      "persistentUuid": "4aabb46d-8c57-463e-acfd-10fb119904b9",
-      "width": 0,
-      "x": 653,
-      "y": 523,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Bub",
-      "persistentUuid": "df1ca93f-4e5b-421f-8639-4e7e39fd3d3a",
-      "width": 0,
-      "x": 32,
-      "y": 534,
-      "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1304,7 +1254,7 @@
         }
       ],
       "content": {
-        "radius": 200,
+        "radius": 50,
         "color": "#ffffff",
         "debugMode": false,
         "texture": ""
@@ -1590,9 +1540,9 @@
           "CooldownActive": false
         },
         {
-          "allowDiagonals": true,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "allowDiagonals": true,
           "acceleration": 1500,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
@@ -1929,7 +1879,7 @@
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "Castle-1.png",
                   "points": [],
                   "originPoint": {
@@ -1943,7 +1893,26 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 38
+                      },
+                      {
+                        "x": 60,
+                        "y": 38
+                      },
+                      {
+                        "x": 60,
+                        "y": 60
+                      },
+                      {
+                        "x": 3,
+                        "y": 60
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -1954,34 +1923,194 @@
   ],
   "events": [
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "name": "Setup",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "inverted": false,
-            "value": "DepartScene"
-          },
-          "parameters": [
-            ""
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
           ],
-          "subInstructions": []
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"attack-delay\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Torch",
+                    "Player.CenterX()",
+                    "Player.CenterY()",
+                    "\"Lighting\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Torch",
+                    "Player"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Lighting::SetRadius"
+                  },
+                  "parameters": [
+                    "Torch",
+                    "125"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Torch",
+                    "Castle.CenterX()",
+                    "Castle.CenterY()",
+                    "\"Lighting\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Torch",
+                    "Castle"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Lighting::SetRadius"
+                  },
+                  "parameters": [
+                    "Torch",
+                    "200"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"enemy-spawn\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Ground",
+                    "=",
+                    "-100"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "ResetObjectTimer"
-          },
-          "parameters": [
-            "Player",
-            "\"attack-delay\""
-          ],
-          "subInstructions": []
-        }
-      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Camera",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "disabled": false,
@@ -1992,45 +2121,26 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
+                "value": "FixCamera"
               },
               "parameters": [
                 "",
-                "Torch",
-                "Player.CenterX()",
-                "Player.CenterY()",
-                "\"Lighting\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "Torch",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "LinkedObjects::LinkObjects"
-              },
-              "parameters": [
+                "Player",
+                "Ground.X()",
+                "Ground.Y()",
+                "Ground.X() + Ground.Width()",
+                "Ground.Y() + Ground.Height()",
                 "",
-                "Torch",
-                "Player"
+                "",
+                ""
               ],
               "subInstructions": []
             }
           ],
           "events": []
         }
-      ]
+      ],
+      "parameters": []
     },
     {
       "colorB": 228,
@@ -2042,44 +2152,88 @@
       "name": "Linked Items",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
-      "events": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Torch",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "AllActors",
+                    "Torch"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Torch",
+                    "=",
+                    "AllActors.CenterX()",
+                    "=",
+                    "AllActors.CenterY() + 2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "AllActors",
+                    "Torch"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Torch",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ],
       "parameters": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "LinkedObjects::PickObjectsLinkedTo"
-          },
-          "parameters": [
-            "",
-            "Torch",
-            "Player"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "MettreXY"
-          },
-          "parameters": [
-            "Torch",
-            "=",
-            "Player.CenterX()",
-            "=",
-            "Player.CenterY()"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
     },
     {
       "colorB": 228,
@@ -2128,21 +2282,100 @@
       "parameters": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Link",
-      "include": {
-        "includeConfig": 0
-      },
-      "target": "SimpleEnemyNight"
+      "name": "AI",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "SimpleEnemyNight"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "4",
+                "\"enemy-spawn\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Bub",
+                "RandomFloatInRange(Ground.X() + Bub.Width(), Ground.X() + Ground.Width() - Bub.Width()) ",
+                "RandomFloatInRange(Ground.Y() + Bub.Height(), Ground.Y() + Ground.Height() - Bub.Height())",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"enemy-spawn\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "Bub.CenterX()",
+                "Bub.CenterY()",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "Bub"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": []
     },
     {
       "colorB": 228,
@@ -2257,9 +2490,9 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 145,
-      "ambientLightColorG": 145,
-      "ambientLightColorR": 145,
+      "ambientLightColorB": 49,
+      "ambientLightColorG": 6,
+      "ambientLightColorR": 32,
       "followBaseLayerCamera": true,
       "isLightingLayer": true,
       "name": "Lighting",
