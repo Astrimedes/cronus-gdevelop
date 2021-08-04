@@ -34,6 +34,9 @@
         },
         {
           "name": "WallTarget"
+        },
+        {
+          "name": "Castle"
         }
       ]
     },
@@ -336,6 +339,118 @@
       "x": 1787,
       "y": 40,
       "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "9179f76d-be06-4d40-981d-aaa7be11b392",
+      "width": 0,
+      "x": 880,
+      "y": 255,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "5fff8259-12a1-43eb-8608-e33a658b7dd4",
+      "width": 0,
+      "x": 119.47368621826172,
+      "y": 202.36842346191406,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "1f5d7eb1-daa9-4561-a7ac-988b62f2381d",
+      "width": 0,
+      "x": 377.368408203125,
+      "y": 299.7368469238281,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "81ff5865-ea07-4dea-bb15-7e81440b7489",
+      "width": 0,
+      "x": 1211.5789794921875,
+      "y": 199.73684692382812,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "e4d866f9-6f2c-4286-9c84-5e5b7e42dcd2",
+      "width": 0,
+      "x": 1432.631591796875,
+      "y": 336.5789489746094,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "63d08152-4335-4727-bc31-80855742f291",
+      "width": 0,
+      "x": 1572.105224609375,
+      "y": 176.05262756347656,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Castle",
+      "persistentUuid": "16cd3502-8fff-45f6-ab91-3e3ddc6484d1",
+      "width": 0,
+      "x": 503.6842041015625,
+      "y": 286.5789489746094,
+      "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1474,6 +1589,25 @@
       }
     },
     {
+      "name": "TorchLocal",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
+        }
+      ],
+      "content": {
+        "radius": 50,
+        "color": "#ffffff",
+        "debugMode": false,
+        "texture": ""
+      }
+    },
+    {
       "name": "PlayerAttack",
       "tags": "",
       "type": "Sprite",
@@ -2122,12 +2256,12 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 3,
-                        "y": 38
+                        "x": 2,
+                        "y": 6.5
                       },
                       {
-                        "x": 60,
-                        "y": 38
+                        "x": 61,
+                        "y": 5.5
                       },
                       {
                         "x": 60,
@@ -2265,135 +2399,6 @@
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Gamepad index mapping - from title screen",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlayerIndex",
-                    "=",
-                    "max(GlobalVariable(PlayerGamepads[0]), 1)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Torch",
-                    "Player.CenterX()",
-                    "Player.CenterY()",
-                    "\"Lighting\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "Torch",
-                    "Player"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Lighting::SetRadius"
-                  },
-                  "parameters": [
-                    "Torch",
-                    "125"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Torch",
-                    "Castle.CenterX()",
-                    "Castle.CenterY()",
-                    "\"Lighting\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "Torch",
-                    "Castle"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Lighting::SetRadius"
-                  },
-                  "parameters": [
-                    "Torch",
-                    "200"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -2420,17 +2425,122 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ChangePlan"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "Ground",
+                    "Player",
+                    "PlayerIndex",
                     "=",
-                    "-100"
+                    "max(GlobalVariable(PlayerGamepads[0]), 1)"
                   ],
                   "subInstructions": []
                 }
               ],
               "events": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "Create Lights",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Castle",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "TorchLocal",
+                        "Castle.CenterX()",
+                        "Castle.CenterY()",
+                        "\"Lighting\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "TorchLocal",
+                        "200"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Player",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Torch",
+                        "Player.CenterX()",
+                        "Player.CenterY()",
+                        "\"Lighting\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "Torch",
+                        "Player"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Lighting::SetRadius"
+                      },
+                      "parameters": [
+                        "Torch",
+                        "125"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": []
             }
           ]
         }
@@ -2448,6 +2558,27 @@
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Ground",
+                "=",
+                "-100"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -2906,7 +3037,21 @@
       "name": "Lighting",
       "visibility": true,
       "cameras": [],
-      "effects": []
+      "effects": [
+        {
+          "effectType": "KawaseBlur",
+          "name": "Effect",
+          "doubleParameters": {
+            "blur": 0.5,
+            "padding": 0,
+            "pixelizeX": 0,
+            "pixelizeY": 0,
+            "quality": 3
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
     }
   ],
   "behaviorsSharedData": [
