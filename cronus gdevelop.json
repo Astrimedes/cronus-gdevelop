@@ -2314,6 +2314,96 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Generic Backgrounds/Background Objects/Retina/tiled_Castle Wall.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-0-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-0-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "lava.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lava.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "lava-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lava-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-2-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-2-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GateSection-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GateSection-5.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2323,21 +2413,25 @@
   "variables": [
     {
       "name": "PlayerGamepads",
-      "type": "array",
+      "type": "structure",
       "children": [
         {
+          "name": "P1",
           "type": "number",
           "value": 0
         },
         {
+          "name": "P2",
           "type": "number",
           "value": 0
         },
         {
+          "name": "P3",
           "type": "number",
           "value": 0
         },
         {
+          "name": "P4",
           "type": "number",
           "value": 0
         }
@@ -2383,6 +2477,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/followobjectswithcamera"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/arraytools"

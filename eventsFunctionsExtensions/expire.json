@@ -10,14 +10,7 @@
   "shortDescription": "Sprites will expire after the given time",
   "version": "",
   "tags": [],
-  "dependencies": [
-    {
-      "exportName": "my-dependency",
-      "name": "New Dependency",
-      "type": "npm",
-      "version": "1.0.0"
-    }
-  ],
+  "dependencies": [],
   "eventsFunctions": [],
   "eventsBasedBehaviors": [
     {

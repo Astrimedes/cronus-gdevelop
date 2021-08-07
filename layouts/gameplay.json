@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.3799999999999996
+    "zoomFactor": 0.2999999999999999
   },
   "objectsGroups": [
     {
@@ -33,10 +33,10 @@
           "name": "Player"
         },
         {
-          "name": "WallTarget"
+          "name": "Castle"
         },
         {
-          "name": "Castle"
+          "name": "GateSection"
         }
       ]
     },
@@ -77,6 +77,20 @@
           "name": "Castle"
         }
       ]
+    },
+    {
+      "name": "Obstacles",
+      "objects": [
+        {
+          "name": "Lava"
+        },
+        {
+          "name": "CastleWall"
+        },
+        {
+          "name": "GateSection"
+        }
+      ]
     }
   ],
   "variables": [
@@ -84,6 +98,11 @@
       "name": "TempString",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "SpawnTimeout",
+      "type": "number",
+      "value": 6
     }
   ],
   "instances": [
@@ -91,7 +110,7 @@
       "angle": 0,
       "customSize": true,
       "height": 1090,
-      "layer": "",
+      "layer": "Background",
       "locked": true,
       "name": "Ground",
       "persistentUuid": "abd68d83-1b11-45d2-b047-bd98ad54b585",
@@ -105,262 +124,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "height": 128,
-      "layer": "",
-      "locked": false,
-      "name": "CastleWall",
-      "persistentUuid": "a1978120-09cc-4be3-8ec9-cc67e323c02d",
-      "width": 1920,
-      "x": -24,
-      "y": -50,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "3d0f8e89-697f-4dab-9a21-47afe5cd82ee",
-      "width": 0,
-      "x": 69,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "940a9e7e-dcb3-46b8-b6a5-682324a5e69b",
-      "width": 0,
-      "x": 204,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "b4b396bc-7b0c-4f12-97a4-4d3a834f62f5",
-      "width": 0,
-      "x": 328,
-      "y": 46,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "040958e9-136a-490e-9ca9-0c2137f41178",
-      "width": 0,
-      "x": 451,
-      "y": 43,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "aa8b69c1-6e0e-428c-96fc-8f4dde9adcc3",
-      "width": 0,
-      "x": 593,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "5777d9a5-757f-48d0-9272-907f2649d5de",
-      "width": 0,
-      "x": 734,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "caed2723-2267-4bd9-8219-0317d522e6c7",
-      "width": 0,
-      "x": 860,
-      "y": 43,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "2c18ddb7-9900-4cf3-94a5-ba7479c39e8b",
-      "width": 0,
-      "x": 966,
-      "y": 46,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "b1b04aed-47dd-44fe-b63a-045ab2fe1e4f",
-      "width": 0,
-      "x": 1098,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "e221e950-46b7-4124-9940-fea2c76f0087",
-      "width": 0,
-      "x": 1222,
-      "y": 46,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "db6e13df-10cf-45f8-8847-12b7d93af02a",
-      "width": 0,
-      "x": 1340,
-      "y": 45,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "9694f184-91ec-47ce-9f9e-26c132956391",
-      "width": 0,
-      "x": 1498,
-      "y": 46,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "3f86d142-f8fa-4570-a64c-82f257707733",
-      "width": 0,
-      "x": 1640,
-      "y": 46,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "WallTarget",
-      "persistentUuid": "bf2964e8-2d16-4c9d-8047-7f86574f2e19",
-      "width": 0,
-      "x": 1787,
-      "y": 40,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Castle",
-      "persistentUuid": "9179f76d-be06-4d40-981d-aaa7be11b392",
-      "width": 0,
-      "x": 880,
-      "y": 255,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "layer": "",
@@ -368,8 +131,8 @@
       "name": "Castle",
       "persistentUuid": "5fff8259-12a1-43eb-8608-e33a658b7dd4",
       "width": 0,
-      "x": 119.47368621826172,
-      "y": 202.36842346191406,
+      "x": 937,
+      "y": 228,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -384,24 +147,8 @@
       "name": "Castle",
       "persistentUuid": "1f5d7eb1-daa9-4561-a7ac-988b62f2381d",
       "width": 0,
-      "x": 377.368408203125,
-      "y": 299.7368469238281,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Castle",
-      "persistentUuid": "81ff5865-ea07-4dea-bb15-7e81440b7489",
-      "width": 0,
-      "x": 1211.5789794921875,
-      "y": 199.73684692382812,
+      "x": 124,
+      "y": 215,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -416,8 +163,8 @@
       "name": "Castle",
       "persistentUuid": "e4d866f9-6f2c-4286-9c84-5e5b7e42dcd2",
       "width": 0,
-      "x": 1432.631591796875,
-      "y": 336.5789489746094,
+      "x": 1363,
+      "y": 225,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -432,8 +179,8 @@
       "name": "Castle",
       "persistentUuid": "63d08152-4335-4727-bc31-80855742f291",
       "width": 0,
-      "x": 1572.105224609375,
-      "y": 176.05262756347656,
+      "x": 1749,
+      "y": 211,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -448,9 +195,270 @@
       "name": "Castle",
       "persistentUuid": "16cd3502-8fff-45f6-ab91-3e3ddc6484d1",
       "width": 0,
-      "x": 503.6842041015625,
-      "y": 286.5789489746094,
+      "x": 500,
+      "y": 221,
       "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 354,
+      "layer": "Background",
+      "locked": false,
+      "name": "Lava",
+      "persistentUuid": "1430f157-42f7-4ff9-b81a-decd8e383c56",
+      "width": 306,
+      "x": 689,
+      "y": 432,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Lighting",
+      "locked": true,
+      "name": "LavaLight",
+      "persistentUuid": "0ba52090-30db-4045-9016-fc8a2daf5e00",
+      "width": 0,
+      "x": 824,
+      "y": 619,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "1dd20176-bebc-44db-ae9f-eed3cb6b14eb",
+      "width": 101,
+      "x": 16,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 143,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "495dd78d-2774-498b-868d-41173b131bd9",
+      "width": 123,
+      "x": 111,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 143,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "021b0f15-39fa-4bf8-ab56-812ab9127553",
+      "width": 123,
+      "x": 510.99993896484375,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 143,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "7a162fe1-065e-4e41-9f75-768f4419f930",
+      "width": 123,
+      "x": 910.9999389648438,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 143,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "f3617e93-bb7b-4c18-a741-af1e9e9c1823",
+      "width": 123,
+      "x": 1311,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 143,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "745b6537-7de7-4c37-adf3-2cbe9e67ee93",
+      "width": 123,
+      "x": 1711,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 123,
+      "layer": "",
+      "locked": false,
+      "name": "GateSection",
+      "persistentUuid": "65d245aa-14af-4448-93ec-a5c4cc04dea1",
+      "width": 123,
+      "x": 111,
+      "y": -140,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "d53451f4-f38d-4eff-816f-67d620b0829c",
+      "width": 298,
+      "x": 223,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "176ca56a-64de-43ae-981f-475de4e9800c",
+      "width": 298,
+      "x": 623,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "dba35884-e291-4d43-af75-037929239064",
+      "width": 298,
+      "x": 1014,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "758abcc4-5005-4c76-bb02-c78ae9e06860",
+      "width": 298,
+      "x": 1423,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "CastleWall",
+      "persistentUuid": "083ba4ab-0883-4993-b522-49595b70295b",
+      "width": 42,
+      "x": 1827,
+      "y": -128,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 477,
+      "layer": "Background",
+      "locked": false,
+      "name": "Lava",
+      "persistentUuid": "29f7e266-6a8b-4f09-8049-15b5199ca39b",
+      "width": 394,
+      "x": 1439,
+      "y": 563,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Lighting",
+      "locked": true,
+      "name": "LavaLight",
+      "persistentUuid": "2c2a69c1-fe0f-41c1-a61a-9203e2502d94",
+      "width": 0,
+      "x": 1609,
+      "y": 780,
+      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -461,7 +469,7 @@
       "height": 32,
       "name": "Ground",
       "tags": "",
-      "texture": "NewObject-1-0.png",
+      "texture": "NewObject-1-0-1.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -503,6 +511,14 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
           "name": "Flash",
           "type": "Flash::Flash",
           "HalfPeriodTime": 0.1,
@@ -521,6 +537,7 @@
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "movementAngleOffset": 0,
           "deceleration": 6000,
           "ignoreDefaultControls": true,
           "acceleration": 1600,
@@ -529,7 +546,6 @@
           "angularMaxSpeed": 180,
           "customIsometryAngle": 30,
           "maxSpeed": 200,
-          "movementAngleOffset": 0,
           "rotateObject": false,
           "viewpoint": "TopDown"
         },
@@ -1570,6 +1586,35 @@
       ]
     },
     {
+      "height": 32,
+      "name": "Lava",
+      "tags": "",
+      "texture": "lava-1.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [
+        {
+          "name": "ScrollRateX",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "ScrollRateY",
+          "type": "string",
+          "value": "0"
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        }
+      ]
+    },
+    {
       "name": "Torch",
       "tags": "",
       "type": "Lighting::LightObject",
@@ -1583,7 +1628,7 @@
       ],
       "content": {
         "radius": 50,
-        "color": "#ffffff",
+        "color": "#f8c51c",
         "debugMode": false,
         "texture": ""
       }
@@ -1601,8 +1646,8 @@
         }
       ],
       "content": {
-        "radius": 50,
-        "color": "#ffffff",
+        "radius": 150,
+        "color": "#f8d41c",
         "debugMode": false,
         "texture": ""
       }
@@ -1616,7 +1661,7 @@
         {
           "name": "Damage",
           "type": "number",
-          "value": 5
+          "value": 15
         }
       ],
       "effects": [],
@@ -1880,9 +1925,9 @@
         {
           "name": "Health",
           "type": "Health::Health",
-          "Health": 10,
+          "Health": 100,
           "DamageCooldown": 0.1,
-          "MaxHealth": 10,
+          "MaxHealth": 100,
           "IsJustDamaged": false,
           "CooldownActive": false
         },
@@ -2209,6 +2254,14 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
           "name": "Flash",
           "type": "Flash::Flash",
           "HalfPeriodTime": 0.1,
@@ -2307,6 +2360,12 @@
           "CooldownActive": false
         },
         {
+          "cost": 2,
+          "impassable": true,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
           "name": "YSort",
           "type": "YSort::YSort"
         }
@@ -2320,6 +2379,14 @@
       "variables": [],
       "effects": [],
       "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
         {
           "name": "Flash",
           "type": "Flash::Flash",
@@ -2338,6 +2405,240 @@
         }
       ],
       "animations": []
+    },
+    {
+      "name": "LavaLight",
+      "tags": "",
+      "type": "Lighting::LightObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "radius": 850,
+        "color": "#f8bd1c",
+        "debugMode": false,
+        "texture": ""
+      }
+    },
+    {
+      "name": "GateSection",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "cost": 10,
+          "impassable": false,
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-2-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -2379,20 +2680,6 @@
                 "\"attack-delay\""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Player",
-                "Ground.X() + (Ground.Width() / 2)",
-                "Ground.Y() * 0.2",
-                "\"\""
-              ],
-              "subInstructions": []
             }
           ],
           "events": [
@@ -2412,6 +2699,18 @@
                     "\"enemy-spawn\""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "SpawnTimeout",
+                    "=",
+                    "3"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -2421,6 +2720,15 @@
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
+              "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Lava",
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -2428,10 +2736,23 @@
                     "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "Player",
-                    "PlayerIndex",
+                    "Lava",
+                    "ScrollRateX",
                     "=",
-                    "max(GlobalVariable(PlayerGamepads[0]), 1)"
+                    "RandomFloatInRange(-6,6)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Lava",
+                    "ScrollRateY",
+                    "=",
+                    "RandomFloatInRange(-6,6)"
                   ],
                   "subInstructions": []
                 }
@@ -2445,7 +2766,7 @@
               "creationTime": 0,
               "disabled": false,
               "folded": false,
-              "name": "Create Lights",
+              "name": "Add players",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -2453,15 +2774,6 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Castle",
                   "conditions": [],
                   "actions": [
                     {
@@ -2471,21 +2783,23 @@
                       },
                       "parameters": [
                         "",
-                        "TorchLocal",
-                        "Castle.CenterX()",
-                        "Castle.CenterY()",
-                        "\"Lighting\""
+                        "Player",
+                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
+                        "Ground.Y() * 0.2",
+                        "\"\""
                       ],
                       "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Lighting::SetRadius"
+                        "value": "ModVarObjet"
                       },
                       "parameters": [
-                        "TorchLocal",
-                        "200"
+                        "Player",
+                        "PlayerIndex",
+                        "=",
+                        "max(GlobalVariable(PlayerGamepads.P1), 1)"
                       ],
                       "subInstructions": []
                     }
@@ -2495,9 +2809,21 @@
                 {
                   "disabled": false,
                   "folded": false,
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Player",
-                  "conditions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerGamepads.P2",
+                        "!=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -2506,33 +2832,121 @@
                       },
                       "parameters": [
                         "",
-                        "Torch",
-                        "Player.CenterX()",
-                        "Player.CenterY()",
-                        "\"Lighting\""
+                        "Player",
+                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
+                        "Ground.Y() * 0.2",
+                        "\"\""
                       ],
                       "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "LinkedObjects::LinkObjects"
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerIndex",
+                        "=",
+                        "GlobalVariable(PlayerGamepads.P2)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerGamepads.P3",
+                        "!=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
                       },
                       "parameters": [
                         "",
-                        "Torch",
-                        "Player"
+                        "Player",
+                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
+                        "Ground.Y() * 0.2",
+                        "\"\""
                       ],
                       "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Lighting::SetRadius"
+                        "value": "ModVarObjet"
                       },
                       "parameters": [
-                        "Torch",
-                        "125"
+                        "Player",
+                        "PlayerIndex",
+                        "=",
+                        "GlobalVariable(PlayerGamepads.P3)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerGamepads.P4",
+                        "!=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Player",
+                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
+                        "Ground.Y() * 0.2",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerIndex",
+                        "=",
+                        "GlobalVariable(PlayerGamepads.P4)"
                       ],
                       "subInstructions": []
                     }
@@ -2543,6 +2957,172 @@
               "parameters": []
             }
           ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Create Lights",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Castle",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Castle",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "TorchLocal",
+                "Castle"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "TorchLocal",
+                "Castle.CenterX()",
+                "Castle.CenterY()",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Lighting::SetRadius"
+              },
+              "parameters": [
+                "TorchLocal",
+                "200"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Castle",
+                "TorchLocal"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Player",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "Player"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "Player.CenterX()",
+                "Player.CenterY()",
+                "\"Lighting\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Lighting::SetRadius"
+              },
+              "parameters": [
+                "Torch",
+                "125"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Torch",
+                "Player"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "parameters": []
@@ -2588,18 +3168,98 @@
             {
               "type": {
                 "inverted": false,
-                "value": "FixCamera"
+                "value": "FollowObjectsWithCamera::FollowObjectsWithCamera"
               },
               "parameters": [
                 "",
                 "Player",
-                "Ground.X()",
-                "Ground.Y()",
-                "Ground.X() + Ground.Width()",
-                "Ground.Y() + Ground.Height()",
-                "",
-                "",
+                "100",
+                "100",
+                "0.5",
+                "1",
+                "\"\"",
+                "0",
+                "0.05",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "CameraX(\"\", 0)",
+                "\"Background\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "CameraY(\"\", 0)",
+                "\"Background\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "Lava",
+                "+",
+                "TimeDelta() * Lava.Variable(ScrollRateX)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TiledSpriteObject::YOffset"
+              },
+              "parameters": [
+                "Lava",
+                "+",
+                "TimeDelta() * Lava.Variable(ScrollRateY)"
               ],
               "subInstructions": []
             }
@@ -2657,7 +3317,7 @@
                     "=",
                     "AllActors.CenterX()",
                     "=",
-                    "AllActors.CenterY() + 2"
+                    "AllActors.CenterY()"
                   ],
                   "subInstructions": []
                 }
@@ -2780,7 +3440,7 @@
               },
               "parameters": [
                 "",
-                "4",
+                "Variable(SpawnTimeout)",
                 "\"enemy-spawn\""
               ],
               "subInstructions": []
@@ -2815,26 +3475,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
+                "value": "ModVarScene"
               },
               "parameters": [
-                "",
-                "Torch",
-                "Bub.CenterX()",
-                "Bub.CenterY()",
-                "\"Lighting\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "LinkedObjects::LinkObjects"
-              },
-              "parameters": [
-                "",
-                "Torch",
-                "Bub"
+                "SpawnTimeout",
+                "=",
+                "max(Variable(SpawnTimeout) * 0.5, 0.25)"
               ],
               "subInstructions": []
             }
@@ -2873,6 +3519,18 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -2885,6 +3543,32 @@
                 "EnemyGroup",
                 "Health",
                 "PlayerAttacks.Variable(Damage)",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Flash::Flash::Flash"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "Flash",
+                "0.5",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "sign(PlayerAttack.CenterX() - EnemyGroup.CenterX()) * 100",
+                "sign(PlayerAttack.CenterY() - EnemyGroup.CenterY()) * 100",
                 ""
               ],
               "subInstructions": []
@@ -2910,6 +3594,18 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "PlayerTeam",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -2925,39 +3621,16 @@
                 ""
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+            },
             {
               "type": {
                 "inverted": false,
-                "value": "CollisionNP"
+                "value": "Flash::Flash::Flash"
               },
               "parameters": [
-                "EnemyGroup",
-                "CastleWall",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "CastleWall",
+                "PlayerTeam",
+                "Flash",
+                "0.5",
                 ""
               ],
               "subInstructions": []
@@ -2977,7 +3650,7 @@
               },
               "parameters": [
                 "Player",
-                "CastleWall",
+                "Obstacles",
                 "",
                 "",
                 ""
@@ -2993,7 +3666,7 @@
               },
               "parameters": [
                 "Player",
-                "CastleWall",
+                "Obstacles",
                 ""
               ],
               "subInstructions": []
@@ -3003,9 +3676,152 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "Death",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "PlayerTeam",
+                "Health",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "Torch",
+                    "PlayerTeam"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Torch",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "TorchLocal",
+                    "PlayerTeam"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "TorchLocal",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Expire::Expire::SetExpiring"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Expire",
+                    "True",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            }
+          ]
+        }
+      ],
+      "parameters": []
     }
   ],
   "layers": [
+    {
+      "ambientLightColorB": 67108864,
+      "ambientLightColorG": 6025744,
+      "ambientLightColorR": 10145312,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Background",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
     {
       "ambientLightColorB": 6324616,
       "ambientLightColorG": 6324616,
@@ -3029,9 +3845,9 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 49,
-      "ambientLightColorG": 6,
-      "ambientLightColorR": 32,
+      "ambientLightColorB": 15,
+      "ambientLightColorG": 1,
+      "ambientLightColorR": 138,
       "followBaseLayerCamera": true,
       "isLightingLayer": true,
       "name": "Lighting",
@@ -3044,8 +3860,8 @@
           "doubleParameters": {
             "blur": 0.5,
             "padding": 0,
-            "pixelizeX": 0,
-            "pixelizeY": 0,
+            "pixelizeX": 1,
+            "pixelizeY": 1,
             "quality": 3
           },
           "stringParameters": {},
@@ -3074,6 +3890,10 @@
     {
       "name": "Pathfinding",
       "type": "PathfindingBehavior::PathfindingBehavior"
+    },
+    {
+      "name": "PathfindingObstacle",
+      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
     },
     {
       "name": "TopDownMovement",

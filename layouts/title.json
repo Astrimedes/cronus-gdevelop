@@ -31,38 +31,6 @@
       "name": "ControllerAdded",
       "type": "boolean",
       "value": false
-    },
-    {
-      "name": "PlayerGamepads",
-      "type": "array",
-      "children": [
-        {
-          "type": "number",
-          "value": 0
-        },
-        {
-          "type": "number",
-          "value": 0
-        },
-        {
-          "type": "number",
-          "value": 0
-        },
-        {
-          "type": "number",
-          "value": 0
-        }
-      ]
-    },
-    {
-      "name": "ChildValue",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "name": "ChildKey",
-      "type": "string",
-      "value": ""
     }
   ],
   "instances": [
@@ -85,14 +53,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 140,
+      "height": 75,
       "layer": "",
       "locked": false,
       "name": "PressGamepad",
       "persistentUuid": "ec9ce015-a31a-44ac-be6b-5e62120b1165",
       "width": 565,
-      "x": 149,
-      "y": 207,
+      "x": 151,
+      "y": 215,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -117,31 +85,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 37,
+      "height": 35,
       "layer": "",
       "locked": false,
       "name": "GamepadsInfo",
       "persistentUuid": "fd10015c-d603-4e31-82d0-5805885d59cc",
-      "width": 143,
-      "x": 160,
-      "y": 363,
+      "width": 536,
+      "x": 148,
+      "y": 277,
       "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "GamepadsTitle",
-      "persistentUuid": "464fef05-e08a-433e-a470-ed56c958a855",
-      "width": 0,
-      "x": 158,
-      "y": 312,
-      "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -155,8 +107,8 @@
       "name": "InstructionsKey",
       "persistentUuid": "1ee26f86-1f3d-4af7-99f1-051a93dde839",
       "width": 514,
-      "x": 177,
-      "y": 481,
+      "x": 154,
+      "y": 400,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -170,9 +122,9 @@
       "locked": false,
       "name": "InstructionsGamepad",
       "persistentUuid": "8b295335-547d-48a0-9ba9-3faeb8b01c98",
-      "width": 386,
-      "x": 353,
-      "y": 324,
+      "width": 501,
+      "x": 148,
+      "y": 328,
       "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
@@ -213,7 +165,7 @@
       "behaviors": [],
       "string": "Press any gamepad button to add gamepads and players.",
       "font": "",
-      "characterSize": 35,
+      "characterSize": 25,
       "color": {
         "b": 0,
         "g": 0,
@@ -231,9 +183,9 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "[ ] ",
+      "string": "{ }",
       "font": "",
-      "characterSize": 35,
+      "characterSize": 20,
       "color": {
         "b": 0,
         "g": 0,
@@ -291,7 +243,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Gamepad Controls: --Move: Control Pad --Attack: A",
+      "string": "Gamepad Controls: \n--Move: Control Pad --Attack: A",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -311,7 +263,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Keyboard Controls: --Move: w/a/s/d --Attack: Space",
+      "string": "Keyboard Controls (1 player only):\n --Move: w/a/s/d --Attack: Space",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -573,14 +525,49 @@
                 },
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "ArrayTools::HasNumber"
+                    "inverted": false,
+                    "value": "VarGlobal"
                   },
                   "parameters": [
-                    "",
-                    "\"PlayerGamepads\"",
-                    "GlobalVariable(TempNumber)",
-                    ""
+                    "PlayerGamepads.P1",
+                    "!=",
+                    "GlobalVariable(TempNumber)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerGamepads.P2",
+                    "!=",
+                    "GlobalVariable(TempNumber)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerGamepads.P3",
+                    "!=",
+                    "GlobalVariable(TempNumber)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "PlayerGamepads.P4",
+                    "!=",
+                    "GlobalVariable(TempNumber)"
                   ],
                   "subInstructions": []
                 }
@@ -595,10 +582,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Egal"
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "Variable(PlayerGamepads[0])",
+                        "PlayerGamepads.P1",
                         "=",
                         "0"
                       ],
@@ -609,10 +596,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads[0]",
+                        "PlayerGamepads.P1",
                         "=",
                         "GlobalVariable(TempNumber)"
                       ],
@@ -640,10 +627,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Egal"
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "Variable(PlayerGamepads[1])",
+                        "PlayerGamepads.P2",
                         "=",
                         "0"
                       ],
@@ -665,10 +652,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads[1]",
+                        "PlayerGamepads.P2",
                         "=",
                         "GlobalVariable(TempNumber)"
                       ],
@@ -696,10 +683,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Egal"
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "Variable(PlayerGamepads[2])",
+                        "PlayerGamepads.P3",
                         "=",
                         "0"
                       ],
@@ -721,10 +708,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads[2]",
+                        "PlayerGamepads.P3",
                         "=",
                         "GlobalVariable(TempNumber)"
                       ],
@@ -752,10 +739,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Egal"
+                        "value": "VarGlobal"
                       },
                       "parameters": [
-                        "Variable(PlayerGamepads[3])",
+                        "PlayerGamepads.P4",
                         "=",
                         "0"
                       ],
@@ -777,10 +764,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads[3]",
+                        "PlayerGamepads.P4",
                         "=",
                         "GlobalVariable(TempNumber)"
                       ],
@@ -830,70 +817,12 @@
               "parameters": [
                 "GamepadsInfo",
                 "=",
-                "ToJSON(PlayerGamepads)"
+                "GlobalVarToJSON(PlayerGamepads)"
               ],
               "subInstructions": []
             }
           ],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "PlayerGamepads[0]",
-                    "=",
-                    "Variable(PlayerGamepads[0])"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "PlayerGamepads[1]",
-                    "=",
-                    "Variable(PlayerGamepads[1])"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "PlayerGamepads[2]",
-                    "=",
-                    "Variable(PlayerGamepads[2])"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "PlayerGamepads[3]",
-                    "=",
-                    "Variable(PlayerGamepads[3])"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
+          "events": []
         }
       ],
       "parameters": []
