@@ -161,9 +161,33 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Flash::Flash::IsFlashing"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Flash",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Pathfinding",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -746,7 +770,7 @@
                     {
                       "type": {
                         "inverted": true,
-                        "value": "Expire::Expire::Expiring"
+                        "value": "Expire::Expire::IsExpiring"
                       },
                       "parameters": [
                         "EnemyGroup",

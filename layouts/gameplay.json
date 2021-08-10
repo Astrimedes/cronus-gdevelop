@@ -23,7 +23,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.2999999999999999
+    "zoomFactor": 0.44999999999999996
   },
   "objectsGroups": [
     {
@@ -103,18 +103,23 @@
       "name": "SpawnTimeout",
       "type": "number",
       "value": 6
+    },
+    {
+      "name": "TempValue",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
     {
       "angle": 0,
       "customSize": true,
-      "height": 1090,
+      "height": 776,
       "layer": "Background",
       "locked": true,
       "name": "Ground",
       "persistentUuid": "abd68d83-1b11-45d2-b047-bd98ad54b585",
-      "width": 1872,
+      "width": 1092,
       "x": 0,
       "y": 0,
       "zOrder": 1,
@@ -131,8 +136,8 @@
       "name": "Castle",
       "persistentUuid": "5fff8259-12a1-43eb-8608-e33a658b7dd4",
       "width": 0,
-      "x": 937,
-      "y": 228,
+      "x": 765,
+      "y": 117,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -147,56 +152,8 @@
       "name": "Castle",
       "persistentUuid": "1f5d7eb1-daa9-4561-a7ac-988b62f2381d",
       "width": 0,
-      "x": 124,
-      "y": 215,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Castle",
-      "persistentUuid": "e4d866f9-6f2c-4286-9c84-5e5b7e42dcd2",
-      "width": 0,
-      "x": 1363,
-      "y": 225,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Castle",
-      "persistentUuid": "63d08152-4335-4727-bc31-80855742f291",
-      "width": 0,
-      "x": 1749,
-      "y": 211,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Castle",
-      "persistentUuid": "16cd3502-8fff-45f6-ab91-3e3ddc6484d1",
-      "width": 0,
-      "x": 500,
-      "y": 221,
+      "x": 243,
+      "y": 301,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -205,31 +162,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 354,
+      "height": 71,
       "layer": "Background",
       "locked": false,
       "name": "Lava",
       "persistentUuid": "1430f157-42f7-4ff9-b81a-decd8e383c56",
-      "width": 306,
-      "x": 689,
-      "y": 432,
+      "width": 153,
+      "x": 2,
+      "y": 548,
       "zOrder": 14,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "Lighting",
-      "locked": true,
-      "name": "LavaLight",
-      "persistentUuid": "0ba52090-30db-4045-9016-fc8a2daf5e00",
-      "width": 0,
-      "x": 824,
-      "y": 619,
-      "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -242,8 +183,8 @@
       "locked": false,
       "name": "CastleWall",
       "persistentUuid": "1dd20176-bebc-44db-ae9f-eed3cb6b14eb",
-      "width": 101,
-      "x": 16,
+      "width": 115,
+      "x": 2,
       "y": -128,
       "zOrder": 17,
       "numberProperties": [],
@@ -292,38 +233,6 @@
       "persistentUuid": "7a162fe1-065e-4e41-9f75-768f4419f930",
       "width": 123,
       "x": 910.9999389648438,
-      "y": -140,
-      "zOrder": 16,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 143,
-      "layer": "",
-      "locked": false,
-      "name": "GateSection",
-      "persistentUuid": "f3617e93-bb7b-4c18-a741-af1e9e9c1823",
-      "width": 123,
-      "x": 1311,
-      "y": -140,
-      "zOrder": 16,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 143,
-      "layer": "",
-      "locked": false,
-      "name": "GateSection",
-      "persistentUuid": "745b6537-7de7-4c37-adf3-2cbe9e67ee93",
-      "width": 123,
-      "x": 1711,
       "y": -140,
       "zOrder": 16,
       "numberProperties": [],
@@ -391,7 +300,7 @@
       "locked": false,
       "name": "CastleWall",
       "persistentUuid": "dba35884-e291-4d43-af75-037929239064",
-      "width": 298,
+      "width": 78,
       "x": 1014,
       "y": -128,
       "zOrder": 17,
@@ -402,46 +311,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 128,
-      "layer": "",
-      "locked": false,
-      "name": "CastleWall",
-      "persistentUuid": "758abcc4-5005-4c76-bb02-c78ae9e06860",
-      "width": 298,
-      "x": 1423,
-      "y": -128,
-      "zOrder": 17,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 128,
-      "layer": "",
-      "locked": false,
-      "name": "CastleWall",
-      "persistentUuid": "083ba4ab-0883-4993-b522-49595b70295b",
-      "width": 42,
-      "x": 1827,
-      "y": -128,
-      "zOrder": 17,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 477,
+      "height": 71,
       "layer": "Background",
       "locked": false,
       "name": "Lava",
-      "persistentUuid": "29f7e266-6a8b-4f09-8049-15b5199ca39b",
-      "width": 394,
-      "x": 1439,
-      "y": 563,
+      "persistentUuid": "8a9cbccb-51c6-43be-b202-9faba3906c35",
+      "width": 179,
+      "x": 683,
+      "y": 548,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -449,16 +326,48 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "Lighting",
-      "locked": true,
-      "name": "LavaLight",
-      "persistentUuid": "2c2a69c1-fe0f-41c1-a61a-9203e2502d94",
-      "width": 0,
-      "x": 1609,
-      "y": 780,
-      "zOrder": 15,
+      "customSize": true,
+      "height": 71,
+      "layer": "Background",
+      "locked": false,
+      "name": "Lava",
+      "persistentUuid": "87e5625b-d8ee-4fb4-b131-da45a2dc2796",
+      "width": 153,
+      "x": 245,
+      "y": 548,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 71,
+      "layer": "Background",
+      "locked": false,
+      "name": "Lava",
+      "persistentUuid": "0f114805-e73a-4853-8c1c-0ff894fe35ae",
+      "width": 153,
+      "x": 463,
+      "y": 548,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 71,
+      "layer": "Background",
+      "locked": false,
+      "name": "Lava",
+      "persistentUuid": "77d1818c-daf0-41dd-bff2-b5d8fa0c496b",
+      "width": 179,
+      "x": 912,
+      "y": 548,
+      "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -506,6 +415,32 @@
           "name": "PlayerIndex",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Combo",
+          "type": "structure",
+          "children": [
+            {
+              "name": "FinishDelay",
+              "type": "number",
+              "value": 0.6
+            },
+            {
+              "name": "HitTimeLimit",
+              "type": "number",
+              "value": 0.35
+            },
+            {
+              "name": "Hits",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "ComboHit",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -535,6 +470,7 @@
           "CooldownActive": false
         },
         {
+          "maxSpeed": 120,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "movementAngleOffset": 0,
@@ -545,7 +481,6 @@
           "angleOffset": 0,
           "angularMaxSpeed": 180,
           "customIsometryAngle": 30,
-          "maxSpeed": 200,
           "rotateObject": false,
           "viewpoint": "TopDown"
         },
@@ -1607,10 +1542,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ]
     },
@@ -1662,6 +1597,16 @@
           "name": "Damage",
           "type": "number",
           "value": 15
+        },
+        {
+          "name": "FacingX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FacingY",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1772,7 +1717,7 @@
         {
           "name": "Damage",
           "type": "number",
-          "value": 5
+          "value": 1
         }
       ],
       "effects": [],
@@ -1945,6 +1890,7 @@
           "rotateObject": false
         },
         {
+          "maxSpeed": 80,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 15000,
@@ -1954,7 +1900,6 @@
           "customIsometryAngle": 30,
           "deceleration": 30000,
           "ignoreDefaultControls": true,
-          "maxSpeed": 200,
           "movementAngleOffset": 0,
           "rotateObject": false,
           "viewpoint": "TopDown"
@@ -2360,10 +2305,10 @@
           "CooldownActive": false
         },
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         },
         {
           "name": "YSort",
@@ -2453,10 +2398,10 @@
           "CooldownActive": false
         },
         {
-          "cost": 10,
-          "impassable": false,
+          "cost": 100,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "impassable": false
         },
         {
           "name": "YSort",
@@ -2711,16 +2656,20 @@
                     "3"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "TempValue",
+                    "=",
+                    "RandomFloatInRange(-50, 50)"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
               "events": []
             },
             {
@@ -2739,20 +2688,46 @@
                     "Lava",
                     "ScrollRateX",
                     "=",
-                    "RandomFloatInRange(-6,6)"
+                    "Variable(TempValue)"
                   ],
                   "subInstructions": []
                 },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "Lava",
-                    "ScrollRateY",
+                    "",
+                    "LavaLight",
+                    "Lava.CenterX()",
+                    "Lava.CenterY()",
+                    "\"Lighting\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Lighting::SetRadius"
+                  },
+                  "parameters": [
+                    "LavaLight",
+                    "Lava.Width() * 2.1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "LavaLight",
                     "=",
-                    "RandomFloatInRange(-6,6)"
+                    "Lava.CenterX()",
+                    "=",
+                    "Lava.CenterY()"
                   ],
                   "subInstructions": []
                 }
@@ -2972,14 +2947,6 @@
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
         {
           "disabled": false,
           "folded": false,
@@ -3456,7 +3423,7 @@
                 "",
                 "Bub",
                 "RandomFloatInRange(Ground.X() + Bub.Width(), Ground.X() + Ground.Width() - Bub.Width()) ",
-                "RandomFloatInRange(Ground.Y() + Bub.Height() + (Ground.Height()*0.75), Ground.Y() + Ground.Height() - Bub.Height())",
+                "RandomFloatInRange(Ground.Y() + Bub.Height() + (Ground.Height()), Ground.Y() + Ground.Height() - Bub.Height())",
                 "\"\""
               ],
               "subInstructions": []
@@ -3537,26 +3504,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Health::Health::Hit"
+                "value": "ActivateBehavior"
               },
               "parameters": [
                 "EnemyGroup",
-                "Health",
-                "PlayerAttacks.Variable(Damage)",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Flash::Flash::Flash"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "Flash",
-                "0.5",
-                ""
+                "Pathfinding",
+                "no"
               ],
               "subInstructions": []
             },
@@ -3567,14 +3520,63 @@
               },
               "parameters": [
                 "EnemyGroup",
-                "sign(PlayerAttack.CenterX() - EnemyGroup.CenterX()) * 100",
-                "sign(PlayerAttack.CenterY() - EnemyGroup.CenterY()) * 100",
-                ""
+                "XFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
+                "YFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
+                "0"
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Flash::Flash::IsFlashing"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Flash",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Health",
+                    "PlayerAttacks.Variable(Damage)",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Flash::Flash::Flash"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Flash",
+                    "0.5",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -3795,19 +3797,19 @@
                 }
               ],
               "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
             }
           ]
         }
       ],
       "parameters": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
     }
   ],
   "layers": [

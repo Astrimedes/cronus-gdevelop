@@ -1,0 +1,95 @@
+{
+  "author": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "Health Bar",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "HealthBar",
+  "previewIconUrl": "",
+  "shortDescription": "Health bar to display health / max health",
+  "version": "",
+  "tags": [],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "",
+      "name": "HealthBar",
+      "objectType": "",
+      "eventsFunctions": [
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "HealthBar::HealthBar",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "120",
+          "type": "Number",
+          "label": "Max Width in pixels",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "Width"
+        },
+        {
+          "value": "20",
+          "type": "Number",
+          "label": "Height in Pixels",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "Height"
+        },
+        {
+          "value": "BarObject",
+          "type": "String",
+          "label": "Scene object name used to create the health bar object",
+          "description": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "BarObjectName"
+        }
+      ]
+    }
+  ]
+}

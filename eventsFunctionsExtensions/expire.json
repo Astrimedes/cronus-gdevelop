@@ -321,7 +321,7 @@
           "description": "Is the object expiring?",
           "fullName": "Is Expiring?",
           "functionType": "Condition",
-          "name": "Expiring",
+          "name": "IsExpiring",
           "private": false,
           "sentence": "Is _PARAM0_ actively expiring/fading away?",
           "events": [
@@ -399,6 +399,61 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Expire::Expire::SetPropertyLife"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.Behavior::PropertyMaxLife()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "Expire::Expire",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [
@@ -417,7 +472,7 @@
           "label": "Current life remaining in seconds",
           "description": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "Life"
         },
         {

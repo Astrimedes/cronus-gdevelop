@@ -61,7 +61,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -748,6 +748,32 @@
                         "PlayerAttack",
                         "=",
                         "Player.TopDownMovement::Angle()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "PlayerAttack",
+                        "FacingX",
+                        "=",
+                        "Player.Variable(FacingX)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "PlayerAttack",
+                        "FacingY",
+                        "=",
+                        "Player.Variable(FacingY)"
                       ],
                       "subInstructions": []
                     }
