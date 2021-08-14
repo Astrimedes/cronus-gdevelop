@@ -220,7 +220,7 @@
                 },
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -312,7 +312,7 @@
                               "parameters": [
                                 "PlayerTeam",
                                 "EnemyGroup",
-                                "PlayerTeam.Width() * 1.25",
+                                "(max(PlayerTeam.Width()*0.5, PlayerTeam.Height()) *0.5) + (max(EnemyGroup.Width()*0.5,EnemyGroup.Height()*0.5))",
                                 ""
                               ],
                               "subInstructions": []
@@ -328,8 +328,8 @@
                                 "EnemyGroup",
                                 "Pathfinding",
                                 "",
-                                "PlayerTeam.CenterX() + RandomFloatInRange(-PlayerTeam.Width(), PlayerTeam.Width())",
-                                "PlayerTeam.CenterY() + RandomFloatInRange(-PlayerTeam.Height(), PlayerTeam.Height())"
+                                "EnemyGroup.CenterX() + ((PlayerTeam.CenterX() - EnemyGroup.CenterX()) * 0.75) - EnemyGroup.Width()",
+                                "EnemyGroup.CenterY() + ((PlayerTeam.CenterY() - EnemyGroup.CenterY()) * 0.75) - EnemyGroup.Height()"
                               ],
                               "subInstructions": []
                             }
@@ -366,7 +366,7 @@
                           "parameters": [
                             "PlayerTeam",
                             "EnemyGroup",
-                            "(min(PlayerTeam.Width(), PlayerTeam.Height()) / 2) * RandomFloatInRange(1.1, 1.25)",
+                            "(max(PlayerTeam.Width()*0.51, PlayerTeam.Height()) *0.51) + (max(EnemyGroup.Width()*0.51,EnemyGroup.Height()*0.51))",
                             ""
                           ],
                           "subInstructions": []
@@ -439,9 +439,47 @@
                               "parameters": [
                                 "",
                                 "EnemyAttack",
-                                "EnemyGroup.CenterX() + XFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Width()/3)",
-                                "EnemyGroup.CenterY() + YFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Height()/3)",
+                                "EnemyGroup.CenterX() + XFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Width()*0.35)",
+                                "EnemyGroup.CenterY() + YFromAngleAndDistance(EnemyGroup.Pathfinding::MovementAngle(), EnemyGroup.Height()*0.35)",
                                 "\"\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SetAngle"
+                              },
+                              "parameters": [
+                                "EnemyAttack",
+                                "=",
+                                "AngleBetweenPositions(EnemyGroup.CenterX(), EnemyGroup.CenterY(), PlayerTeam.CenterX(), PlayerTeam.CenterY())"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "EnemyAttack",
+                                "FacingX",
+                                "=",
+                                "EnemyGroup.Variable(FacingX)"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "EnemyAttack",
+                                "FacingY",
+                                "=",
+                                "EnemyGroup.Variable(FacingY)"
                               ],
                               "subInstructions": []
                             }
@@ -923,7 +961,7 @@
               },
               "parameters": [
                 "",
-                "1",
+                "1.5",
                 "\"enemy-overlap\""
               ],
               "subInstructions": []

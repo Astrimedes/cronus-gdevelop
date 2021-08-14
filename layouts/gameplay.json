@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.42999999999999994,
+    "zoomFactor": 0.35000000000000003,
     "windowMask": false
   },
   "objectsGroups": [
@@ -2433,9 +2433,9 @@
           "CooldownActive": false
         },
         {
+          "cost": 4,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 100,
           "impassable": false
         },
         {
@@ -3184,7 +3184,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3276,6 +3276,28 @@
                 "",
                 "=",
                 "CameraY(\"\", 0)",
+                "\"Background\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "CameraZoom(\"\",0)",
                 "\"Background\"",
                 "0"
               ],
@@ -3465,7 +3487,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Input",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3656,21 +3678,7 @@
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "AddForceXY"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "XFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
-                "YFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,
@@ -3714,6 +3722,28 @@
                     "Flash",
                     "0.5",
                     ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": true,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "XFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
+                    "YFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
+                    "0"
                   ],
                   "subInstructions": []
                 }
