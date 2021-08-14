@@ -259,7 +259,7 @@
                   "parameters": [
                     "HealthBar",
                     "=",
-                    "AllActors.CenterX() - ((HealthBar.Variable(Width)/2) * 1.1)",
+                    "AllActors.CenterX() - (HealthBar.Variable(Width)/2)",
                     "=",
                     "AllActors.CenterY() - (AllActors.Height()/2) - (HealthBar.Variable(Height)*1.1)"
                   ],
