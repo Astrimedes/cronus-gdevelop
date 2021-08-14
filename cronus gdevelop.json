@@ -2609,6 +2609,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/playerinput"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/healthbar"
     }
   ],
   "eventsFunctionsExtensions": [

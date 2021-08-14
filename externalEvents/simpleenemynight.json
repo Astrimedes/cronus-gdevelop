@@ -261,6 +261,31 @@
                         "0"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Pathfinding",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Pathfinding",
+                        "no"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -287,6 +312,18 @@
                   "conditions": [
                     {
                       "type": {
+                        "inverted": true,
+                        "value": "Flash::Flash::IsFlashing"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Flash",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
                         "inverted": false,
                         "value": "PickNearest"
                       },
@@ -299,7 +336,20 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Pathfinding",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
@@ -355,7 +405,7 @@
                             "EnemyGroup",
                             "interval",
                             "=",
-                            "RandomFloatInRange(0.75, 2)"
+                            "RandomFloatInRange(0.4, 1)"
                           ],
                           "subInstructions": []
                         }
@@ -439,6 +489,19 @@
                           "type": {
                             "inverted": false,
                             "value": "PathfindingBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "EnemyGroup",
+                            "Pathfinding",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PathfindingBehavior::Speed"
                           },
                           "parameters": [
                             "EnemyGroup",

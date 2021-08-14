@@ -13,17 +13,15 @@
   "v": 209,
   "uiSettings": {
     "grid": false,
-    "gridB": 255,
-    "gridG": 180,
+    "gridType": "rectangular",
+    "gridWidth": 32,
     "gridHeight": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
-    "gridR": 158,
-    "gridType": "rectangular",
-    "gridWidth": 32,
+    "gridColor": 10401023,
     "snap": true,
-    "windowMask": false,
-    "zoomFactor": 0.44999999999999996
+    "zoomFactor": 0.42999999999999994,
+    "windowMask": false
   },
   "objectsGroups": [
     {
@@ -75,6 +73,9 @@
         },
         {
           "name": "Castle"
+        },
+        {
+          "name": "GateSection"
         }
       ]
     },
@@ -102,7 +103,7 @@
     {
       "name": "SpawnTimeout",
       "type": "number",
-      "value": 6
+      "value": 2
     },
     {
       "name": "TempValue",
@@ -371,6 +372,54 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Lighting",
+      "locked": false,
+      "name": "TorchLocal",
+      "persistentUuid": "24f7eb44-5cee-42fe-88b8-a11f4f2b8daf",
+      "width": 0,
+      "x": 172,
+      "y": -77,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Lighting",
+      "locked": false,
+      "name": "TorchLocal",
+      "persistentUuid": "e3a3dab9-0c46-423c-a0d8-22a72e95484a",
+      "width": 0,
+      "x": 572,
+      "y": -66,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Lighting",
+      "locked": false,
+      "name": "TorchLocal",
+      "persistentUuid": "e1915642-2f7a-45b8-9ac2-2c4c04da6b9b",
+      "width": 0,
+      "x": 967,
+      "y": -66,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -470,9 +519,9 @@
           "CooldownActive": false
         },
         {
-          "maxSpeed": 120,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "maxSpeed": 120,
           "movementAngleOffset": 0,
           "deceleration": 6000,
           "ignoreDefaultControls": true,
@@ -1596,7 +1645,7 @@
         {
           "name": "Damage",
           "type": "number",
-          "value": 15
+          "value": 5
         },
         {
           "name": "FacingX",
@@ -1870,17 +1919,18 @@
         {
           "name": "Health",
           "type": "Health::Health",
-          "Health": 100,
+          "Health": 10,
           "DamageCooldown": 0.1,
-          "MaxHealth": 100,
+          "MaxHealth": 10,
           "IsJustDamaged": false,
           "CooldownActive": false
         },
         {
+          "acceleration": 200,
+          "maxSpeed": 80,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
           "allowDiagonals": true,
-          "acceleration": 1500,
           "angleOffset": 0,
           "cellHeight": 20,
           "cellWidth": 20,
@@ -1888,21 +1938,6 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "rotateObject": false
-        },
-        {
-          "maxSpeed": 80,
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-          "acceleration": 15000,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "customIsometryAngle": 30,
-          "deceleration": 30000,
-          "ignoreDefaultControls": true,
-          "movementAngleOffset": 0,
-          "rotateObject": false,
-          "viewpoint": "TopDown"
         },
         {
           "name": "YSort",
@@ -2398,9 +2433,9 @@
           "CooldownActive": false
         },
         {
-          "cost": 100,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 100,
           "impassable": false
         },
         {
@@ -2584,6 +2619,55 @@
           ]
         }
       ]
+    },
+    {
+      "name": "HealthBar",
+      "tags": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [
+        {
+          "name": "Width",
+          "type": "number",
+          "value": 24
+        },
+        {
+          "name": "Height",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "Health",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "MaxHealth",
+          "type": "number",
+          "value": -1
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "fillOpacity": 180,
+      "outlineSize": 0,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "outlineColor": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true
     }
   ],
   "events": [
@@ -2942,7 +3026,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Create Lights",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3100,7 +3184,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3242,7 +3326,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Linked Items",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3336,6 +3420,29 @@
       "creationTime": 0,
       "disabled": false,
       "folded": false,
+      "name": "Health Bars",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "HealthBar"
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": true,
       "name": "Animations",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3358,7 +3465,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Input",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3403,14 +3510,33 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Timer"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "Variable(SpawnTimeout)",
-                "\"enemy-spawn\""
-              ],
-              "subInstructions": []
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "Variable(SpawnTimeout)",
+                    "\"enemy-spawn\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -3442,16 +3568,46 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarScene"
+                "value": "Create"
               },
               "parameters": [
-                "SpawnTimeout",
-                "=",
-                "max(Variable(SpawnTimeout) * 0.5, 0.25)"
+                "",
+                "HealthBar",
+                "Bub.X()",
+                "Bub.Y()",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Bub",
+                "HealthBar"
               ],
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ],
@@ -3501,18 +3657,6 @@
             }
           ],
           "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "Pathfinding",
-                "no"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -3685,7 +3829,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "name": "Death",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3802,14 +3946,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
     }
   ],
   "layers": [
@@ -3847,9 +3983,9 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 15,
-      "ambientLightColorG": 1,
-      "ambientLightColorR": 138,
+      "ambientLightColorB": 87,
+      "ambientLightColorG": 80,
+      "ambientLightColorR": 146,
       "followBaseLayerCamera": true,
       "isLightingLayer": true,
       "name": "Lighting",
@@ -3900,6 +4036,10 @@
     {
       "name": "TopDownMovement",
       "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     },
     {
       "name": "YSort",
