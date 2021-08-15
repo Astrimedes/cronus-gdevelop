@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.35000000000000003,
+    "zoomFactor": 0.55,
     "windowMask": false
   },
   "objectsGroups": [
@@ -472,12 +472,17 @@
             {
               "name": "FinishDelay",
               "type": "number",
-              "value": 0.6
+              "value": 0.8
+            },
+            {
+              "name": "HitDelay",
+              "type": "number",
+              "value": 0.1
             },
             {
               "name": "HitTimeLimit",
               "type": "number",
-              "value": 0.35
+              "value": 0.65
             },
             {
               "name": "Hits",
@@ -488,6 +493,11 @@
         },
         {
           "name": "ComboHit",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AttackDelay",
           "type": "number",
           "value": 0
         }
@@ -1656,6 +1666,16 @@
           "name": "FacingY",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Knockback",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Stun",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1767,6 +1787,16 @@
           "name": "Damage",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "Knockback",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Stun",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1919,17 +1949,17 @@
         {
           "name": "Health",
           "type": "Health::Health",
-          "Health": 10,
-          "DamageCooldown": 0.1,
-          "MaxHealth": 10,
+          "Health": 50,
+          "DamageCooldown": 0.2,
+          "MaxHealth": 50,
           "IsJustDamaged": false,
           "CooldownActive": false
         },
         {
-          "acceleration": 200,
-          "maxSpeed": 80,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "acceleration": 200,
+          "maxSpeed": 80,
           "allowDiagonals": true,
           "angleOffset": 0,
           "cellHeight": 20,
@@ -2433,9 +2463,9 @@
           "CooldownActive": false
         },
         {
-          "cost": 4,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 4,
           "impassable": false
         },
         {
@@ -2668,6 +2698,26 @@
       },
       "absoluteCoordinates": false,
       "clearBetweenFrames": true
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "Status",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "status",
+      "font": "",
+      "characterSize": 12,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     }
   ],
   "events": [
@@ -2740,7 +2790,16 @@
                     "3"
                   ],
                   "subInstructions": []
-                },
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
@@ -2863,7 +2922,55 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player.CenterX() - (Status.Width()/2)",
+                            "Player.Y() - Status.Height()",
+                            "\"\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Status",
+                            "=",
+                            "Player.ZOrder()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -2912,7 +3019,55 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player.CenterX() - (Status.Width()/2)",
+                            "Player.Y() - Status.Height()",
+                            "\"\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Status",
+                            "=",
+                            "Player.ZOrder()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -2961,7 +3116,63 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player.CenterX() - (Status.Width()/2)",
+                            "Player.Y() - Status.Height()",
+                            "\"\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Status",
+                            "=",
+                            "Player.ZOrder()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -3010,7 +3221,67 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player.CenterX() - (Status.Width()/2)",
+                            "Player.Y() - Status.Height()",
+                            "\"\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Status",
+                            "=",
+                            "Player.ZOrder()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::Opacity"
+                          },
+                          "parameters": [
+                            "Status",
+                            "=",
+                            "88"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Status",
+                            "Player"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ],
               "parameters": []
@@ -3348,7 +3619,7 @@
       "colorR": 74,
       "creationTime": 0,
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "name": "Linked Items",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3429,6 +3700,129 @@
                 }
               ],
               "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Status",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "Player",
+                    "Status"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Status",
+                    "=",
+                    "Player.CenterX() - (Status.Width()/2)",
+                    "=",
+                    "Player.Y() - (Status.Height()/2)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Status",
+                    "=",
+                    "Player.ZOrder()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "Status",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "ComboHit",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "Status",
+                        "=",
+                        "\"x\" + ToString(Player.Variable(ComboHit))"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         }
@@ -3729,7 +4123,7 @@
               "events": []
             },
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
@@ -3741,8 +4135,8 @@
                   },
                   "parameters": [
                     "EnemyGroup",
-                    "XFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
-                    "YFromAngleAndDistance(PlayerAttacks.Angle(), 150)",
+                    "PlayerAttacks.Variable(FacingX) * PlayerAttacks.Variable(Knockback)",
+                    "PlayerAttacks.Variable(FacingY) * PlayerAttacks.Variable(Knockback)",
                     "0"
                   ],
                   "subInstructions": []
