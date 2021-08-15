@@ -1984,6 +1984,10 @@
           "rotateObject": false
         },
         {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
           "name": "YSort",
           "type": "YSort::YSort"
         }
@@ -3874,7 +3878,21 @@
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PathfindingBehavior::Speed"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "Pathfinding",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": [
             {
               "disabled": false,
@@ -3922,29 +3940,47 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "AddForceXY"
-                  },
-                  "parameters": [
-                    "EnemyGroup",
-                    "PlayerAttacks.Variable(FacingX) * PlayerAttacks.Variable(Knockback)",
-                    "PlayerAttacks.Variable(FacingY) * PlayerAttacks.Variable(Knockback)",
-                    "0"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Tween::IsPlaying"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Tween",
+                        "\"hit\""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Tween::AddObjectPositionTween"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Tween",
+                        "\"hit\"",
+                        "EnemyGroup.CenterX() + (PlayerAttacks.Variable(FacingX) * PlayerAttacks.Variable(Knockback))",
+                        "EnemyGroup.CenterY() + (PlayerAttacks.Variable(FacingY) *  PlayerAttacks.Variable(Knockback))",
+                        "\"easeOutBack\"",
+                        "400",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         },
