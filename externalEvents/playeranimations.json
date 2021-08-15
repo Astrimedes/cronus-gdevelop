@@ -16,7 +16,7 @@
       "events": [
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -426,7 +426,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -708,6 +708,89 @@
               },
               "parameters": [
                 "Player"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "Dashing",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ShadowClones::AnimateShadowClones"
+              },
+              "parameters": [
+                "",
+                "Player",
+                "ShadowPlayer",
+                "16",
+                "1",
+                "10",
+                "0",
+                "\"\"",
+                "Player.ZOrder()-1",
+                "yes",
+                "yes",
+                "yes",
+                "yes",
+                "yes",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "Dashing",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ShadowClones::DeleteShadowClones"
+              },
+              "parameters": [
+                "",
+                "Player",
+                "ShadowPlayer",
+                "12"
               ],
               "subInstructions": []
             }

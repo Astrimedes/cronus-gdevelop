@@ -846,7 +846,7 @@
           "label": "",
           "description": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "IsJustHealed"
         }
       ]

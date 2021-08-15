@@ -241,7 +241,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Gamepad Controls: \n--Move: Control Pad --Attack: A",
+      "string": "Gamepad Controls: \n--Move: Control Pad --Attack: A --Dash: B",
       "font": "",
       "characterSize": 20,
       "color": {
@@ -261,7 +261,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Keyboard Controls (1 player only):\n --Move: w/a/s/d --Attack: Space",
+      "string": "Keyboard Controls (1 player only):\n --Move: w/a/s/d --Attack: Space --Dash: Return",
       "font": "",
       "characterSize": 20,
       "color": {

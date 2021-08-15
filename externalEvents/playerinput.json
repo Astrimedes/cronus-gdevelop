@@ -487,7 +487,7 @@
                 },
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -883,23 +883,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Tween::AddObjectPositionTween"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Tween",
-                        "\"dash\"",
-                        "Player.CenterX() + (Player.Variable(FacingX) * 64)",
-                        "Player.CenterY() + (Player.Variable(FacingY) * 64)",
-                        "\"easeOutBack\"",
-                        "400",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
@@ -909,7 +892,119 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Egal"
+                              },
+                              "parameters": [
+                                "Player.Variable(FacingY)",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Egal"
+                              },
+                              "parameters": [
+                                "Player.Variable(FacingX)",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionTween"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Tween",
+                            "\"dash\"",
+                            "Player.X() + (Player.Variable(FacingX) * Player.Variable(Dash.Distance))",
+                            "Player.Y() + (Player.Variable(FacingY) * Player.Variable(Dash.Distance))",
+                            "\"easeOutExpo\"",
+                            "Player.Variable(Dash.Time)",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Player.Variable(FacingX)",
+                            "!=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Player.Variable(FacingY)",
+                            "!=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionTween"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Tween",
+                            "\"dash\"",
+                            "Player.X() + (Player.Variable(FacingX) * (Player.Variable(Dash.Distance)*0.72))",
+                            "Player.Y() + (Player.Variable(FacingY) * (Player.Variable(Dash.Distance)*0.72))",
+                            "\"easeOutExpo\"",
+                            "Player.Variable(Dash.Time)",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ]
             },
@@ -920,8 +1015,8 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
-                    "value": "Tween::HasFinished"
+                    "inverted": true,
+                    "value": "Tween::IsPlaying"
                   },
                   "parameters": [
                     "Player",
@@ -1247,22 +1342,116 @@
                         "Player.Variable(FacingY)"
                       ],
                       "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "AddForceXY"
-                      },
-                      "parameters": [
-                        "PlayerAttack",
-                        "Player.Variable(FacingX) * 32",
-                        "Player.Variable(FacingY) * 32",
-                        "1"
-                      ],
-                      "subInstructions": []
                     }
                   ],
                   "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "PlayerAttack",
+                                "FacingX",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "PlayerAttack",
+                                "FacingY",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "PlayerAttack",
+                            "Player.Variable(FacingX) * 32",
+                            "Player.Variable(FacingY) * 32",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "PlayerAttack",
+                            "FacingX",
+                            "!=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "PlayerAttack",
+                            "FacingY",
+                            "!=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "PlayerAttack",
+                            "Player.Variable(FacingX) * (32 * 0.72)",
+                            "Player.Variable(FacingY) * (32 * 0.72)",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
                     {
                       "disabled": false,
                       "folded": false,
