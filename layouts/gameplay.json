@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.6300000000000001,
+    "zoomFactor": 0.45,
     "windowMask": false
   },
   "objectsGroups": [
@@ -35,6 +35,9 @@
         },
         {
           "name": "GateSection"
+        },
+        {
+          "name": "Barrier"
         }
       ]
     },
@@ -109,6 +112,11 @@
       "name": "TempValue",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "ComboCountTimeLimit",
+      "type": "string",
+      "value": "1"
     }
   ],
   "instances": [
@@ -396,6 +404,22 @@
       "x": 967,
       "y": -66,
       "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Barrier",
+      "persistentUuid": "84da70e0-3c07-4aee-a8f5-dc1542a2cee2",
+      "width": 0,
+      "x": 566,
+      "y": 329,
+      "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1680,6 +1704,42 @@
               "value": 300
             }
           ]
+        },
+        {
+          "name": "Charge",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 20
+            },
+            {
+              "name": "Distance",
+              "type": "number",
+              "value": 88
+            },
+            {
+              "name": "Time",
+              "type": "number",
+              "value": 400
+            }
+          ]
+        },
+        {
+          "name": "ComboCount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerNumber",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Charging",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -2860,6 +2920,11 @@
           "name": "Stun",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "PlayerNumber",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -3476,6 +3541,10 @@
           "CooldownActive": false
         },
         {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
           "name": "YSort",
           "type": "YSort::YSort"
         }
@@ -3906,6 +3975,80 @@
         "g": 255,
         "r": 255
       }
+    },
+    {
+      "name": "Barrier",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0.1,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false,
+          "IsJustHealed": false
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\StoneBlock-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -4108,6 +4251,19 @@
                         "max(GlobalVariable(PlayerGamepads.P1), 1)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerNumber",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -4155,6 +4311,19 @@
                         "PlayerIndex",
                         "=",
                         "GlobalVariable(PlayerGamepads.P2)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerNumber",
+                        "=",
+                        "2"
                       ],
                       "subInstructions": []
                     }
@@ -4206,6 +4375,19 @@
                         "GlobalVariable(PlayerGamepads.P3)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerNumber",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -4253,6 +4435,19 @@
                         "PlayerIndex",
                         "=",
                         "GlobalVariable(PlayerGamepads.P4)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerNumber",
+                        "=",
+                        "4"
                       ],
                       "subInstructions": []
                     }
@@ -4717,14 +4912,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreXY"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
                     "Status",
                     "=",
-                    "Player.CenterX() - (Status.Width()/2)",
-                    "=",
-                    "Player.Y() - (Status.Height()/2)"
+                    "\"\""
                   ],
                   "subInstructions": []
                 },
@@ -4746,27 +4939,6 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "Status",
-                        "=",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
@@ -4775,7 +4947,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "ComboHit",
+                        "ComboCount",
                         ">",
                         "0"
                       ],
@@ -4791,7 +4963,30 @@
                       "parameters": [
                         "Status",
                         "=",
-                        "\"x\" + ToString(Player.Variable(ComboHit))"
+                        "\"x\" + ToString(Player.Variable(ComboCount))"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Status",
+                        "=",
+                        "Player.CenterX() - (Status.Width()/2)",
+                        "=",
+                        "Player.Y() - (Status.Height()/2)"
                       ],
                       "subInstructions": []
                     }
@@ -5017,58 +5212,220 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "PlayerAttacks",
-                "EnemyGroup",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "Health",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PathfindingBehavior::Speed"
-              },
-              "parameters": [
-                "EnemyGroup",
-                "Pathfinding",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "name": "Special Moves",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Charging",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "EnemyGroup",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::Speed"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Pathfinding",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Flash::Flash::IsFlashing"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Flash",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Flash",
+                        "Player.Variable(Charge.Time)/1000/2",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Health",
+                        "Player.Variable(Charge.Damage)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionTween"
+                          },
+                          "parameters": [
+                            "EnemyGroup",
+                            "Tween",
+                            "\"charge-hit\"",
+                            "EnemyGroup.X() + (Player.Variable(FacingX) * Player.Variable(Charge.Distance)/2)",
+                            "EnemyGroup.Y() + (Player.Variable(FacingY) *  Player.Variable(Charge.Distance)/2)",
+                            "\"easeOutBack\"",
+                            "Player.Variable(Charge.Time)/4",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "ComboCount",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player",
+                            "\"combo-count\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Attacks",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "PlayerAttacks",
+                    "EnemyGroup",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "EnemyGroup",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
                 {
                   "type": {
                     "inverted": true,
@@ -5086,31 +5443,53 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Health::Health::Hit"
+                    "value": "PathfindingBehavior::Speed"
                   },
                   "parameters": [
                     "EnemyGroup",
-                    "Health",
-                    "PlayerAttacks.Variable(Damage)",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Flash::Flash::Flash"
-                  },
-                  "parameters": [
-                    "EnemyGroup",
-                    "Flash",
-                    "0.5",
-                    ""
+                    "Pathfinding",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Health",
+                        "PlayerAttacks.Variable(Damage)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Flash::Flash::Flash"
+                      },
+                      "parameters": [
+                        "EnemyGroup",
+                        "Flash",
+                        "0.5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -5139,8 +5518,8 @@
                         "EnemyGroup",
                         "Tween",
                         "\"hit\"",
-                        "EnemyGroup.CenterX() + (PlayerAttacks.Variable(FacingX) * PlayerAttacks.Variable(Knockback))",
-                        "EnemyGroup.CenterY() + (PlayerAttacks.Variable(FacingY) *  PlayerAttacks.Variable(Knockback))",
+                        "EnemyGroup.X() + (PlayerAttacks.Variable(FacingX) * PlayerAttacks.Variable(Knockback))",
+                        "EnemyGroup.Y() + (PlayerAttacks.Variable(FacingY) *  PlayerAttacks.Variable(Knockback))",
                         "\"easeOutBack\"",
                         "400",
                         ""
@@ -5149,121 +5528,359 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Player",
+                        "PlayerAttack"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "ComboCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"combo-count\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "EnemyAttacks",
+                    "PlayerTeam",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Dashing",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Charging",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Health",
+                    "EnemyAttacks.Variable(Damage)",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Flash::Flash::Flash"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Flash",
+                    "0.5",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
-          ]
+          ],
+          "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "name": "Environment collision",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "EnemyAttacks",
-                "PlayerTeam",
-                "",
-                "",
-                ""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Obstacles",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "PlayerTeam",
-                "Health",
-                ""
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Obstacles",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "PlayerTeam",
-                "Dashing",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
+              "events": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Health::Health::Hit"
-              },
-              "parameters": [
-                "PlayerTeam",
-                "Health",
-                "EnemyAttacks.Variable(Damage)",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Flash::Flash::Flash"
-              },
-              "parameters": [
-                "PlayerTeam",
-                "Flash",
-                "0.5",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "name": "Castle Fade Out When Concealing Player",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player",
-                "Obstacles",
-                "",
-                "",
-                ""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Plan"
+                  },
+                  "parameters": [
+                    "Castle",
+                    ">",
+                    "Player.ZOrder()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade-out\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Player",
+                    "",
+                    "",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::StopTween"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade-in\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade-out\"",
+                    "160",
+                    "\"easeOutQuint\"",
+                    "280",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Player",
+                    "",
+                    "",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "Castle",
+                        "Tween",
+                        "\"fade\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade\"",
+                    "255",
+                    "\"easeOutQuint\"",
+                    "280",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "Player",
-                "Obstacles",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "parameters": []
         }
       ],
       "parameters": []
@@ -5281,7 +5898,7 @@
       "events": [
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {

@@ -1008,6 +1008,15 @@
         "name": "HighlightSquare-1-0.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/StoneBlock-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\StoneBlock-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1124,6 +1133,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/expire"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/resourcebar"
     }
   ],
   "externalLayouts": [

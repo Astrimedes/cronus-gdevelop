@@ -205,7 +205,7 @@
                     "value": "Tween::StopTween"
                   },
                   "parameters": [
-                    "AllActors",
+                    "HealthBar",
                     "Tween",
                     "\"health\"",
                     "yes"
