@@ -5748,6 +5748,18 @@
                 },
                 {
                   "type": {
+                    "inverted": false,
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Castle",
+                    ">",
+                    "160"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
                     "inverted": true,
                     "value": "Tween::Exists"
                   },
@@ -5777,13 +5789,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Tween::StopTween"
+                    "value": "Tween::RemoveTween"
                   },
                   "parameters": [
                     "Castle",
                     "Tween",
-                    "\"fade-in\"",
-                    ""
+                    "\"fade-in\""
                   ],
                   "subInstructions": []
                 },
@@ -5813,6 +5824,30 @@
               "conditions": [
                 {
                   "type": {
+                    "inverted": false,
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "<",
+                    "255"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "Castle",
+                    "Tween",
+                    "\"fade-in\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
                     "inverted": true,
                     "value": "CollisionNP"
                   },
@@ -5824,42 +5859,21 @@
                     "yes"
                   ],
                   "subInstructions": []
-                },
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Tween::HasFinished"
-                      },
-                      "parameters": [
-                        "Castle",
-                        "Tween",
-                        "\"fade\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "Tween::Exists"
+                    "value": "Tween::RemoveTween"
                   },
                   "parameters": [
                     "Castle",
                     "Tween",
-                    "\"fade\""
+                    "\"fade-out\""
                   ],
                   "subInstructions": []
-                }
-              ],
-              "actions": [
+                },
                 {
                   "type": {
                     "inverted": false,
@@ -5868,7 +5882,7 @@
                   "parameters": [
                     "Castle",
                     "Tween",
-                    "\"fade\"",
+                    "\"fade-in\"",
                     "255",
                     "\"easeOutQuint\"",
                     "280",
