@@ -53,7 +53,7 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/NewObject-1-4.png",
+        "file": "NewObject-1-4.png",
         "kind": "image",
         "metadata": "",
         "name": "NewObject-1-4.png",
@@ -62,7 +62,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewObject-2.png",
+        "file": "NewObject-2.png",
         "kind": "image",
         "metadata": "",
         "name": "NewObject-2.png",
@@ -71,7 +71,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewObject-3.png",
+        "file": "NewObject-3.png",
         "kind": "image",
         "metadata": "",
         "name": "NewObject-3.png",
@@ -80,7 +80,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewObject-4.png",
+        "file": "NewObject-4.png",
         "kind": "image",
         "metadata": "",
         "name": "NewObject-4.png",
@@ -323,7 +323,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkRight-1.png",
+        "file": "WalkRight-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkRight-1.png",
@@ -332,7 +332,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkRight-2.png",
+        "file": "WalkRight-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkRight-2.png",
@@ -341,7 +341,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkRight-3.png",
+        "file": "WalkRight-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkRight-3.png",
@@ -350,7 +350,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkRight-4.png",
+        "file": "WalkRight-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkRight-4.png",
@@ -359,7 +359,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkLeft-1.png",
+        "file": "WalkLeft-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkLeft-1.png",
@@ -368,7 +368,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkLeft-2.png",
+        "file": "WalkLeft-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkLeft-2.png",
@@ -377,7 +377,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkLeft-3.png",
+        "file": "WalkLeft-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkLeft-3.png",
@@ -386,7 +386,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkLeft-4.png",
+        "file": "WalkLeft-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkLeft-4.png",
@@ -395,7 +395,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUp-1.png",
+        "file": "WalkUp-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUp-1.png",
@@ -404,7 +404,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUp-2.png",
+        "file": "WalkUp-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUp-2.png",
@@ -413,7 +413,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUp-3.png",
+        "file": "WalkUp-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUp-3.png",
@@ -422,7 +422,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUp-4.png",
+        "file": "WalkUp-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUp-4.png",
@@ -431,7 +431,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDown-1.png",
+        "file": "WalkDown-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDown-1.png",
@@ -440,7 +440,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDown-2.png",
+        "file": "WalkDown-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDown-2.png",
@@ -449,7 +449,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDown-3.png",
+        "file": "WalkDown-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDown-3.png",
@@ -458,7 +458,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDown-4.png",
+        "file": "WalkDown-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDown-4.png",
@@ -467,7 +467,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-1.png",
+        "file": "WalkUpRight-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpRight-1.png",
@@ -476,7 +476,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-2.png",
+        "file": "WalkUpRight-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpRight-2.png",
@@ -485,7 +485,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-3.png",
+        "file": "WalkUpRight-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpRight-3.png",
@@ -494,7 +494,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-4.png",
+        "file": "WalkUpRight-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpRight-4.png",
@@ -503,7 +503,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-1.png",
+        "file": "WalkDownRight-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownRight-1.png",
@@ -512,7 +512,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-2.png",
+        "file": "WalkDownRight-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownRight-2.png",
@@ -521,7 +521,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-3.png",
+        "file": "WalkDownRight-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownRight-3.png",
@@ -530,7 +530,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-4.png",
+        "file": "WalkDownRight-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownRight-4.png",
@@ -539,7 +539,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-1.png",
+        "file": "WalkDownLeft-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownLeft-1.png",
@@ -548,7 +548,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-2.png",
+        "file": "WalkDownLeft-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownLeft-2.png",
@@ -557,7 +557,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-3.png",
+        "file": "WalkDownLeft-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownLeft-3.png",
@@ -566,7 +566,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-4.png",
+        "file": "WalkDownLeft-4.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkDownLeft-4.png",
@@ -575,7 +575,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackRight-1.png",
+        "file": "AttackRight-1.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackRight-1.png",
@@ -584,7 +584,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackRight-2.png",
+        "file": "AttackRight-2.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackRight-2.png",
@@ -593,7 +593,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackRight-3.png",
+        "file": "AttackRight-3.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackRight-3.png",
@@ -602,7 +602,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackRight-4.png",
+        "file": "AttackRight-4.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackRight-4.png",
@@ -611,7 +611,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackRight-5.png",
+        "file": "AttackRight-5.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackRight-5.png",
@@ -620,7 +620,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackLeft-1.png",
+        "file": "AttackLeft-1.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackLeft-1.png",
@@ -629,7 +629,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackLeft-2.png",
+        "file": "AttackLeft-2.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackLeft-2.png",
@@ -638,7 +638,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackLeft-3.png",
+        "file": "AttackLeft-3.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackLeft-3.png",
@@ -647,7 +647,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackLeft-4.png",
+        "file": "AttackLeft-4.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackLeft-4.png",
@@ -656,7 +656,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackLeft-5.png",
+        "file": "AttackLeft-5.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackLeft-5.png",
@@ -665,7 +665,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackUp-1.png",
+        "file": "AttackUp-1.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackUp-1.png",
@@ -674,7 +674,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackUp-2.png",
+        "file": "AttackUp-2.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackUp-2.png",
@@ -683,7 +683,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackUp-3.png",
+        "file": "AttackUp-3.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackUp-3.png",
@@ -692,7 +692,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackUp-4.png",
+        "file": "AttackUp-4.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackUp-4.png",
@@ -701,7 +701,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackUp-5.png",
+        "file": "AttackUp-5.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackUp-5.png",
@@ -710,7 +710,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackDown-1.png",
+        "file": "AttackDown-1.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackDown-1.png",
@@ -719,7 +719,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackDown-2.png",
+        "file": "AttackDown-2.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackDown-2.png",
@@ -728,7 +728,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackDown-3.png",
+        "file": "AttackDown-3.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackDown-3.png",
@@ -737,7 +737,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackDown-4.png",
+        "file": "AttackDown-4.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackDown-4.png",
@@ -746,7 +746,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/AttackDown-5.png",
+        "file": "AttackDown-5.png",
         "kind": "image",
         "metadata": "",
         "name": "AttackDown-5.png",
@@ -755,7 +755,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-1.png",
+        "file": "WalkUpLeft-1.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpLeft-1.png",
@@ -764,7 +764,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-2.png",
+        "file": "WalkUpLeft-2.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpLeft-2.png",
@@ -773,7 +773,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-3.png",
+        "file": "WalkUpLeft-3.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpLeft-3.png",
@@ -782,7 +782,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-4-0.png",
+        "file": "WalkUpLeft-4-0.png",
         "kind": "image",
         "metadata": "",
         "name": "WalkUpLeft-4-0.png",
@@ -791,7 +791,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Castle-1.png",
+        "file": "Castle-1.png",
         "kind": "image",
         "metadata": "",
         "name": "Castle-1.png",
@@ -813,7 +813,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewObject-1-0-1.png",
+        "file": "NewObject-1-0-1.png",
         "kind": "image",
         "metadata": "",
         "name": "NewObject-1-0-1.png",
@@ -822,7 +822,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/lava-1.png",
+        "file": "lava-1.png",
         "kind": "image",
         "metadata": "",
         "name": "lava-1.png",
@@ -831,7 +831,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-2.png",
+        "file": "GateSection-2.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-2.png",
@@ -840,7 +840,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-1-0.png",
+        "file": "GateSection-1-0.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-1-0.png",
@@ -849,7 +849,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-2-0.png",
+        "file": "GateSection-2-0.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-2-0.png",
@@ -858,7 +858,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-3.png",
+        "file": "GateSection-3.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-3.png",
@@ -867,7 +867,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-4.png",
+        "file": "GateSection-4.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-4.png",
@@ -876,7 +876,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GateSection-5.png",
+        "file": "GateSection-5.png",
         "kind": "image",
         "metadata": "",
         "name": "GateSection-5.png",
@@ -1002,7 +1002,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/HighlightSquare-1-0.png",
+        "file": "HighlightSquare-1-0.png",
         "kind": "image",
         "metadata": "",
         "name": "HighlightSquare-1-0.png",

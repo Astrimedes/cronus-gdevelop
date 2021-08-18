@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.45,
+    "zoomFactor": 0.36999999999999994,
     "windowMask": false
   },
   "objectsGroups": [
@@ -79,6 +79,9 @@
         },
         {
           "name": "GateSection"
+        },
+        {
+          "name": "Barrier"
         }
       ]
     },
@@ -106,7 +109,7 @@
     {
       "name": "SpawnTimeout",
       "type": "number",
-      "value": 2
+      "value": 3
     },
     {
       "name": "TempValue",
@@ -2914,7 +2917,7 @@
         {
           "name": "Knockback",
           "type": "number",
-          "value": 0
+          "value": 10
         },
         {
           "name": "Stun",
@@ -3035,7 +3038,7 @@
         {
           "name": "Damage",
           "type": "number",
-          "value": 1
+          "value": 3
         },
         {
           "name": "Knockback",
@@ -4049,6 +4052,72 @@
           ]
         }
       ]
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "GateHealthText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "name": "GateHealth",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Gate Health",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 15,
+        "g": 216,
+        "r": 255
+      }
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "ResourceText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 1
+        }
+      ],
+      "string": "Resources:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 15,
+        "g": 216,
+        "r": 255
+      }
     }
   ],
   "events": [
@@ -4209,12 +4278,34 @@
               "events": []
             },
             {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+                  },
+                  "parameters": [
+                    "",
+                    "\"HUD\"",
+                    "0",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Add players",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4458,6 +4549,111 @@
               "parameters": []
             }
           ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "disabled": false,
+      "folded": false,
+      "name": "HUD",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TempValue",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "GateSection",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TempValue",
+                "+",
+                "GateSection.Health::Health()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "GateHealthText",
+                "GateHealth",
+                "!=",
+                "Variable(TempValue)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "GateHealthText",
+                "GateHealth",
+                "=",
+                "Variable(TempValue)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "GateHealthText",
+                "=",
+                "\"Gate: \" + GateHealthText.VariableString(GateHealth)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "parameters": []
@@ -5097,6 +5293,18 @@
             {
               "type": {
                 "inverted": false,
+                "value": "NbObjet"
+              },
+              "parameters": [
+                "EnemyGroup",
+                "<",
+                "100"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
@@ -5611,6 +5819,18 @@
                 {
                   "type": {
                     "inverted": true,
+                    "value": "Flash::Flash::IsFlashing"
+                  },
+                  "parameters": [
+                    "PlayerTeam",
+                    "Flash",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
                     "value": "VarObjet"
                   },
                   "parameters": [
@@ -5657,13 +5877,50 @@
                   "parameters": [
                     "PlayerTeam",
                     "Flash",
-                    "0.5",
+                    "0.25",
                     ""
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "PlayerTeam",
+                        "ComboCount",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "PlayerTeam",
+                        "ComboCount",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -6082,9 +6339,24 @@
           "booleanParameters": {}
         }
       ]
+    },
+    {
+      "ambientLightColorB": -2147483632,
+      "ambientLightColorG": 6026736,
+      "ambientLightColorR": 10810472,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "UI",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
     }
   ],
   "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    },
     {
       "name": "Bounce",
       "type": "Bounce::Bounce"

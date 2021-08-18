@@ -6,15 +6,18 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "AllActors",
       "conditions": [
         {
           "type": {
-            "inverted": false,
-            "value": "DepartScene"
+            "inverted": true,
+            "value": "LinkedObjects::PickObjectsLinkedTo"
           },
           "parameters": [
-            ""
+            "",
+            "HealthBar",
+            "AllActors"
           ],
           "subInstructions": []
         }
@@ -24,60 +27,50 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "AllActors",
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [],
-          "events": [
+          "actions": [
             {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HealthBar",
-                    "AllActors.X()",
-                    "AllActors.Y()",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "AllActors",
-                    "HealthBar"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "HealthBar",
-                    "Width",
-                    "=",
-                    "max(HealthBar.Variable(Width), AllActors.Width()*0.75)"
-                  ],
-                  "subInstructions": []
-                }
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "HealthBar",
+                "AllActors.X()",
+                "AllActors.Y()",
+                ""
               ],
-              "events": []
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "AllActors",
+                "HealthBar"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HealthBar",
+                "Width",
+                "=",
+                "max(HealthBar.Variable(Width), AllActors.Width()*0.75)"
+              ],
+              "subInstructions": []
             }
-          ]
+          ],
+          "events": []
         }
       ]
     },
@@ -160,7 +153,7 @@
                     "HealthBar",
                     "Health",
                     "=",
-                    "AllActors.Health::Health()"
+                    "max(0, AllActors.Health::Health())"
                   ],
                   "subInstructions": []
                 },
@@ -173,7 +166,7 @@
                     "HealthBar",
                     "MaxHealth",
                     "=",
-                    "AllActors.Health::MaxHealth()"
+                    "max(1, AllActors.Health::MaxHealth())"
                   ],
                   "subInstructions": []
                 }
@@ -191,7 +184,7 @@
                     "value": "Egal"
                   },
                   "parameters": [
-                    "AllActors.Health::Health()",
+                    "max(0, AllActors.Health::Health())",
                     "!=",
                     "HealthBar.Variable(Health)"
                   ],
@@ -223,7 +216,7 @@
                     "\"health\"",
                     "Health",
                     "HealthBar.Variable(Health)",
-                    "AllActors.Health::Health()",
+                    "max(0, AllActors.Health::Health())",
                     "\"easeOutSine\"",
                     "350",
                     ""
