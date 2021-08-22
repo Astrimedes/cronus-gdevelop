@@ -332,7 +332,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -382,7 +382,7 @@
                     "EnemyGroup",
                     "Pathfinding",
                     "=",
-                    "80"
+                    "50"
                   ],
                   "subInstructions": []
                 }

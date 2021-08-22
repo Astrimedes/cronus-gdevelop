@@ -1631,8 +1631,8 @@
                       "parameters": [
                         "",
                         "PlayerAttack",
-                        "Player.CenterX() + (Player.Variable(FacingX) * Player.Width()/3)",
-                        "Player.CenterY() + (Player.Variable(FacingY) * Player.Height()/3)",
+                        "Player.CenterX() + (Player.Variable(FacingX) * Player.Width() * RandomFloatInRange(0.3, 0.6))",
+                        "Player.CenterY() + (Player.Variable(FacingY) * Player.Height() * RandomFloatInRange(0.3, 0.6))",
                         "\"\""
                       ],
                       "subInstructions": []
@@ -1991,6 +1991,20 @@
                             "PlayerAttack",
                             "*",
                             "2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetCenter"
+                          },
+                          "parameters": [
+                            "PlayerAttack",
+                            "+",
+                            "(Player.Variable(FacingX) * PlayerAttack.Width()/10)",
+                            "+",
+                            "(Player.Variable(FacingY) * PlayerAttack.Height()/10)"
                           ],
                           "subInstructions": []
                         }
