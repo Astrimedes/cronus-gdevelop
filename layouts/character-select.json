@@ -13,17 +13,15 @@
   "v": 209,
   "uiSettings": {
     "grid": false,
-    "gridB": 255,
-    "gridG": 180,
+    "gridType": "rectangular",
+    "gridWidth": 32,
     "gridHeight": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
-    "gridR": 158,
-    "gridType": "rectangular",
-    "gridWidth": 32,
+    "gridColor": 10401023,
     "snap": true,
-    "windowMask": false,
-    "zoomFactor": 0.5599999999999996
+    "zoomFactor": 0.5599999999999996,
+    "windowMask": false
   },
   "objectsGroups": [
     {
@@ -2276,7 +2274,7 @@
                 "value": "VarGlobal"
               },
               "parameters": [
-                "PlayerGamepads.P2",
+                "Players[1].Gamepad",
                 "!=",
                 "0"
               ],
@@ -2350,7 +2348,7 @@
                 "value": "VarGlobal"
               },
               "parameters": [
-                "PlayerGamepads.P3",
+                "Players[2].Gamepad",
                 "!=",
                 "0"
               ],
@@ -2424,7 +2422,7 @@
                 "value": "VarGlobal"
               },
               "parameters": [
-                "PlayerGamepads.P4",
+                "Players[3].Gamepad",
                 "!=",
                 "0"
               ],

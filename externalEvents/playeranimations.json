@@ -24,7 +24,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -94,7 +94,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "\"WalkDownRight\""
+                        "\"WalkDown\""
                       ],
                       "subInstructions": []
                     }
@@ -188,7 +188,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "\"WalkDownLeft\""
+                        "\"WalkDown\""
                       ],
                       "subInstructions": []
                     }
@@ -282,7 +282,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "\"WalkUpLeft\""
+                        "\"WalkUp\""
                       ],
                       "subInstructions": []
                     }
@@ -376,7 +376,7 @@
                       },
                       "parameters": [
                         "Player",
-                        "\"WalkUpRight\""
+                        "\"WalkUp\""
                       ],
                       "subInstructions": []
                     }

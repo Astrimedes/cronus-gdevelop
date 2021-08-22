@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.36999999999999994,
+    "zoomFactor": 0.6200000000000001,
     "windowMask": false
   },
   "objectsGroups": [
@@ -98,6 +98,28 @@
           "name": "GateSection"
         }
       ]
+    },
+    {
+      "name": "PlayerGroup",
+      "objects": [
+        {
+          "name": "Player"
+        },
+        {
+          "name": "PlayerChar2"
+        },
+        {
+          "name": "PlayerChar3"
+        }
+      ]
+    },
+    {
+      "name": "ShadowCloneGroup",
+      "objects": [
+        {
+          "name": "ShadowPlayer"
+        }
+      ]
     }
   ],
   "variables": [
@@ -148,8 +170,8 @@
       "name": "Castle",
       "persistentUuid": "5fff8259-12a1-43eb-8608-e33a658b7dd4",
       "width": 0,
-      "x": 765,
-      "y": 117,
+      "x": 770,
+      "y": 204,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -164,8 +186,8 @@
       "name": "Castle",
       "persistentUuid": "1f5d7eb1-daa9-4561-a7ac-988b62f2381d",
       "width": 0,
-      "x": 243,
-      "y": 301,
+      "x": 330,
+      "y": 195,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -417,11 +439,411 @@
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "Barrier",
-      "persistentUuid": "84da70e0-3c07-4aee-a8f5-dc1542a2cee2",
+      "name": "Bub",
+      "persistentUuid": "797a044a-3863-479a-986b-9ac4c766fa18",
       "width": 0,
-      "x": 566,
-      "y": 329,
+      "x": 140.80950927734375,
+      "y": 469,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "1c177e57-bfc9-48b0-9861-dbc5347fbc9a",
+      "width": 0,
+      "x": 74.14283752441406,
+      "y": 480.90478515625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "a9d14783-1818-45e8-93a4-211610a78949",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "b2eab1c0-19db-468c-9d3b-99916a5a96f0",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "d3274c40-b1a5-4916-baca-516e67b14fc0",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "3e051d05-c79f-421d-a4cf-ad540e913a5e",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "c0366188-2bf7-41c8-b76f-ddba68c77a90",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "510747a8-bed7-4815-bf13-1ded1f463964",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "65726210-0808-414a-97a8-648f2d0cbbff",
+      "width": 0,
+      "x": 167,
+      "y": 471.3809814453125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "73a47cee-d874-4122-9c83-ca0e6cc97836",
+      "width": 0,
+      "x": 180.4146270751953,
+      "y": 693.3322143554688,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "a379ba94-ab5b-49aa-a276-66309308b40d",
+      "width": 0,
+      "x": 362.1219482421875,
+      "y": 698.2102661132812,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "76aa2ddf-f372-4111-b9be-e97e47a38f00",
+      "width": 0,
+      "x": 441.3902587890625,
+      "y": 677.478515625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "9688b92b-dcd5-499a-83e5-00c88a3f591f",
+      "width": 0,
+      "x": 703.5853881835938,
+      "y": 660.4053955078125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "aace1401-7266-426e-b75e-98c15cdf4038",
+      "width": 0,
+      "x": 910.9024658203125,
+      "y": 726.259033203125,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "33c566ca-e9fd-4ef2-a26e-2094a16025ab",
+      "width": 0,
+      "x": 836.51220703125,
+      "y": 661.6248779296875,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "eefbee98-3991-4e2e-bc1f-5ad58df3b260",
+      "width": 0,
+      "x": 520.6585083007812,
+      "y": 715.283447265625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "d9518156-ba0f-43cd-b082-f314581c60c4",
+      "width": 0,
+      "x": 642.6097412109375,
+      "y": 692.1126708984375,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "5a2cb954-4794-41b5-9c61-9c3a140c8066",
+      "width": 0,
+      "x": 871.8780517578125,
+      "y": 659.1858520507812,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "7b91b025-5a8f-4fd2-9037-0651f3e019ea",
+      "width": 0,
+      "x": 909.7399291992188,
+      "y": 438.6066589355469,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "a74f49f4-28f6-4649-8de5-08235e5824ea",
+      "width": 0,
+      "x": 901.6754150390625,
+      "y": 304.7356872558594,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "0e685fe9-ae6f-4583-a338-b0f988d99eeb",
+      "width": 0,
+      "x": 238.7721710205078,
+      "y": 343.44537353515625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "ff324143-f00a-4cbb-a637-8f9fe8cb32a0",
+      "width": 0,
+      "x": 446.836669921875,
+      "y": 407.96148681640625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "bb63241d-39e8-4238-bcc2-bd5be5c31c49",
+      "width": 0,
+      "x": 659.7399291992188,
+      "y": 283.7679443359375,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "a15df616-a0b1-4828-a641-1cb823c2e3fa",
+      "width": 0,
+      "x": 661.352783203125,
+      "y": 440.2195739746094,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "06be1503-80b1-4f79-8a8f-0de18b502521",
+      "width": 0,
+      "x": 254.9011993408203,
+      "y": 293.44537353515625,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Bub",
+      "persistentUuid": "a99ed128-2f62-4669-b0f8-11870fc05992",
+      "width": 0,
+      "x": 53,
+      "y": 355,
       "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
@@ -1616,7 +2038,7 @@
       ]
     },
     {
-      "name": "Player",
+      "name": "PlayerChar3",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -2117,16 +2539,16 @@
           ]
         },
         {
-          "name": "WalkUpRight",
+          "name": "AttackUp",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpRight-1.png",
+                  "image": "AttackUp-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2143,7 +2565,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpRight-2.png",
+                  "image": "AttackUp-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2160,7 +2582,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpRight-3.png",
+                  "image": "AttackUp-3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2177,7 +2599,24 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpRight-4.png",
+                  "image": "AttackUp-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2197,16 +2636,16 @@
           ]
         },
         {
-          "name": "WalkUpLeft",
+          "name": "AttackDown",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpLeft-1.png",
+                  "image": "AttackDown-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2223,7 +2662,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpLeft-2.png",
+                  "image": "AttackDown-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2240,7 +2679,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpLeft-3.png",
+                  "image": "AttackDown-3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2257,7 +2696,24 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkUpLeft-4-0.png",
+                  "image": "AttackDown-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2277,16 +2733,16 @@
           ]
         },
         {
-          "name": "WalkDownRight",
+          "name": "AttackLeft",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownRight-1.png",
+                  "image": "AttackLeft-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2303,7 +2759,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownRight-2.png",
+                  "image": "AttackLeft-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2320,7 +2776,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownRight-3.png",
+                  "image": "AttackLeft-3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2337,7 +2793,24 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownRight-4.png",
+                  "image": "AttackLeft-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2357,7 +2830,287 @@
           ]
         },
         {
-          "name": "WalkDownLeft",
+          "name": "AttackRight",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PlayerChar2",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "FacingX",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "FacingY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Attacking",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Moving",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "PlayerIndex",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Combo",
+          "type": "structure",
+          "children": [
+            {
+              "name": "FinishDelay",
+              "type": "number",
+              "value": 0.8
+            },
+            {
+              "name": "HitDelay",
+              "type": "number",
+              "value": 0.05
+            },
+            {
+              "name": "HitTimeLimit",
+              "type": "number",
+              "value": 0.65
+            },
+            {
+              "name": "Hits",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "ComboHit",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AttackDelay",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Dashing",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Init",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Dash",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Distance",
+              "type": "number",
+              "value": 64
+            },
+            {
+              "name": "Time",
+              "type": "number",
+              "value": 300
+            }
+          ]
+        },
+        {
+          "name": "Charge",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 20
+            },
+            {
+              "name": "Distance",
+              "type": "number",
+              "value": 88
+            },
+            {
+              "name": "Time",
+              "type": "number",
+              "value": 400
+            }
+          ]
+        },
+        {
+          "name": "ComboCount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerNumber",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Charging",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0.1,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "maxSpeed": 120,
+          "movementAngleOffset": 0,
+          "deceleration": 6000,
+          "ignoreDefaultControls": true,
+          "acceleration": 1600,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "customIsometryAngle": 30,
+          "rotateObject": false,
+          "viewpoint": "TopDown"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
+        }
+      ],
+      "animations": [
+        {
+          "name": "WalkRight",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2366,7 +3119,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownLeft-1.png",
+                  "image": "WalkRight-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2383,7 +3136,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownLeft-2.png",
+                  "image": "WalkRight-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2400,7 +3153,7 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownLeft-3.png",
+                  "image": "WalkRight-3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2417,7 +3170,1138 @@
                 },
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "WalkDownLeft-4.png",
+                  "image": "WalkRight-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkLeft",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkDown",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AttackUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackUp-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AttackDown",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackDown-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AttackLeft",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackLeft-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AttackRight",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "AttackRight-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Player",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "FacingX",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "FacingY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Attacking",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Moving",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "PlayerIndex",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Combo",
+          "type": "structure",
+          "children": [
+            {
+              "name": "FinishDelay",
+              "type": "number",
+              "value": 0.4
+            },
+            {
+              "name": "HitDelay",
+              "type": "number",
+              "value": 0.02
+            },
+            {
+              "name": "HitTimeLimit",
+              "type": "number",
+              "value": 0.65
+            },
+            {
+              "name": "Hits",
+              "type": "number",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "name": "ComboHit",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AttackDelay",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Dashing",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Init",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Dash",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Distance",
+              "type": "number",
+              "value": 64
+            },
+            {
+              "name": "Time",
+              "type": "number",
+              "value": 300
+            }
+          ]
+        },
+        {
+          "name": "Charge",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 20
+            },
+            {
+              "name": "Distance",
+              "type": "number",
+              "value": 88
+            },
+            {
+              "name": "Time",
+              "type": "number",
+              "value": 400
+            }
+          ]
+        },
+        {
+          "name": "ComboCount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerNumber",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "Charging",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Expire",
+          "type": "Expire::Expire",
+          "MaxLife": 0.5,
+          "Life": 0.5,
+          "Fades": true,
+          "Expiring": false
+        },
+        {
+          "name": "Flash",
+          "type": "Flash::Flash",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health",
+          "Health": 100,
+          "DamageCooldown": 0.1,
+          "MaxHealth": 100,
+          "IsJustDamaged": false,
+          "CooldownActive": false
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "maxSpeed": 120,
+          "movementAngleOffset": 0,
+          "deceleration": 6000,
+          "ignoreDefaultControls": true,
+          "acceleration": 1600,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "customIsometryAngle": 30,
+          "rotateObject": false,
+          "viewpoint": "TopDown"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
+        }
+      ],
+      "animations": [
+        {
+          "name": "WalkRight",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkRight-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkRight-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkRight-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkRight-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkLeft",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkLeft-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkUp-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WalkDown",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "WalkDown-4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3773,65 +5657,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "GateSection-2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "GateSection-2-0.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": false,
-                  "image": "GateSection-3.png",
+                  "image": "GateSection-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3889,7 +5715,65 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "GateSection-5.png",
+                  "image": "GateSection-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GateSection-2-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -4305,7 +6189,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Add players",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4319,231 +6203,123 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Create"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "",
-                        "Player",
-                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
-                        "Ground.Y() * 0.2",
-                        "\"\""
+                        "TempNumber",
+                        "=",
+                        "-1"
                       ],
                       "subInstructions": []
-                    },
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "4",
+                  "conditions": [],
+                  "actions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarObjet"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "Player",
-                        "PlayerIndex",
-                        "=",
-                        "max(GlobalVariable(PlayerGamepads.P1), 1)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerNumber",
-                        "=",
+                        "TempNumber",
+                        "+",
                         "1"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarGlobal"
-                      },
-                      "parameters": [
-                        "PlayerGamepads.P2",
-                        "!=",
-                        "0"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Egal"
+                              },
+                              "parameters": [
+                                "GlobalVariable(Players[GlobalVariable(TempNumber)].Gamepad)",
+                                "!=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "TempNumber",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player",
+                            "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
+                            "Ground.Y() * 0.2",
+                            "\"\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerIndex",
+                            "=",
+                            "max(GlobalVariable(Players[GlobalVariable(TempNumber)].Gamepad), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerNumber",
+                            "=",
+                            "GlobalVariable(TempNumber)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
-                        "Ground.Y() * 0.2",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerIndex",
-                        "=",
-                        "GlobalVariable(PlayerGamepads.P2)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerNumber",
-                        "=",
-                        "2"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarGlobal"
-                      },
-                      "parameters": [
-                        "PlayerGamepads.P3",
-                        "!=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
-                        "Ground.Y() * 0.2",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerIndex",
-                        "=",
-                        "GlobalVariable(PlayerGamepads.P3)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerNumber",
-                        "=",
-                        "3"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarGlobal"
-                      },
-                      "parameters": [
-                        "PlayerGamepads.P4",
-                        "!=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "Ground.X() + (Ground.Width() / 2) + RandomFloatInRange(-100, 100)",
-                        "Ground.Y() * 0.2",
-                        "\"\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerIndex",
-                        "=",
-                        "GlobalVariable(PlayerGamepads.P4)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerNumber",
-                        "=",
-                        "4"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
+                  ]
                 }
               ],
               "parameters": []
@@ -5921,6 +7697,62 @@
                   "events": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "GateSection",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Health::Health::IsDead"
+                      },
+                      "parameters": [
+                        "GateSection",
+                        "Health",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "GateSection.Health::Health()",
+                        "<",
+                        "GateSection.Health::MaxHealth()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "GateSection",
+                        "=",
+                        "max(1, floor((GateSection.Health::Health() / GateSection.Health::MaxHealth()) * 5))"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -6276,6 +8108,40 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "NbObjet"
+              },
+              "parameters": [
+                "GateSection",
+                "<",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Gameplay\"",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "parameters": []

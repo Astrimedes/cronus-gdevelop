@@ -467,114 +467,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpRight-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpRight-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpRight-3.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpRight-4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpRight-4.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownRight-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownRight-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownRight-3.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownRight-4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownRight-4.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownLeft-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownLeft-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownLeft-3.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkDownLeft-4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkDownLeft-4.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/AttackRight-1.png",
         "kind": "image",
         "metadata": "",
@@ -755,42 +647,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-2.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-3.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/WalkUpLeft-4-0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "WalkUpLeft-4-0.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Castle-1.png",
         "kind": "image",
         "metadata": "",
@@ -885,123 +741,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Bumped.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Bumped.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Bumped.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Idle_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Idle_1.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Idle_1.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Idle_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Idle_2.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Idle_2.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_1.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_1.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_2.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_2.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_3.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_3.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_4.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_4.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_5.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_5.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Blocky Bub_Running_6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Blocky Bub_Running_6.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Character Pack 1/Blocky Bub/Blocky Bub_Running_6.png",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/HighlightSquare-1-0.png",
         "kind": "image",
         "metadata": "",
@@ -1017,6 +756,69 @@
         "name": "assets\\StoneBlock-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Hell HolE1.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Hell HolE1.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/hell hole title.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\hell hole title.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/WalkRight-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\WalkRight-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Devo the Devil_Running_1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Devo the Devil_Running_2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Devo the Devil_Running_3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Devo the Devil_Running_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Devo the Devil_Running_4.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1024,32 +826,6 @@
   "objects": [],
   "objectsGroups": [],
   "variables": [
-    {
-      "name": "PlayerGamepads",
-      "type": "structure",
-      "children": [
-        {
-          "name": "P1",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "P2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "P3",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "P4",
-          "type": "number",
-          "value": 0
-        }
-      ]
-    },
     {
       "name": "TempNumber",
       "type": "number",
@@ -1059,6 +835,112 @@
       "name": "TempString",
       "type": "string",
       "value": ""
+    },
+    {
+      "name": "Players",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Active",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Class",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Gamepad",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "P1"
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Active",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Class",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Gamepad",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "P2"
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Active",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Class",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Gamepad",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "P3"
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "Active",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Class",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "Gamepad",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Name",
+              "type": "string",
+              "value": "P4"
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -1094,6 +976,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flexbox"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/shadowclones"

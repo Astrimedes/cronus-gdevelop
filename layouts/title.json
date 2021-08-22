@@ -20,7 +20,7 @@
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "snap": true,
-    "zoomFactor": 0.47999999999999954,
+    "zoomFactor": 0.6799999999999999,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -34,31 +34,15 @@
   "instances": [
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "Title",
-      "persistentUuid": "0550d38a-7fa8-43e6-9688-18bf4775a961",
-      "width": 0,
-      "x": 147,
-      "y": 46,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
-      "height": 75,
+      "height": 125,
       "layer": "",
       "locked": false,
       "name": "PressGamepad",
       "persistentUuid": "ec9ce015-a31a-44ac-be6b-5e62120b1165",
-      "width": 565,
-      "x": 151,
-      "y": 215,
+      "width": 202,
+      "x": 401,
+      "y": 148,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -66,15 +50,15 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 164,
       "layer": "",
       "locked": false,
       "name": "PressStart",
       "persistentUuid": "c7550306-042c-4cd3-81de-8e70c6c7ee14",
-      "width": 0,
-      "x": 144,
-      "y": 501,
+      "width": 220,
+      "x": 432,
+      "y": 299,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -83,30 +67,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 35,
-      "layer": "",
-      "locked": false,
-      "name": "GamepadsInfo",
-      "persistentUuid": "fd10015c-d603-4e31-82d0-5805885d59cc",
-      "width": 536,
-      "x": 148,
-      "y": 277,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 27,
+      "height": 28,
       "layer": "",
       "locked": false,
       "name": "InstructionsKey",
       "persistentUuid": "1ee26f86-1f3d-4af7-99f1-051a93dde839",
-      "width": 514,
-      "x": 154,
-      "y": 400,
+      "width": 227,
+      "x": 11,
+      "y": 252,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -115,15 +83,31 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 58,
+      "height": 99,
       "layer": "",
       "locked": false,
       "name": "InstructionsGamepad",
       "persistentUuid": "8b295335-547d-48a0-9ba9-3faeb8b01c98",
-      "width": 501,
-      "x": 148,
-      "y": 328,
+      "width": 189,
+      "x": 44,
+      "y": 362,
       "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 480,
+      "layer": "",
+      "locked": true,
+      "name": "background",
+      "persistentUuid": "f78af09a-830c-48f2-8d07-6500f59c6ede",
+      "width": 640,
+      "x": 7,
+      "y": 3,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -160,34 +144,24 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 0
+        }
+      ],
       "string": "Press any gamepad button to add gamepads and players.",
       "font": "",
       "characterSize": 25,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
-      }
-    },
-    {
-      "bold": false,
-      "italic": false,
-      "name": "GamepadsInfo",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "{ }",
-      "font": "",
-      "characterSize": 20,
-      "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -205,9 +179,9 @@
       "font": "",
       "characterSize": 35,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -220,14 +194,24 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 0,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 0
+        }
+      ],
       "string": "Press any keyboard key to START",
       "font": "",
       "characterSize": 35,
       "color": {
-        "b": 119,
-        "g": 158,
-        "r": 133
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -240,14 +224,24 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0
+        }
+      ],
       "string": "Gamepad Controls: \n--Move: Control Pad --Attack: A --Dash: B",
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
     },
     {
@@ -260,15 +254,75 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1
+        }
+      ],
       "string": "Keyboard Controls (1 player only):\n --Move: w/a/s/d --Attack: Space --Dash: Return",
       "font": "",
       "characterSize": 20,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 28,
+        "g": 231,
+        "r": 248
       }
+    },
+    {
+      "name": "background",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 3,
+          "leftEdgeAnchor": 3,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 3,
+          "topEdgeAnchor": 3
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\hell hole title.jpg",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -301,6 +355,14 @@
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         },
         {
@@ -527,7 +589,7 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "PlayerGamepads.P1",
+                    "Players[0].Gamepad",
                     "!=",
                     "GlobalVariable(TempNumber)"
                   ],
@@ -539,7 +601,7 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "PlayerGamepads.P2",
+                    "Players[1].Gamepad",
                     "!=",
                     "GlobalVariable(TempNumber)"
                   ],
@@ -551,7 +613,7 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "PlayerGamepads.P3",
+                    "Players[2].Gamepad",
                     "!=",
                     "GlobalVariable(TempNumber)"
                   ],
@@ -563,7 +625,7 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "PlayerGamepads.P4",
+                    "Players[3].Gamepad",
                     "!=",
                     "GlobalVariable(TempNumber)"
                   ],
@@ -583,7 +645,7 @@
                         "value": "VarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P1",
+                        "Players[0].Gamepad",
                         "=",
                         "0"
                       ],
@@ -597,7 +659,7 @@
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P1",
+                        "Players[0].Gamepad",
                         "=",
                         "GlobalVariable(TempNumber)"
                       ],
@@ -628,7 +690,7 @@
                         "value": "VarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P2",
+                        "Players[1].Gamepad",
                         "=",
                         "0"
                       ],
@@ -653,9 +715,21 @@
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P2",
+                        "Players[1].Gamepad",
                         "=",
                         "GlobalVariable(TempNumber)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Players[1].Active",
+                        "=",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -684,7 +758,7 @@
                         "value": "VarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P3",
+                        "Players[2].Gamepad",
                         "=",
                         "0"
                       ],
@@ -709,9 +783,21 @@
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P3",
+                        "Players[2].Gamepad",
                         "=",
                         "GlobalVariable(TempNumber)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Players[2].Active",
+                        "=",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -740,7 +826,7 @@
                         "value": "VarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P4",
+                        "Players[3].Gamepad",
                         "=",
                         "0"
                       ],
@@ -765,9 +851,21 @@
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "PlayerGamepads.P4",
+                        "Players[3].Gamepad",
                         "=",
                         "GlobalVariable(TempNumber)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "Players[3].Active",
+                        "=",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -788,39 +886,6 @@
               ]
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "ControllerAdded",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "GamepadsInfo",
-                "=",
-                "GlobalVarToJSON(PlayerGamepads)"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         }
       ],
       "parameters": []
@@ -903,5 +968,10 @@
       "effects": []
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    }
+  ]
 }
