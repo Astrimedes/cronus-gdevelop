@@ -1352,21 +1352,6 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Attack - Input",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
               "comment": "Attack - state",
               "comment2": ""
             },
@@ -1478,6 +1463,21 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Attack - Input",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -1492,35 +1492,9 @@
                     "0"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ObjectTimer"
-                  },
-                  "parameters": [
-                    "Player",
-                    "\"attack-delay\"",
-                    "Player.Variable(AttackDelay)"
-                  ],
-                  "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "Player",
-                    "AttackDelay",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -1530,7 +1504,42 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Gamepads::C_Button_pressed"
+                        "value": "ObjectTimer"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"attack-delay\"",
+                        "Player.Variable(AttackDelay)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "AttackDelay",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Button_released"
                       },
                       "parameters": [
                         "",
@@ -1538,6 +1547,27 @@
                         "\"A\"",
                         ""
                       ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "AttackDelay",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
                       "subInstructions": []
                     }
                   ],
@@ -1566,11 +1596,24 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "KeyReleased"
                       },
                       "parameters": [
                         "",
                         "Space"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "AttackDelay",
+                        "=",
+                        "0"
                       ],
                       "subInstructions": []
                     }

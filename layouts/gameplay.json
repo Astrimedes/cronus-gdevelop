@@ -3704,9 +3704,9 @@
           "CooldownActive": false
         },
         {
-          "maxSpeed": 110,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "maxSpeed": 110,
           "movementAngleOffset": 0,
           "deceleration": 6000,
           "ignoreDefaultControls": true,
@@ -4820,10 +4820,10 @@
           "CooldownActive": false
         },
         {
-          "acceleration": 200,
-          "maxSpeed": 40,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "acceleration": 200,
+          "maxSpeed": 40,
           "allowDiagonals": true,
           "angleOffset": 0,
           "cellHeight": 20,
