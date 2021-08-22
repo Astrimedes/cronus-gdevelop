@@ -111,6 +111,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PlayersInfo",
+      "persistentUuid": "8cc0f7dd-ec98-4d14-8899-0565fa00cbcc",
+      "width": 0,
+      "x": 402,
+      "y": 266,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -132,6 +148,36 @@
         "b": 0,
         "g": 0,
         "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "PlayersInfo",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 1,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 0
+        }
+      ],
+      "string": "Players: 1",
+      "font": "",
+      "characterSize": 25,
+      "color": {
+        "b": 222,
+        "g": 233,
+        "r": 235
       }
     },
     {
@@ -743,6 +789,18 @@
                         "True"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -809,6 +867,18 @@
                       "parameters": [
                         "ControllerAdded",
                         "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerCount",
+                        "+",
+                        "1"
                       ],
                       "subInstructions": []
                     }
@@ -879,6 +949,18 @@
                         "True"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "PlayerCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -886,6 +968,39 @@
               ]
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ControllerAdded",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "PlayersInfo",
+                "=",
+                "\"Players: \" + ToString(GlobalVariable(PlayerCount))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "parameters": []
@@ -921,11 +1036,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"Gameplay\""
+                "\"Gameplay\"",
+                "yes"
               ],
               "subInstructions": []
             }

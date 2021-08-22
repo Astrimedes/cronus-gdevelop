@@ -941,6 +941,11 @@
           ]
         }
       ]
+    },
+    {
+      "name": "PlayerCount",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [

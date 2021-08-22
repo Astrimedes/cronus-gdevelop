@@ -1640,6 +1640,18 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "PlayerAttack",
+                        "*",
+                        "RandomFloatInRange(1,1.15)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "SetAngle"
                       },
                       "parameters": [
